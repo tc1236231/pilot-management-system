@@ -27,7 +27,7 @@ Route::group([
     Route::get('/dashboard', 'DashboardController@index')->name('dashboard.index');
     Route::get('/dashboard/bind', 'DashboardController@bindPlatformShow')->name('dashboard.bind');
     Route::post('/dashboard/bind', 'DashboardController@bindPlatform')->middleware('throttle:15,10')->name('dashboard.bindPlatform');
-    Route::delete('/dashboard/bind', 'DashboardController@unbindPlatform')->name('dashboard.unbindPlatform');
+    Route::get('/dashboard/unbind', 'DashboardController@unbindPlatform')->name('dashboard.unbindPlatform');
     Route::get('/dashboard/va', 'DashboardController@va')->name('dashboard.va');
     Route::post('/dashboard/va', 'DashboardController@bindva')->name('dashboard.bindva');
     Route::get('/dashboard/profile', 'DashboardController@profile')->name('dashboard.profile');

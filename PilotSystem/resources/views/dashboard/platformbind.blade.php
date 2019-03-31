@@ -86,7 +86,7 @@
                 });
                 $.ajax({
                     url: "{{ route('frontend.dashboard.unbindPlatform') }}",
-                    method: 'delete',
+                    method: 'GET',
                     data: {
                         platform: platform_code,
                     },

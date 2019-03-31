@@ -2,403 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="722eae44-6275-42c6-8be4-1b623b872617" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/PilotSystem/app/Console/Command.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/app/Console/Commands/DevCommands.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/app/Http/Requests/BindPlatformRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/app/Interfaces/Award.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/app/Interfaces/Controller.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/app/Interfaces/Enum.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/app/Interfaces/FormRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/app/Interfaces/ImportExport.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/app/Interfaces/Listener.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/app/Interfaces/Metar.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/app/Interfaces/Migration.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/app/Interfaces/Model.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/app/Interfaces/Repository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/app/Interfaces/Service.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/app/Interfaces/Unit.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/app/Models/Enums/PilotFlightPermission.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/app/Models/Enums/PilotLevel.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/app/Models/Enums/PilotNameLog.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/app/Models/PilotLog.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/app/Models/PilotPlatform.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/app/Models/PilotRedeemCode.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/app/Models/PilotSearchLog.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/app/Models/PilotTimeStats.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/app/Models/Platform.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/app/Services/CurrencyService.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/app/Services/PlatformService.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/css/maps/style.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/fonts/Roboto/LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/fonts/Roboto/Roboto-Black.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/fonts/Roboto/Roboto-BlackItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/fonts/Roboto/Roboto-Bold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/fonts/Roboto/Roboto-BoldItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/fonts/Roboto/Roboto-Italic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/fonts/Roboto/Roboto-Light.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/fonts/Roboto/Roboto-LightItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/fonts/Roboto/Roboto-Medium.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/fonts/Roboto/Roboto-MediumItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/fonts/Roboto/Roboto-Regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/fonts/Roboto/Roboto-Thin.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/fonts/Roboto/Roboto-ThinItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/carousel/banner_1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/carousel/banner_10.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/carousel/banner_11.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/carousel/banner_12.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/carousel/banner_2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/carousel/banner_3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/carousel/banner_4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/carousel/banner_5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/carousel/banner_6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/carousel/banner_7.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/carousel/banner_8.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/carousel/banner_9.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/faces-clipart/pic-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/faces-clipart/pic-2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/faces-clipart/pic-3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/faces-clipart/pic-4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/faces/face1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/faces/face10.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/faces/face11.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/faces/face12.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/faces/face13.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/faces/face14.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/faces/face15.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/faces/face16.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/faces/face17.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/faces/face18.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/faces/face19.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/faces/face2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/faces/face20.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/faces/face21.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/faces/face22.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/faces/face23.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/faces/face24.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/faces/face25.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/faces/face26.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/faces/face27.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/faces/face3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/faces/face4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/faces/face5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/faces/face6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/faces/face7.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/faces/face8.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/faces/face9.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/favicon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/file-icons/128/001-interface-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/file-icons/128/002-tool.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/file-icons/128/003-interface.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/file-icons/128/004-folder-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/file-icons/128/005-database.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/file-icons/128/006-record.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/file-icons/128/007-folder.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/file-icons/128/008-archive.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/file-icons/256/001-interface-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/file-icons/256/002-tool.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/file-icons/256/003-interface.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/file-icons/256/004-folder-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/file-icons/256/005-database.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/file-icons/256/006-record.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/file-icons/256/007-folder.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/file-icons/256/008-archive.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/file-icons/512/001-interface-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/file-icons/512/002-tool.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/file-icons/512/003-interface.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/file-icons/512/004-folder-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/file-icons/512/005-database.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/file-icons/512/006-record.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/file-icons/512/007-folder.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/file-icons/512/008-archive.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/file-icons/64/001-interface-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/file-icons/64/002-tool.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/file-icons/64/003-interface.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/file-icons/64/004-folder-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/file-icons/64/005-database.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/file-icons/64/006-record.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/file-icons/64/007-folder.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/file-icons/64/008-archive.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/flags/AD.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/flags/AE.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/flags/AG.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/flags/AM.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/flags/AR.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/flags/AT.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/flags/AU.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/flags/BE.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/flags/BF.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/flags/BG.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/flags/BO.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/flags/BR.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/flags/CA.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/flags/CD.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/flags/CG.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/flags/CH.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/flags/CL.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/flags/CM.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/flags/CN.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/flags/CO.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/flags/CZ.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/flags/DE.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/flags/DJ.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/flags/DK.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/flags/DZ.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/flags/EE.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/flags/EG.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/flags/ES.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/flags/FI.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/flags/FR.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/flags/GA.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/flags/GB.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/flags/GM.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/flags/GT.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/flags/HN.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/flags/HT.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/flags/HU.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/flags/ID.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/flags/IE.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/flags/IL.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/flags/IN.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/flags/IQ.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/flags/IR.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/flags/IT.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/flags/JM.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/flags/JO.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/flags/JP.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/flags/KG.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/flags/KN.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/flags/KP.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/flags/KR.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/flags/KW.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/flags/KZ.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/flags/LA.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/flags/LB.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/flags/LC.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/flags/LS.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/flags/LU.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/flags/LV.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/flags/MG.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/flags/MK.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/flags/ML.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/flags/MM.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/flags/MT.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/flags/MX.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/flags/NA.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/flags/NE.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/flags/NG.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/flags/NI.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/flags/NL.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/flags/NO.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/flags/OM.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/flags/PA.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/flags/PE.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/flags/PG.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/flags/PK.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/flags/PL.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/flags/PT.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/flags/PY.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/flags/QA.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/flags/RO.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/flags/RU.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/flags/RW.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/flags/SA.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/flags/SE.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/flags/SG.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/flags/SL.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/flags/SN.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/flags/SO.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/flags/SV.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/flags/TD.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/flags/TJ.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/flags/TL.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/flags/TR.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/flags/TZ.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/flags/UA.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/flags/US.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/flags/VE.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/flags/VN.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/flags/YE.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/lightbox/play-button.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/lightbox/thumb-v-v-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/lightbox/thumb-v-v-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/lightbox/thumb-v-y-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/lightbox/thumb-v-y-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/logo.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/logo_mini.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/logo_white.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/samples/1280x768/1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/samples/1280x768/10.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/samples/1280x768/11.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/samples/1280x768/12.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/samples/1280x768/13.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/samples/1280x768/14.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/samples/1280x768/15.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/samples/1280x768/2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/samples/1280x768/3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/samples/1280x768/4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/samples/1280x768/5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/samples/1280x768/6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/samples/1280x768/7.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/samples/1280x768/8.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/samples/1280x768/9.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/samples/300x300/1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/samples/300x300/10.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/samples/300x300/11.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/samples/300x300/12.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/samples/300x300/13.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/samples/300x300/14.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/samples/300x300/15.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/samples/300x300/2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/samples/300x300/3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/samples/300x300/4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/samples/300x300/5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/samples/300x300/6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/samples/300x300/7.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/samples/300x300/8.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/samples/300x300/9.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/samples/Banner_bg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/samples/Login_bg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/samples/Login_bg2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/samples/Mac.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/samples/angular-4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/samples/bootstrap-stack.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/samples/charts.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/samples/dashboard.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/samples/e-commerce.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/samples/editors.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/samples/email.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/samples/footer_bg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/samples/forms.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/samples/html5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/samples/lockscreen-bg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/samples/modal.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/samples/popup.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/samples/widgets.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/sprites/blue.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/sprites/dark.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/sprites/green.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/sprites/jsgrid-icons.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/sprites/logo-mini.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/sprites/red.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/sprites/yellow.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/js/ace.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/js/alerts.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/js/avgrund.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/js/bootstrap-table.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/js/bt-maxLength.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/js/c3.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/js/calendar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/js/chart.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/js/chartist.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/js/circle-progress.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/js/clipboard.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/js/codeEditor.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/js/codemirror.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/js/context-menu.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/js/cropper.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/js/dashboard.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/js/data-table.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/js/datepicker-zh-TW.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/js/db.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/js/demo.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/js/desktop-notification.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/js/dragula.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/js/dropify.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/js/dropzone.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/js/editorDemo.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/js/file-upload.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/js/float-chart.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/js/form-addons.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/js/form-repeater.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/js/form-validation.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/js/formpickers.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/js/google-charts.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/js/google-maps.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/js/hoverable-collapse.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/js/iCheck.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/js/ion-range-slider.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/js/jq.tablesort.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/js/jquery-file-upload.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/js/js-grid.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/js/just-gage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/js/light-gallery.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/js/listify.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/js/mapeal.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/js/mapeal_example_2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/js/mapeal_example_3.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/js/mapiel.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/js/maps.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/js/misc.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/js/modal-demo.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/js/morris.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/js/no-ui-slider.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/js/off-canvas.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/js/owl-carousel.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/js/paginate.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/js/popover.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/js/progress-bar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/js/rickshaw.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/js/select2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/js/settings.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/js/sparkline.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/js/tablesorter.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/js/tabs.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/js/tight-grid.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/js/toastDemo.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/js/todolist.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/js/tooltips.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/js/tour.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/js/typeahead.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/js/wizard.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/js/x-editable.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/resources/lang/cn/auth.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/resources/lang/cn/common.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/resources/lang/cn/pagination.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/resources/lang/cn/passwords.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/resources/lang/cn/validation.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/resources/lang/en/common.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/resources/views/base.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/resources/views/dashboard/admin/log.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/resources/views/dashboard/admin/manage.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/resources/views/dashboard/admin/redeem.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/resources/views/dashboard/bind.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/resources/views/dashboard/home.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/resources/views/dashboard/layout.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/resources/views/dashboard/log/redeem.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/resources/views/dashboard/navbar.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/resources/views/dashboard/platformbind.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/resources/views/dashboard/profile.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/resources/views/dashboard/redeem.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/resources/views/dashboard/sidebar.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/resources/views/dashboard/transfer.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/resources/views/dashboard/va.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/resources/views/dashboard/vainfo.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PilotSystem/resources/views/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PilotSystem/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/PilotSystem/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PilotSystem/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/PilotSystem/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PilotSystem/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/PilotSystem/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PilotSystem/app/Http/Controllers/Auth/ResetPasswordController.php" beforeDir="false" afterPath="$PROJECT_DIR$/PilotSystem/app/Http/Controllers/Auth/ResetPasswordController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PilotSystem/app/Http/Controllers/Auth/VerificationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/PilotSystem/app/Http/Controllers/Auth/VerificationController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PilotSystem/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/PilotSystem/app/Http/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PilotSystem/app/Http/Middleware/RedirectIfAuthenticated.php" beforeDir="false" afterPath="$PROJECT_DIR$/PilotSystem/app/Http/Middleware/RedirectIfAuthenticated.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PilotSystem/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/PilotSystem/app/Providers/AppServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PilotSystem/app/Providers/EventServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/PilotSystem/app/Providers/EventServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PilotSystem/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/PilotSystem/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PilotSystem/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/PilotSystem/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PilotSystem/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/PilotSystem/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PilotSystem/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/PilotSystem/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PilotSystem/config/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/PilotSystem/config/auth.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PilotSystem/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/PilotSystem/config/database.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PilotSystem/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PilotSystem/database/migrations/2014_10_12_100000_create_password_resets_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PilotSystem/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/PilotSystem/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PilotSystem/public/css/app.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PilotSystem/public/js/app.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PilotSystem/resources/lang/en/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/PilotSystem/resources/lang/en/auth.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PilotSystem/resources/lang/en/pagination.php" beforeDir="false" afterPath="$PROJECT_DIR$/PilotSystem/resources/lang/en/pagination.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PilotSystem/app/Listeners/EmailVerified.php" beforeDir="false" afterPath="$PROJECT_DIR$/PilotSystem/app/Listeners/EmailVerified.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PilotSystem/resources/views/dashboard/platformbind.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/PilotSystem/resources/views/dashboard/platformbind.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PilotSystem/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/PilotSystem/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PilotSystem/webpack.mix.js" beforeDir="false" afterPath="$PROJECT_DIR$/PilotSystem/webpack.mix.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -412,85 +19,82 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PilotSystem/app/Http/Controllers/Auth/RegisterController.php">
+        <entry file="file://$PROJECT_DIR$/PilotSystem/database/migrations/2019_03_31_175959_reset_password_table.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="335">
-              <caret line="85" column="18" selection-start-line="85" selection-start-column="18" selection-end-line="85" selection-end-column="18" />
-              <folding>
-                <element signature="e#45#66#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="390">
+              <caret line="28" column="5" lean-forward="true" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PilotSystem/app/Models/Pilot.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="116" column="26" lean-forward="true" selection-start-line="116" selection-start-column="26" selection-end-line="116" selection-end-column="26" />
-              <folding>
-                <element signature="e#30#70#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/PilotSystem/app/Models/PilotTimeStats.php">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PilotSystem/resources/views/auth/login.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="23" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/PilotSystem/app/Models/Platform.php">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PilotSystem/resources/views/dashboard/profile.blade.php">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/PilotSystem/resources/views/dashboard/home.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
-              <caret line="113" column="32" selection-start-line="113" selection-start-column="32" selection-end-line="113" selection-end-column="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PilotSystem/resources/views/dashboard/platformbind.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="244">
-              <caret line="57" column="15" selection-start-line="57" selection-start-column="15" selection-end-line="57" selection-end-column="15" />
+            <state relative-caret-position="278">
+              <caret line="88" column="32" selection-start-line="88" selection-start-column="32" selection-end-line="88" selection-end-column="32" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PilotSystem/resources/views/dashboard/bind.blade.php">
+        <entry file="file://$PROJECT_DIR$/PilotSystem/app/Models/Enums/PilotNameLog.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
+            <state relative-caret-position="270">
+              <caret line="18" column="43" lean-forward="true" selection-start-line="18" selection-start-column="43" selection-end-line="18" selection-end-column="43" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PilotSystem/resources/views/auth/suspended.blade.php">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PilotSystem/resources/views/auth/registered.blade.php">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PilotSystem/resources/views/auth/pending.blade.php">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PilotSystem/resources/views/auth/register.blade.php">
+        <entry file="file://$PROJECT_DIR$/PilotSystem/app/Http/Controllers/Auth/VerificationController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="41" column="37" selection-start-line="41" selection-start-column="37" selection-end-line="41" selection-end-column="37" />
+            <state relative-caret-position="305">
+              <caret line="32" column="19" lean-forward="true" selection-start-line="32" selection-start-column="19" selection-end-line="32" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PilotSystem/routes/web.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="158">
+              <caret line="29" column="33" selection-start-line="29" selection-start-column="27" selection-end-line="29" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PilotSystem/app/Http/Controllers/Frontend/DashboardController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="5">
+              <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PilotSystem/app/Listeners/EmailVerified.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="207">
+              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+              <folding>
+                <element signature="e#33#67#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -514,6 +118,7 @@
       <find>$user</find>
       <find>payment(</find>
       <find>&lt;br /&gt;</find>
+      <find>解绑失败</find>
     </findStrings>
     <replaceStrings>
       <replace>$timeStats</replace>
@@ -525,7 +130,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/PilotSystem/resources/views/dashboard/profile.blade.php" />
         <option value="$PROJECT_DIR$/PilotSystem/resources/views/dashboard/transfer.blade.php" />
         <option value="$PROJECT_DIR$/PilotSystem/app/Http/Requests/UpdateProfileRequest.php" />
         <option value="$PROJECT_DIR$/PilotSystem/app/Http/Requests/BindVARequest.php" />
@@ -541,7 +145,6 @@
         <option value="$PROJECT_DIR$/PilotSystem/resources/views/dashboard/admin/redeem.blade.php" />
         <option value="$PROJECT_DIR$/PilotSystem/app/Models/Enums/PilotFlightPermission.php" />
         <option value="$PROJECT_DIR$/PilotSystem/resources/views/dashboard/bind.blade.php" />
-        <option value="$PROJECT_DIR$/PilotSystem/resources/views/dashboard/platformbind.blade.php" />
         <option value="$PROJECT_DIR$/PilotSystem/resources/views/dashboard/vainfo.blade.php" />
         <option value="$PROJECT_DIR$/PilotSystem/resources/views/dashboard/admin/manage.blade.php" />
         <option value="$PROJECT_DIR$/PilotSystem/app/Http/Requests/AdminUpdateProfileRequest.php" />
@@ -571,11 +174,13 @@
         <option value="$PROJECT_DIR$/PilotSystem/app/Http/Controllers/Auth/ResetPasswordController.php" />
         <option value="$PROJECT_DIR$/PilotSystem/resources/views/auth/register.blade.php" />
         <option value="$PROJECT_DIR$/PilotSystem/app/Providers/EventServiceProvider.php" />
-        <option value="$PROJECT_DIR$/PilotSystem/routes/web.php" />
-        <option value="$PROJECT_DIR$/PilotSystem/app/Listeners/EmailVerified.php" />
         <option value="$PROJECT_DIR$/PilotSystem/app/Http/Controllers/Auth/RegisterController.php" />
         <option value="$PROJECT_DIR$/PilotSystem/app/Models/Pilot.php" />
         <option value="$PROJECT_DIR$/PilotSystem/resources/views/dashboard/home.blade.php" />
+        <option value="$PROJECT_DIR$/PilotSystem/database/migrations/2019_03_31_175959_reset_password_table.php" />
+        <option value="$PROJECT_DIR$/PilotSystem/app/Listeners/EmailVerified.php" />
+        <option value="$PROJECT_DIR$/PilotSystem/routes/web.php" />
+        <option value="$PROJECT_DIR$/PilotSystem/resources/views/dashboard/platformbind.blade.php" />
       </list>
     </option>
   </component>
@@ -722,6 +327,21 @@
               <item name="PilotSystem_Docker" type="462c0819:PsiDirectoryNode" />
               <item name="PilotSystem" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Console" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PilotSystem_Docker" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PilotSystem_Docker" type="462c0819:PsiDirectoryNode" />
+              <item name="PilotSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Console" type="462c0819:PsiDirectoryNode" />
+              <item name="Commands" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PilotSystem_Docker" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PilotSystem_Docker" type="462c0819:PsiDirectoryNode" />
+              <item name="PilotSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="Http" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -746,6 +366,15 @@
               <item name="PilotSystem_Docker" type="462c0819:PsiDirectoryNode" />
               <item name="PilotSystem" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Http" type="462c0819:PsiDirectoryNode" />
+              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
+              <item name="Frontend" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PilotSystem_Docker" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PilotSystem_Docker" type="462c0819:PsiDirectoryNode" />
+              <item name="PilotSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="Listeners" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -754,6 +383,14 @@
               <item name="PilotSystem" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="Models" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PilotSystem_Docker" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PilotSystem_Docker" type="462c0819:PsiDirectoryNode" />
+              <item name="PilotSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Models" type="462c0819:PsiDirectoryNode" />
+              <item name="Enums" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="PilotSystem_Docker" type="b2602c69:ProjectViewProjectNode" />
@@ -831,6 +468,23 @@
               <item name="assets" type="462c0819:PsiDirectoryNode" />
               <item name="css" type="462c0819:PsiDirectoryNode" />
               <item name="maps" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PilotSystem_Docker" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PilotSystem_Docker" type="462c0819:PsiDirectoryNode" />
+              <item name="PilotSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PilotSystem_Docker" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PilotSystem_Docker" type="462c0819:PsiDirectoryNode" />
+              <item name="PilotSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+              <item name="auth" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="PilotSystem_Docker" type="b2602c69:ProjectViewProjectNode" />
@@ -1000,12 +654,12 @@
       <workItem from="1553641520177" duration="127000" />
       <workItem from="1553642391853" duration="36109000" />
       <workItem from="1553881536084" duration="484000" />
-      <workItem from="1554042164556" duration="8967000" />
+      <workItem from="1554042164556" duration="11270000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="129192000" />
+    <option name="totallyTimeSpent" value="131495000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1260" height="669" extended-state="0" />
@@ -1038,100 +692,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/PilotSystem/.env">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="34" selection-start-line="34" selection-end-line="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PilotSystem/config/queue.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PilotSystem/vendor/laravel/framework/src/Illuminate/Auth/Notifications/VerifyEmail.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
-          <folding>
-            <element signature="e#49#79#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PilotSystem/vendor/laravel/framework/src/Illuminate/Bus/Queueable.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1750">
-          <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PilotSystem/_ide_helper.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="356">
-          <caret line="6127" column="66" selection-start-line="6127" selection-start-column="66" selection-end-line="6127" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PilotSystem/resources/lang/en/validation.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PilotSystem/resources/lang/en/passwords.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PilotSystem/resources/lang/en/pagination.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PilotSystem/resources/lang/en/common.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PilotSystem/resources/lang/en/auth.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PilotSystem/app/Notifications/CustomVerifyEmail.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="11" column="23" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="23" />
-          <folding>
-            <element signature="e#37#83#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PilotSystem/vendor/laravel/framework/src/Illuminate/Contracts/Auth/MustVerifyEmail.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="37" selection-start-line="25" selection-end-line="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PilotSystem/resources/views/auth/verify.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="6" selection-start-line="23" selection-start-column="6" selection-end-line="23" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PilotSystem/config/database.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="45" selection-start-line="18" selection-start-column="45" selection-end-line="18" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PilotSystem/database/migrations/2019_03_17_140609_refactor_pilots_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="26" selection-start-line="26" selection-end-line="28" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PilotSystem/database/migrations/2019_03_29_044028_refactor_pilot_search_log.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="21" selection-start-line="21" selection-end-line="25" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/PilotSystem/database/migrations/2019_03_31_162024_pilot_email_verify.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
@@ -1166,9 +726,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PilotSystem/resources/views/dashboard/profile.blade.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/PilotSystem/resources/views/dashboard/navbar.blade.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1192,9 +749,6 @@
           <caret line="35" column="20" selection-start-line="35" selection-start-column="20" selection-end-line="35" selection-end-column="20" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PilotSystem/app/Models/Platform.php">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/PilotSystem/app/Models/PilotRedeemCode.php">
       <provider selected="true" editor-type-id="text-editor" />
@@ -1243,13 +797,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PilotSystem/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="27" column="31" lean-forward="true" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/PilotSystem/app/Http/Controllers/Auth/ResetPasswordController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-113">
@@ -1260,27 +807,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PilotSystem/app/Http/Controllers/Auth/VerificationController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="32" column="19" lean-forward="true" selection-start-line="32" selection-start-column="19" selection-end-line="32" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/PilotSystem/database/migrations/2019_03_20_170151_laratrust_setup_tables.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="303">
           <caret line="107" selection-start-line="107" selection-end-line="111" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PilotSystem/app/Listeners/EmailVerified.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="359">
-          <caret line="32" column="30" lean-forward="true" selection-start-line="32" selection-start-column="30" selection-end-line="32" selection-end-column="30" />
-          <folding>
-            <element signature="e#33#54#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1327,13 +857,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PilotSystem/resources/views/dashboard/platformbind.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="57" column="15" selection-start-line="57" selection-start-column="15" selection-end-line="57" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/PilotSystem/resources/views/dashboard/bind.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -1343,8 +866,123 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/PilotSystem/resources/views/dashboard/home.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="113" column="32" selection-start-line="113" selection-start-column="32" selection-end-line="113" selection-end-column="32" />
+        <state relative-caret-position="275">
+          <caret line="108" column="23" selection-start-line="108" selection-start-column="23" selection-end-line="108" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/1@2x.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PilotSystem/public/assets/images/favicon.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PilotSystem/public/assets/images/logo.svg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PilotSystem/public/assets/images/logo_mini.svg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PilotSystem/public/assets/images/logo_white.svg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PilotSystem/public/assets/images/auth/bg.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PilotSystem/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="28" column="19" lean-forward="true" selection-start-line="28" selection-start-column="19" selection-end-line="28" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PilotSystem/app/Console/Command.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PilotSystem/app/Console/Commands/DevCommands.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="211">
+          <caret line="38" column="19" lean-forward="true" selection-start-line="38" selection-start-column="19" selection-end-line="38" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PilotSystem/app/Http/Controllers/Frontend/HomeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PilotSystem/app/Http/Controllers/Frontend/AdminDashboardController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1211" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PilotSystem/app/Providers/AuthServiceProvider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="23" column="25" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PilotSystem/app/Models/PilotTimeStats.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PilotSystem/app/Models/Platform.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PilotSystem/resources/views/dashboard/profile.blade.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PilotSystem/app/Models/Enums/PilotNameLog.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="43" lean-forward="true" selection-start-line="18" selection-start-column="43" selection-end-line="18" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PilotSystem/database/migrations/2019_03_31_175959_reset_password_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="28" column="5" lean-forward="true" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PilotSystem/app/Http/Controllers/Auth/VerificationController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="305">
+          <caret line="32" column="19" lean-forward="true" selection-start-line="32" selection-start-column="19" selection-end-line="32" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PilotSystem/app/Listeners/EmailVerified.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+          <folding>
+            <element signature="e#33#67#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PilotSystem/app/Http/Controllers/Frontend/DashboardController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5">
+          <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PilotSystem/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="29" column="33" selection-start-line="29" selection-start-column="27" selection-end-line="29" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PilotSystem/resources/views/dashboard/platformbind.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="278">
+          <caret line="88" column="32" selection-start-line="88" selection-start-column="32" selection-end-line="88" selection-end-column="32" />
         </state>
       </provider>
     </entry>

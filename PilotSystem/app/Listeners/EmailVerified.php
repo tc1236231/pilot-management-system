@@ -2,6 +2,7 @@
 
 namespace App\Listeners;
 
+use App\Models\Enums\PilotNameLog;
 use App\Models\Pilot;
 use App\Models\Role;
 use Illuminate\Auth\Events\Verified;
@@ -31,6 +32,7 @@ class EmailVerified
         $pilot = $event->user;
         if($pilot->level == 0)
             $pilot->level = 1;
+            $pilot->namelog = PilotNameLog::EMAIL_VERIFIED;
         $role = Role::where('name', 'user')->first();
         $pilot->attachRole($role);
         $pilot->save();
