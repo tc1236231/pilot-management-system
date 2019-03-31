@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="722eae44-6275-42c6-8be4-1b623b872617" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/PilotSystem/app/Http/Controllers/Frontend/AdminDashboardController.php" beforeDir="false" afterPath="$PROJECT_DIR$/PilotSystem/app/Http/Controllers/Frontend/AdminDashboardController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PilotSystem/app/Models/Pilot.php" beforeDir="false" afterPath="$PROJECT_DIR$/PilotSystem/app/Models/Pilot.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PilotSystem/app/Notifications/CustomVerifyEmail.php" beforeDir="false" afterPath="$PROJECT_DIR$/PilotSystem/app/Notifications/CustomVerifyEmail.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PilotSystem/app/Notifications/CustomResetPassword.php" beforeDir="false" afterPath="$PROJECT_DIR$/PilotSystem/app/Notifications/CustomResetPassword.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,11 +15,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/PilotSystem/app/Notifications/CustomResetPassword.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" column="23" selection-start-line="21" selection-end-line="22" />
+            <state relative-caret-position="350">
+              <caret line="24" column="25" lean-forward="true" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
               <folding>
                 <element signature="e#37#85#0#PHP" expanded="true" />
               </folding>
@@ -41,8 +39,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PilotSystem/app/Models/Pilot.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="156" column="40" lean-forward="true" selection-start-line="156" selection-start-column="40" selection-end-line="156" selection-end-column="40" />
+            <state relative-caret-position="245">
+              <caret line="147" column="5" lean-forward="true" selection-start-line="147" selection-start-column="5" selection-end-line="147" selection-end-column="5" />
               <folding>
                 <element signature="e#30#72#0#PHP" expanded="true" />
               </folding>
@@ -83,11 +81,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PilotSystem/app/Http/Controllers/Frontend/AdminDashboardController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="416">
-              <caret line="97" column="58" selection-start-line="97" selection-start-column="58" selection-end-line="97" selection-end-column="58" />
+            <state relative-caret-position="393">
+              <caret line="100" lean-forward="true" selection-start-line="100" selection-end-line="100" />
             </state>
           </provider>
         </entry>
@@ -194,9 +192,9 @@
         <option value="$PROJECT_DIR$/PilotSystem/routes/web.php" />
         <option value="$PROJECT_DIR$/PilotSystem/resources/views/dashboard/platformbind.blade.php" />
         <option value="$PROJECT_DIR$/PilotSystem/app/Models/Pilot.php" />
-        <option value="$PROJECT_DIR$/PilotSystem/app/Notifications/CustomResetPassword.php" />
         <option value="$PROJECT_DIR$/PilotSystem/app/Notifications/CustomVerifyEmail.php" />
         <option value="$PROJECT_DIR$/PilotSystem/app/Http/Controllers/Frontend/AdminDashboardController.php" />
+        <option value="$PROJECT_DIR$/PilotSystem/app/Notifications/CustomResetPassword.php" />
       </list>
     </option>
   </component>
@@ -670,12 +668,12 @@
       <workItem from="1553641520177" duration="127000" />
       <workItem from="1553642391853" duration="36109000" />
       <workItem from="1553881536084" duration="484000" />
-      <workItem from="1554042164556" duration="12953000" />
+      <workItem from="1554042164556" duration="13084000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="133178000" />
+    <option name="totallyTimeSpent" value="133309000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1260" height="669" extended-state="0" />
@@ -958,16 +956,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PilotSystem/app/Notifications/CustomResetPassword.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="23" selection-start-line="21" selection-end-line="22" />
-          <folding>
-            <element signature="e#37#85#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/PilotSystem/app/Notifications/CustomVerifyEmail.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
@@ -991,16 +979,6 @@
     <entry file="file://$PROJECT_DIR$/PilotSystem/app/Models/PilotLog.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/PilotSystem/app/Models/Pilot.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="156" column="40" lean-forward="true" selection-start-line="156" selection-start-column="40" selection-end-line="156" selection-end-column="40" />
-          <folding>
-            <element signature="e#30#72#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/PilotSystem/app/Models/Enums/PilotNameLog.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -1017,8 +995,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/PilotSystem/app/Http/Controllers/Frontend/AdminDashboardController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="97" column="58" selection-start-line="97" selection-start-column="58" selection-end-line="97" selection-end-column="58" />
+        <state relative-caret-position="393">
+          <caret line="100" lean-forward="true" selection-start-line="100" selection-end-line="100" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PilotSystem/app/Models/Pilot.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="245">
+          <caret line="147" column="5" lean-forward="true" selection-start-line="147" selection-start-column="5" selection-end-line="147" selection-end-column="5" />
+          <folding>
+            <element signature="e#30#72#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PilotSystem/app/Notifications/CustomResetPassword.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="24" column="25" lean-forward="true" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
+          <folding>
+            <element signature="e#37#85#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
