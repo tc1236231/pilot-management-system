@@ -2,11 +2,14 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\Models\Pilot;
+use App\Models\Platform;
 use App\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Illuminate\Validation\Rule;
 
 class RegisterController extends Controller
 {
@@ -28,7 +31,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/dashboard';
 
     /**
      * Create a new controller instance.
@@ -40,6 +43,13 @@ class RegisterController extends Controller
         $this->middleware('guest');
     }
 
+    public function showRegistrationForm()
+    {
+        return view('auth.register', [
+            'platforms' => Platform::where('shouquan','=',1)->get()
+        ]);
+    }
+
     /**
      * Get a validator for an incoming registration request.
      *
@@ -49,9 +59,16 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'platform' => ['required',
+                Rule::exists('platform','code')->where(function ($query) {
+                    $query->where('shouquan', '=', 1);
+                }),
+                ],
+            'callsign' => ['required', 'string', 'min:4', 'max:4', 'unique:pilots', 'unique:saved_huhao,huhao'],
+            'email' => ['required', 'string', 'email', 'max:255', 'unique:pilots', 'confirmed'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
+            'icq' => ['required', 'string', 'max:20', 'unique:saved_icq,icq'],
+            'toc_accepted' => ['required', 'accepted'],
         ]);
     }
 
@@ -61,12 +78,15 @@ class RegisterController extends Controller
      * @param  array  $data
      * @return \App\User
      */
-    protected function create(array $data)
+    protected function create(array $data) : Pilot
     {
-        return User::create([
-            'name' => $data['name'],
+        return Pilot::create([
+            'co' => $data['platform'],
+            'callsign' => $data['callsign'],
             'email' => $data['email'],
+            'level' => 0,
             'password' => Hash::make($data['password']),
+            'icq' => 'QQ号' . ':' . $data['icq'],
         ]);
     }
 }

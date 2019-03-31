@@ -59,6 +59,28 @@ return [
             ]) : [],
         ],
 
+        'platform_cfr' => [
+            'driver'    => 'mysql',
+            'host'      => env('DB_HOST_CFR', '127.0.0.1'),
+            'database'  => env('DB_DATABASE_CFR', 'forge'),
+            'username'  => env('DB_USERNAME_CFR', 'forge'),
+            'password'  => env('DB_PASSWORD_CFR', ''),
+            'charset'   => 'utf8',
+            'collation' => 'utf8_general_ci',
+            'prefix'    => '',
+        ],
+
+        'platform_va' => [
+            'driver'    => 'mysql',
+            'host'      => env('DB_HOST_VA', '127.0.0.1'),
+            'database'  => env('DB_DATABASE_VA', 'forge'),
+            'username'  => env('DB_USERNAME_VA', 'forge'),
+            'password'  => env('DB_PASSWORD_VA', ''),
+            'charset'   => 'utf8',
+            'collation' => 'utf8_general_ci',
+            'prefix'    => '',
+        ],
+
         'pgsql' => [
             'driver' => 'pgsql',
             'host' => env('DB_HOST', '127.0.0.1'),
