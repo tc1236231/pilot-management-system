@@ -31,6 +31,20 @@
                             </div>
                         </div>
 
+                        <div class="form-group{{ $errors->has('callsign') ? ' has-error' : '' }}">
+                            <label for="callsign" class="col-md-4 control-label">{{ __('对应呼号') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="callsign" type="callsign" class="form-control" name="callsign" value="{{ old('callsign') }}" required>
+
+                                @if ($errors->has('callsign'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('callsign') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
                         <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
                             <label for="password" class="col-md-4 control-label">{{ __('Password') }}</label>
 
