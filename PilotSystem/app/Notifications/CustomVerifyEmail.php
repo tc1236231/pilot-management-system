@@ -20,7 +20,7 @@ class CustomVerifyEmail extends VerifyEmail
         }
 
         return (new MailMessage)
-            ->from('coc@chinaflier.com')
+            ->from(env('MAIL_USERNAME'))
             ->subject('飞行员系统-邮箱验证激活')
             ->line('请点击下面的按钮以完成飞行员系统的邮箱激活')
             ->action(

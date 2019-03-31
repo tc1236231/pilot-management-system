@@ -89,6 +89,16 @@ class AdminDashboardController extends Controller
         $targetPilot->txt =  $attrs['txt'] . " | "  . $targetPilot->txt;
         $targetPilot->save();
 
+        $logs = [
+            'co' => $targetPilot->co,
+            'searchid' => $targetPilot->callsign,
+            'level' => $targetPilot->level,
+            'namelog' => $targetPilot->namelog,
+            'txt' => $attrs['txt'],
+            'admin_callsign' => $request->user()->callsign
+        ];
+        PilotSearchLog::create($logs);
+
         $request->session()->flash('status', '修改成功!');
         $request->session()->flash('alert-class', 'alert-success');
         return redirect()->back();
