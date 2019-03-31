@@ -17,6 +17,8 @@ class AuthController extends Controller
     {
         $callsign = Input::get('callsign','');
         $password = Input::get('password','');
+        if(strlen($callsign) != 4 || !is_numeric($callsign))
+            return response()->json(['status' => 'error', 'message' => '呼号格式错误']);
 
         $pilot = Pilot::where('callsign', '=', $callsign)->first();
         if(!$pilot)
@@ -28,6 +30,6 @@ class AuthController extends Controller
         if ($pilot->level == PilotLevel::BANNED)
             return response()->json(['status' => 'error', 'message' => '呼号停飞']);
 
-        return response()->json(['status' => 'success', 'message' => '']);
+        return response()->json(['status' => 'success', 'message' => '', 'pilot' => $pilot]);
     }
 }
