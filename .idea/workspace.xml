@@ -2,10 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="722eae44-6275-42c6-8be4-1b623b872617" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PilotSystem/public/assets/images/logo.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PilotSystem/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/PilotSystem/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PilotSystem/app/Http/Controllers/Api/AuthController.php" beforeDir="false" afterPath="$PROJECT_DIR$/PilotSystem/app/Http/Controllers/Api/AuthController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PilotSystem/resources/lang/cn/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/PilotSystem/resources/lang/cn/auth.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PilotSystem/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/PilotSystem/resources/views/auth/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PilotSystem/resources/views/auth/passwords/email.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/PilotSystem/resources/views/auth/passwords/email.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PilotSystem/resources/views/base.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/PilotSystem/resources/views/base.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PilotSystem/resources/views/dashboard/navbar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/PilotSystem/resources/views/dashboard/navbar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PilotSystem/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/PilotSystem/resources/views/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PilotSystem/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/PilotSystem/routes/api.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,31 +25,36 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PilotSystem/app/Http/Controllers/Api/AuthController.php">
+        <entry file="file://$PROJECT_DIR$/PilotSystem/resources/views/dashboard/navbar.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="29" column="48" lean-forward="true" selection-start-line="29" selection-start-column="48" selection-end-line="29" selection-end-column="48" />
-              <folding>
-                <element signature="e#44#76#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="255">
+              <caret line="17" column="45" lean-forward="true" selection-start-line="17" selection-start-column="45" selection-end-line="17" selection-end-column="45" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PilotSystem/.gitignore">
+        <entry file="file://$PROJECT_DIR$/PilotSystem/resources/views/home.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" column="1" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
+            <state relative-caret-position="333">
+              <caret line="111" column="55" lean-forward="true" selection-start-line="111" selection-start-column="55" selection-end-line="111" selection-end-column="55" />
+              <folding>
+                <element signature="e#2686#2736#0#HTML" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
+        <entry file="file://$PROJECT_DIR$/PilotSystem/app/Http/Controllers/Api/AuthController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="1" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
+            <state relative-caret-position="262">
+              <caret line="75" column="60" selection-start-line="75" selection-start-column="60" selection-end-line="75" selection-end-column="60" />
+              <folding>
+                <element signature="e#44#76#0#PHP" expanded="true" />
+                <element signature="e#25#31#0" expanded="true" />
+                <element signature="e#31#37#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -51,59 +62,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PilotSystem/routes/api.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="3" lean-forward="true" selection-start-line="20" selection-start-column="3" selection-end-line="20" selection-end-column="3" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PilotSystem/app/Http/Controllers/Auth/LoginController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="298">
-              <caret line="28" column="7" lean-forward="true" selection-start-line="28" selection-start-column="7" selection-end-line="28" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PilotSystem/config/auth.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-132">
-              <caret line="46" column="28" lean-forward="true" selection-start-line="46" selection-start-column="28" selection-end-line="46" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PilotSystem/database/migrations/2019_03_31_210406_api_user.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="293">
-              <caret line="22" column="11" lean-forward="true" selection-start-line="22" selection-start-column="11" selection-end-line="22" selection-end-column="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PilotSystem/app/Models/ApiUser.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="33" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
-              <folding>
-                <element signature="e#30#70#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PilotSystem/app/Models/User.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="18" lean-forward="true" selection-end-line="56" />
-              <folding>
-                <element signature="e#30#70#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="195">
+              <caret line="13" column="2" lean-forward="true" selection-start-line="13" selection-start-column="2" selection-end-line="13" selection-end-column="2" />
             </state>
           </provider>
         </entry>
@@ -111,8 +71,49 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PilotSystem/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="36" column="21" lean-forward="true" selection-start-line="36" selection-start-column="21" selection-end-line="36" selection-end-column="21" />
+            <state relative-caret-position="690">
+              <caret line="55" column="2" selection-start-line="55" selection-start-column="2" selection-end-line="55" selection-end-column="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PilotSystem/routes/channels.php">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PilotSystem/resources/views/auth/login.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="335">
+              <caret line="56" column="18" selection-start-line="56" selection-start-column="18" selection-end-line="56" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PilotSystem/resources/views/dashboard/platformbind.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-57">
+              <caret line="74" selection-start-line="74" selection-end-line="103" selection-end-column="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PilotSystem/resources/views/base.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="20" column="26" lean-forward="true" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PilotSystem/resources/views/dashboard/layout.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="18" column="25" lean-forward="true" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -137,9 +138,19 @@
       <find>payment(</find>
       <find>&lt;br /&gt;</find>
       <find>解绑失败</find>
+      <find>locale</find>
+      <find>login-full</find>
+      <find>routes</find>
+      <find>@$namelog==</find>
+      <find>font</find>
+      <find>echo</find>
     </findStrings>
     <replaceStrings>
       <replace>$timeStats</replace>
+      <replace>$namelog==</replace>
+      <replace>$this-&gt;hideStar($icq)</replace>
+      <replace>fonts</replace>
+      <replace>$message .=</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -148,11 +159,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/PilotSystem/resources/views/dashboard/log/redeem.blade.php" />
-        <option value="$PROJECT_DIR$/PilotSystem/resources/views/dashboard/redeem.blade.php" />
-        <option value="$PROJECT_DIR$/PilotSystem/app/Http/Requests/CreateRedeemCodesRequest.php" />
-        <option value="$PROJECT_DIR$/PilotSystem/resources/views/dashboard/admin/redeem.blade.php" />
-        <option value="$PROJECT_DIR$/PilotSystem/app/Models/Enums/PilotFlightPermission.php" />
         <option value="$PROJECT_DIR$/PilotSystem/resources/views/dashboard/bind.blade.php" />
         <option value="$PROJECT_DIR$/PilotSystem/resources/views/dashboard/vainfo.blade.php" />
         <option value="$PROJECT_DIR$/PilotSystem/resources/views/dashboard/admin/manage.blade.php" />
@@ -169,14 +175,11 @@
         <option value="$PROJECT_DIR$/PilotSystem/config/wechat.php" />
         <option value="$PROJECT_DIR$/PilotSystem/app/Http/Controllers/WechatController.php" />
         <option value="$PROJECT_DIR$/PilotSystem/resources/views/auth/toc.blade.php" />
-        <option value="$PROJECT_DIR$/PilotSystem/resources/views/auth/login.blade.php" />
         <option value="$PROJECT_DIR$/PilotSystem/resources/views/auth/verify.blade.php" />
         <option value="$PROJECT_DIR$/PilotSystem/app/Http/Controllers/Auth/VerificationController.php" />
         <option value="$PROJECT_DIR$/PilotSystem/app/Http/Kernel.php" />
         <option value="$PROJECT_DIR$/PilotSystem/config/mail.php" />
-        <option value="$PROJECT_DIR$/PilotSystem/.env" />
         <option value="$PROJECT_DIR$/PilotSystem/database/migrations/2019_03_31_162024_pilot_email_verify.php" />
-        <option value="$PROJECT_DIR$/PilotSystem/resources/views/auth/passwords/email.blade.php" />
         <option value="$PROJECT_DIR$/PilotSystem/resources/views/auth/register.blade.php" />
         <option value="$PROJECT_DIR$/PilotSystem/app/Http/Controllers/Auth/RegisterController.php" />
         <option value="$PROJECT_DIR$/PilotSystem/resources/views/dashboard/home.blade.php" />
@@ -192,13 +195,21 @@
         <option value="$PROJECT_DIR$/PilotSystem/app/Providers/EventServiceProvider.php" />
         <option value="$PROJECT_DIR$/PilotSystem/app/Listeners/PasswordChanged.php" />
         <option value="$PROJECT_DIR$/PilotSystem/app/Http/Controllers/Auth/ResetPasswordController.php" />
-        <option value="$PROJECT_DIR$/PilotSystem/routes/api.php" />
         <option value="$PROJECT_DIR$/PilotSystem/config/auth.php" />
         <option value="$PROJECT_DIR$/PilotSystem/app/Models/ApiUser.php" />
         <option value="$PROJECT_DIR$/PilotSystem/database/migrations/2019_03_31_210406_api_user.php" />
-        <option value="$PROJECT_DIR$/PilotSystem/app/Http/Controllers/Api/AuthController.php" />
         <option value="$PROJECT_DIR$/PilotSystem/.gitignore" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/PilotSystem/.env" />
+        <option value="$PROJECT_DIR$/PilotSystem/public/assets/css/style.css" />
+        <option value="$PROJECT_DIR$/PilotSystem/resources/views/base.blade.php" />
+        <option value="$PROJECT_DIR$/PilotSystem/resources/lang/cn/auth.php" />
+        <option value="$PROJECT_DIR$/PilotSystem/resources/views/auth/passwords/email.blade.php" />
+        <option value="$PROJECT_DIR$/PilotSystem/resources/views/dashboard/navbar.blade.php" />
+        <option value="$PROJECT_DIR$/PilotSystem/resources/views/auth/login.blade.php" />
+        <option value="$PROJECT_DIR$/PilotSystem/routes/api.php" />
+        <option value="$PROJECT_DIR$/PilotSystem/resources/views/home.blade.php" />
+        <option value="$PROJECT_DIR$/PilotSystem/app/Http/Controllers/Api/AuthController.php" />
       </list>
     </option>
   </component>
@@ -334,6 +345,179 @@
               <item name="PilotSystem_Docker" type="462c0819:PsiDirectoryNode" />
               <item name="PilotSystem" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="PilotSystem_Docker" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PilotSystem_Docker" type="462c0819:PsiDirectoryNode" />
+              <item name="PilotSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PilotSystem_Docker" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PilotSystem_Docker" type="462c0819:PsiDirectoryNode" />
+              <item name="PilotSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Http" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PilotSystem_Docker" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PilotSystem_Docker" type="462c0819:PsiDirectoryNode" />
+              <item name="PilotSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Http" type="462c0819:PsiDirectoryNode" />
+              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PilotSystem_Docker" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PilotSystem_Docker" type="462c0819:PsiDirectoryNode" />
+              <item name="PilotSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Http" type="462c0819:PsiDirectoryNode" />
+              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
+              <item name="Api" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PilotSystem_Docker" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PilotSystem_Docker" type="462c0819:PsiDirectoryNode" />
+              <item name="PilotSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Http" type="462c0819:PsiDirectoryNode" />
+              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
+              <item name="Auth" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PilotSystem_Docker" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PilotSystem_Docker" type="462c0819:PsiDirectoryNode" />
+              <item name="PilotSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Interfaces" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PilotSystem_Docker" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PilotSystem_Docker" type="462c0819:PsiDirectoryNode" />
+              <item name="PilotSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Listeners" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PilotSystem_Docker" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PilotSystem_Docker" type="462c0819:PsiDirectoryNode" />
+              <item name="PilotSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Models" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PilotSystem_Docker" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PilotSystem_Docker" type="462c0819:PsiDirectoryNode" />
+              <item name="PilotSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Notifications" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PilotSystem_Docker" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PilotSystem_Docker" type="462c0819:PsiDirectoryNode" />
+              <item name="PilotSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="bootstrap" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PilotSystem_Docker" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PilotSystem_Docker" type="462c0819:PsiDirectoryNode" />
+              <item name="PilotSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="database" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PilotSystem_Docker" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PilotSystem_Docker" type="462c0819:PsiDirectoryNode" />
+              <item name="PilotSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PilotSystem_Docker" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PilotSystem_Docker" type="462c0819:PsiDirectoryNode" />
+              <item name="PilotSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PilotSystem_Docker" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PilotSystem_Docker" type="462c0819:PsiDirectoryNode" />
+              <item name="PilotSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PilotSystem_Docker" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PilotSystem_Docker" type="462c0819:PsiDirectoryNode" />
+              <item name="PilotSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PilotSystem_Docker" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PilotSystem_Docker" type="462c0819:PsiDirectoryNode" />
+              <item name="PilotSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PilotSystem_Docker" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PilotSystem_Docker" type="462c0819:PsiDirectoryNode" />
+              <item name="PilotSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="lang" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PilotSystem_Docker" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PilotSystem_Docker" type="462c0819:PsiDirectoryNode" />
+              <item name="PilotSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="lang" type="462c0819:PsiDirectoryNode" />
+              <item name="cn" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PilotSystem_Docker" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PilotSystem_Docker" type="462c0819:PsiDirectoryNode" />
+              <item name="PilotSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PilotSystem_Docker" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PilotSystem_Docker" type="462c0819:PsiDirectoryNode" />
+              <item name="PilotSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="auth" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PilotSystem_Docker" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PilotSystem_Docker" type="462c0819:PsiDirectoryNode" />
+              <item name="PilotSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="auth" type="462c0819:PsiDirectoryNode" />
+              <item name="passwords" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PilotSystem_Docker" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PilotSystem_Docker" type="462c0819:PsiDirectoryNode" />
+              <item name="PilotSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="dashboard" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PilotSystem_Docker" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PilotSystem_Docker" type="462c0819:PsiDirectoryNode" />
+              <item name="PilotSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="routes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PilotSystem_Docker" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PilotSystem_Docker" type="462c0819:PsiDirectoryNode" />
+              <item name="PilotSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="storage" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -347,19 +531,19 @@
     <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/PilotSystem/app/Http/Controllers/Frontend" />
-      <recent name="$PROJECT_DIR$/PilotSystem/resources/sass/sass" />
-      <recent name="$PROJECT_DIR$/PilotSystem/resources/js/coreui" />
-      <recent name="$PROJECT_DIR$/PilotSystem/app/Models" />
-      <recent name="$PROJECT_DIR$/PilotSystem/public/assets" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/PilotSystem/public/assets/images" />
       <recent name="$PROJECT_DIR$/PilotSystem/app/Models" />
       <recent name="$PROJECT_DIR$/PilotSystem/app/Services" />
       <recent name="$PROJECT_DIR$/PilotSystem/app/Console/Commands" />
       <recent name="$PROJECT_DIR$/PilotSystem/app/Console" />
-      <recent name="$PROJECT_DIR$/PilotSystem/app" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/PilotSystem/public/assets/images" />
+      <recent name="$PROJECT_DIR$/PilotSystem/app/Http/Controllers/Frontend" />
+      <recent name="$PROJECT_DIR$/PilotSystem/resources/sass/sass" />
+      <recent name="$PROJECT_DIR$/PilotSystem/resources/js/coreui" />
+      <recent name="$PROJECT_DIR$/PilotSystem/app/Models" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -388,19 +572,19 @@
       <workItem from="1553641520177" duration="127000" />
       <workItem from="1553642391853" duration="36109000" />
       <workItem from="1553881536084" duration="484000" />
-      <workItem from="1554042164556" duration="18846000" />
+      <workItem from="1554042164556" duration="25530000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="139071000" />
+    <option name="totallyTimeSpent" value="145755000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1260" height="669" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.29310346" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49913344" visible="true" weight="0.29310346" />
+      <window_info id="Structure" order="1" sideWeight="0.50086653" side_tool="true" weight="0.29310346" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32928944" />
@@ -426,189 +610,10 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/PilotSystem/public/assets/images/logo_white.svg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PilotSystem/public/assets/images/auth/bg.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PilotSystem/.env">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="19" lean-forward="true" selection-start-line="28" selection-start-column="19" selection-end-line="28" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PilotSystem/app/Console/Command.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PilotSystem/app/Console/Commands/DevCommands.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="38" column="19" lean-forward="true" selection-start-line="38" selection-start-column="19" selection-end-line="38" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PilotSystem/app/Http/Controllers/Frontend/HomeController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PilotSystem/app/Providers/AuthServiceProvider.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="23" column="25" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PilotSystem/app/Models/PilotTimeStats.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PilotSystem/app/Models/Platform.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PilotSystem/resources/views/dashboard/profile.blade.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PilotSystem/database/migrations/2019_03_31_175959_reset_password_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="28" column="5" lean-forward="true" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PilotSystem/app/Http/Controllers/Frontend/DashboardController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5">
-          <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PilotSystem/resources/views/dashboard/platformbind.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="5" lean-forward="true" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PilotSystem/vendor/laravel/framework/src/Illuminate/Auth/Notifications/ResetPassword.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="52" selection-start-line="52" selection-end-line="64" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PilotSystem/resources/views/home.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="335">
-          <caret line="62" column="33" selection-start-line="62" selection-start-column="33" selection-end-line="62" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PilotSystem/app/Models/PilotLog.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PilotSystem/app/Models/Enums/PilotNameLog.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="43" lean-forward="true" selection-start-line="18" selection-start-column="43" selection-end-line="18" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PilotSystem/app/Models/PilotSearchLog.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="409">
-          <caret line="45" column="23" selection-start-line="45" selection-start-column="9" selection-end-line="45" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PilotSystem/app/Models/Pilot.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="147" column="5" lean-forward="true" selection-start-line="147" selection-start-column="5" selection-end-line="147" selection-end-column="5" />
-          <folding>
-            <element signature="e#30#72#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PilotSystem/app/Http/Controllers/Auth/VerificationController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="20" column="20" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PilotSystem/vendor/laravel/framework/src/Illuminate/Support/Facades/Password.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="58" column="1" lean-forward="true" selection-start-line="58" selection-start-column="1" selection-end-line="58" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PilotSystem/vendor/laravel/framework/src/Illuminate/Auth/Passwords/PasswordBrokerManager.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1585">
-          <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PilotSystem/_ide_helper.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="7354" column="45" lean-forward="true" selection-start-line="7354" selection-start-column="45" selection-end-line="7354" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PilotSystem/vendor/laravel/framework/src/Illuminate/Contracts/Auth/PasswordBroker.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PilotSystem/app/Http/Controllers/Auth/ForgotPasswordController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="23" column="18" lean-forward="true" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PilotSystem/vendor/laravel/framework/src/Illuminate/Foundation/Auth/SendsPasswordResetEmails.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="25" column="38" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="38" />
-          <folding>
-            <element signature="e#46#74#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PilotSystem/vendor/laravel/framework/src/Illuminate/Foundation/Application.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="1122" column="69" selection-start-line="1122" selection-start-column="69" selection-end-line="1122" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PilotSystem/resources/views/auth/passwords/email.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-195" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/PilotSystem/vendor/laravel/framework/src/Illuminate/Auth/Passwords/PasswordBroker.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-13">
           <caret line="71" lean-forward="true" selection-start-line="71" selection-end-line="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PilotSystem/resources/views/auth/passwords/reset.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="39" selection-start-line="23" selection-start-column="39" selection-end-line="23" selection-end-column="39" />
         </state>
       </provider>
     </entry>
@@ -706,20 +711,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PilotSystem/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="36" column="21" lean-forward="true" selection-start-line="36" selection-start-column="21" selection-end-line="36" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PilotSystem/app/Http/Controllers/Auth/LoginController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="28" column="7" lean-forward="true" selection-start-line="28" selection-start-column="7" selection-end-line="28" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/PilotSystem/app/Models/User.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -727,13 +718,6 @@
           <folding>
             <element signature="e#30#70#0#PHP" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PilotSystem/routes/api.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="3" lean-forward="true" selection-start-line="20" selection-start-column="3" selection-end-line="20" selection-end-column="3" />
         </state>
       </provider>
     </entry>
@@ -751,29 +735,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PilotSystem/config/auth.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-132">
-          <caret line="46" column="28" lean-forward="true" selection-start-line="46" selection-start-column="28" selection-end-line="46" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/PilotSystem/app/Models/ApiUser.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="14" column="33" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
           <folding>
             <element signature="e#30#70#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PilotSystem/app/Http/Controllers/Api/AuthController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="29" column="48" lean-forward="true" selection-start-line="29" selection-start-column="48" selection-end-line="29" selection-end-column="48" />
-          <folding>
-            <element signature="e#44#76#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -788,7 +755,213 @@
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
-          <caret line="2" column="1" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
+          <caret line="2" column="6" lean-forward="true" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PilotSystem/app/Http/Controllers/Auth/LoginController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="28" column="7" lean-forward="true" selection-start-line="28" selection-start-column="7" selection-end-line="28" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PilotSystem/vendor/laravel/framework/src/Illuminate/Support/Facades/Hash.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="35" lean-forward="true" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PilotSystem/vendor/laravel/framework/src/Illuminate/Hashing/HashManager.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="214">
+          <caret line="72" column="34" selection-start-line="72" selection-start-column="34" selection-end-line="72" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PilotSystem/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="20" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PilotSystem/config/auth.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-360">
+          <caret line="46" column="28" lean-forward="true" selection-start-line="46" selection-start-column="28" selection-end-line="46" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PilotSystem/config/hashing.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="278">
+          <caret line="25" column="8" lean-forward="true" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PilotSystem/config/app.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="82" column="11" selection-start-line="82" selection-start-column="5" selection-end-line="82" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PilotSystem/vendor/laravel/framework/src/Illuminate/Broadcasting/BroadcastManager.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="431">
+          <caret line="113" column="45" lean-forward="true" selection-start-line="113" selection-start-column="45" selection-end-line="113" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PilotSystem/_ide_helper.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="212">
+          <caret line="2485" column="38" selection-start-line="2485" selection-start-column="38" selection-end-line="2485" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PilotSystem/public/assets/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="7024" column="39" lean-forward="true" selection-start-line="7024" selection-start-column="39" selection-end-line="7024" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PilotSystem/public/assets/images/sprites/dark.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PilotSystem/public/assets/images/logo.svg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PilotSystem/public/assets/images/logo_mini.svg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PilotSystem/public/assets/images/logo_white.svg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PilotSystem/public/assets/images/main_title.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PilotSystem/public/assets/images/logo.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PilotSystem/public/assets/images/favicon.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PilotSystem/resources/views/auth/layout.blade.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PilotSystem/resources/views/auth/passwords/reset.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="39" selection-start-line="23" selection-start-column="39" selection-end-line="23" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PilotSystem/resources/lang/cn/common.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PilotSystem/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="903" column="13" selection-start-line="903" selection-start-column="13" selection-end-line="903" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PilotSystem/resources/lang/cn/auth.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="18" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PilotSystem/resources/views/auth/passwords/email.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PilotSystem/resources/views/dashboard/home.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="70" lean-forward="true" selection-start-line="14" selection-start-column="70" selection-end-line="14" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PilotSystem/resources/views/dashboard/navbar.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="45" lean-forward="true" selection-start-line="17" selection-start-column="45" selection-end-line="17" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PilotSystem/resources/views/auth/login.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="335">
+          <caret line="56" column="18" selection-start-line="56" selection-start-column="18" selection-end-line="56" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PilotSystem/resources/views/base.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="26" lean-forward="true" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PilotSystem/resources/views/dashboard/layout.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="25" lean-forward="true" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PilotSystem/resources/views/dashboard/platformbind.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-57">
+          <caret line="74" selection-start-line="74" selection-end-line="103" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PilotSystem/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="690">
+          <caret line="55" column="2" selection-start-line="55" selection-start-column="2" selection-end-line="55" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PilotSystem/routes/api.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="2" lean-forward="true" selection-start-line="13" selection-start-column="2" selection-end-line="13" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PilotSystem/routes/channels.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PilotSystem/resources/views/home.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="333">
+          <caret line="111" column="55" lean-forward="true" selection-start-line="111" selection-start-column="55" selection-end-line="111" selection-end-column="55" />
+          <folding>
+            <element signature="e#2686#2736#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PilotSystem/app/Http/Controllers/Api/AuthController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="262">
+          <caret line="75" column="60" selection-start-line="75" selection-start-column="60" selection-end-line="75" selection-end-column="60" />
+          <folding>
+            <element signature="e#44#76#0#PHP" expanded="true" />
+            <element signature="e#25#31#0" expanded="true" />
+            <element signature="e#31#37#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

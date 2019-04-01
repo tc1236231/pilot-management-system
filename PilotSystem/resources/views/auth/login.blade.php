@@ -55,12 +55,6 @@
                     {{ Form::close() }}
                 </div>
             </div>
-            <div class="w-100"></div>
-            <div class="col-lg-4 mx-auto">
-                <input class="w-50 m-lg-3 search-input" placeholder="输入4位呼号" type="text" name="hh" id="hhnumber" value="" /> &nbsp;
-                <input type="button" name="button" class="btn btn-default" id="hhsearchstatus" value="查询呼号状态" />
-                <div style="color:lime;text-align:center;font-size:18px;margin-top:10px;" id="searchresult"></div>
-            </div>
         </div>
     </div>
     <!-- content-wrapper ends -->

@@ -14,6 +14,13 @@ use Illuminate\Http\Request;
 */
 
 Route::group([
+    'middleware' => ['throttle:60,1'],
+    'namespace' => 'Api', 'prefix' => 'public', 'as' => 'api.public.',
+], function () {
+    Route::get('/pilot/status', 'AuthController@queryPublicPilotStatus')->name('pilot.status');
+});
+
+Route::group([
     'middleware' => ['auth:api'],
     'namespace' => 'Api', 'prefix' => '', 'as' => 'api.',
 ], function () {

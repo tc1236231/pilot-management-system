@@ -1,7 +1,7 @@
 <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
     <div class="text-center navbar-brand-wrapper">
-        <a class="navbar-brand brand-logo" href="{{ route('frontend.home') }}"><img src="../../images/logo.svg" alt="logo"></a>
-        <a class="navbar-brand brand-logo-mini" href="{{ route('frontend.home') }}"><img src="../../images/logo_mini.svg" alt="logo"></a>
+        <a class="navbar-brand brand-logo" href="{{ route('frontend.home') }}"><img src="{{ asset('assets/images/dashboard-title.png') }}" alt="logo"></a>
+        <a class="navbar-brand brand-logo-mini" href="{{ route('frontend.home') }}"><img src="{{ asset('assets/images/logo.png') }}" alt="logo title"></a>
     </div>
     <div class="navbar-menu-wrapper d-flex align-items-center">
         <p class="page-name d-none d-lg-block">

@@ -13,9 +13,11 @@ return [
     |
     */
 
-    'failed' => 'These credentials do not match our records.',
-    'throttle' => 'Too many login attempts. Please try again in :seconds seconds.',
-    'login' => 'Login',
-    'createaccount' => 'Create New Callsign',
-    'forgotpassword' => 'Forgot Password',
+    'failed' => '呼号或密码错误.',
+    'throttle' => '尝试次数过多. 请在 :seconds 秒后重试.',
+    'login' => '登录',
+    'createaccount' => '注册呼号',
+    'forgotpassword' => '找回密码',
+    'email' => '注册邮箱',
+    'sendresetlink' => '发送密码重置链接至邮箱',
 ];
