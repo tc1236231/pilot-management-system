@@ -16,7 +16,7 @@
                 </ul>
             </div>
         </li>
-        @if(Auth::user()->level >= 4 && Auth::user()->level <= 8)
+        @if(Auth::user()->level >= 4 && Auth::user()->level <= 9)
             <li class="nav-item nav-category">
                 <a class="nav-link" data-toggle="collapse" href="#atc" aria-expanded="false" aria-controls="ui-basic">
                     <span class="menu-title">管制员功能</span>
