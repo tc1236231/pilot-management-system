@@ -18,6 +18,10 @@ return [
     'login' => '登录',
     'createaccount' => '注册呼号',
     'forgotpassword' => '找回密码',
+    'resetpassword' => '密码重置',
     'email' => '注册邮箱',
     'sendresetlink' => '发送密码重置链接至邮箱',
+    'callsign' => '飞行员呼号',
+    'password' => '密码',
+    'confirm_password' => '确认密码',
 ];

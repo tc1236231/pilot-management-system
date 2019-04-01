@@ -17,12 +17,12 @@ Route::group([
     'middleware' => ['throttle:60,1'],
     'namespace' => 'Api', 'prefix' => 'public', 'as' => 'api.public.',
 ], function () {
-    Route::get('/pilot/status', 'AuthController@queryPublicPilotStatus')->name('pilot.status');
+    Route::get('/pilot/status', 'PilotController@queryPublicPilotStatus')->name('pilot.status');
 });
 
 Route::group([
     'middleware' => ['auth:api'],
     'namespace' => 'Api', 'prefix' => '', 'as' => 'api.',
 ], function () {
-    Route::get('/pilot/verify', 'AuthController@verifyCallsignPassword');
+    Route::get('/pilot/verify', 'PilotController@verifyCallsignPassword')->name('pilot.verify');
 });

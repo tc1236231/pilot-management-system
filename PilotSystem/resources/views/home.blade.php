@@ -74,7 +74,7 @@
                             @endif
                         @endauth
                         <div class="col-lg-12 mx-auto my-3">
-                            <input class="m-lg-3 search-input" placeholder="输入4位呼号" type="text" name="callsign" id="callsign" value="" /> &nbsp;
+                            <input class="m-lg-3 search-input" placeholder="输入4位呼号或QQ号" type="text" name="callsign" id="callsign" value="" /> &nbsp;
                             <input type="button" name="button" class="btn btn-outline-light" id="queryStatus" value="查询呼号状态" />
                             <div class="m-0" style="color:lime;text-align:center;" id="searchResult">
                             </div>
@@ -92,7 +92,12 @@
                 e.preventDefault();
                 let button = $(this);
                 button.prop('disabled', true);
+                let field = 'callsign';
                 let callsign = $('#callsign').val();
+                if(callsign.length > 4)
+                {
+                    field = 'icq';
+                }
                 $.ajaxSetup({
                     headers: {
                         'Accept': 'application/json',
@@ -104,16 +109,15 @@
                     url: "{{ route('api.public.pilot.status') }}",
                     method: 'GET',
                     data: {
-                        callsign: callsign,
+                        callsign: callsign, type: field,
                     },
                     success: function(result){
-                        console.log(result.message);
                         $('#searchResult').html(result.message);
                         button.prop('disabled', false);
                     },
                     error: function (jqXHR, status, err) {
-                        var err = eval("(" + jqXHR.responseText + ")");
-                        $('#searchResult').html('查询失败:' + err.message);
+                        let responseTxt = eval("(" + jqXHR.responseText + ")");
+                        $('#searchResult').html('查询失败:' + responseTxt.message);
                         button.prop('disabled', false);
                     }});
             });

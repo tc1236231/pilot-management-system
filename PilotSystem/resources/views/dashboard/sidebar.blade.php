@@ -51,9 +51,9 @@
             </a>
             <div class="collapse" id="help">
                 <ul class="nav flex-column sub-menu">
-                    <li class="nav-item"> <a class="nav-link" href="../../pages/ui-features/buttons.html">连飞规定</a></li>
-                    <li class="nav-item"> <a class="nav-link" href="../../pages/ui-features/typography.html">软件下载</a></li>
-                    <li class="nav-item"> <a class="nav-link" href="../../pages/ui-features/typography.html">加入我们</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="{{ route('frontend.dashboard.link.flightrule') }}">连飞规定</a></li>
+                    <li class="nav-item"> <a class="nav-link" target="_blank" href="//bbs.chinaflier.com/thread-31231-1-1.html">软件下载</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="{{ route('frontend.dashboard.link.joinus') }}">加入我们</a></li>
                 </ul>
             </div>
         </li>
@@ -64,9 +64,9 @@
             </a>
             <div class="collapse" id="rank">
                 <ul class="nav flex-column sub-menu">
-                    <li class="nav-item"> <a class="nav-link" href="../../pages/ui-features/buttons.html">飞行员排名</a></li>
-                    <li class="nav-item"> <a class="nav-link" href="../../pages/ui-features/typography.html">管制员排名</a></li>
-                    <li class="nav-item"> <a class="nav-link" href="../../pages/ui-features/typography.html">各平台排名</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="{{ route('frontend.dashboard.rank.pilot') }}">飞行员排名</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="{{ route('frontend.dashboard.rank.atc') }}">管制员排名</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="{{ route('frontend.dashboard.rank.platform') }}">各平台排名</a></li>
                 </ul>
             </div>
         </li>

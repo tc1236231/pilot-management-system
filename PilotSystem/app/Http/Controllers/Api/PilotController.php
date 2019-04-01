@@ -10,7 +10,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Input;
 
-class AuthController extends Controller
+class PilotController extends Controller
 {
     private function hideStar($str) { //QQ、邮箱 中间字符串以*隐藏
         if (strpos($str, '@')) {
@@ -30,7 +30,6 @@ class AuthController extends Controller
         return $rs;
     }
 
-    //
     public function verifyCallsignPassword()
     {
         $callsign = Input::get('callsign','');
@@ -54,17 +53,31 @@ class AuthController extends Controller
     public function queryPublicPilotStatus()
     {
         $callsign = Input::get('callsign','');
-        if(strlen($callsign) != 4 || !is_numeric($callsign))
-            return response()->json(['message' => '呼号格式错误'], 422);
+        $type = Input::get('type','callsign');
+        if($type == "callsign")
+        {
+            if(strlen($callsign) != 4 || !is_numeric($callsign))
+                return response()->json(['message' => '呼号格式错误'], 422);
 
-        $pilot = Pilot::where('callsign', '=', $callsign)->first();
-        if(!$pilot)
-            return response()->json(['message' => '呼号不存在'], 404);
+            $pilot = Pilot::where('callsign', '=', $callsign)->first();
+            if(!$pilot)
+                return response()->json(['message' => '呼号不存在'], 404);
+        }
+        else if($type == "icq")
+        {
+            $pilot = Pilot::where('icq', 'LIKE', '%'. $callsign . '%')->first();
+            if(!$pilot)
+                return response()->json(['message' => '呼号不存在'], 404);
+        }
+        else
+        {
+            return response()->json(['message' => '无输入'], 422);
+        }
 
         if($pilot->level >= PilotLevel::PLATFORM_ADMIN)
             return response()->json(['message' => '你无权查看该呼号信息'], 401);
 
-        $message = "<br />所属平台：".$pilot->co." &nbsp;&nbsp; 呼号类型：".PilotLevel::label($pilot->level)."<br />
+        $message = $pilot->callsign . "<br />所属平台：".$pilot->co." &nbsp;&nbsp; 呼号类型：".PilotLevel::label($pilot->level)."<br />
           ".$this->hideStar($pilot->icq)."   激活邮箱：".$this->hideStar($pilot->email)."<br />
           累计连飞：".round((($pilot->onlinetime)/3600),2)."小时 &nbsp; 累计管制：".round((($pilot->atctime)/3600),2)."小时<br />
           <br />

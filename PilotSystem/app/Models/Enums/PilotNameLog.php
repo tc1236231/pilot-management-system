@@ -10,7 +10,7 @@ use App\Interfaces\Enum;
 class PilotNameLog extends Enum
 {
     public const BANNED = '活动违规禁飞';
-    public const EMAIL_VERIFIED = '邮箱激活呼号';
+    public const EMAIL_VERIFIED = '邮箱激活呼号'; //normal
     public const MANUAL_VERIFIED = '人工激活呼号';
     public const BBS_AD_MUTED = '论坛广告禁言';
     public const QUIT_NO_GROUP = '自退禁止加群';
@@ -49,13 +49,13 @@ class PilotNameLog extends Enum
             case PilotLevel::ATC_ALL:
                 $array = [];
                 if($targetLevel != 0)
-                    array_merge($array, [self::BANNED]);
+                    array_merge($array, [self::BANNED, self::EMAIL_VERIFIED]);
                 else
-                    array_merge($array, [self::UNBANNED_ONCE, self::UNBANNED_TWICE, self::UNBANNED_THIRD,
+                    array_merge($array, [self::EMAIL_VERIFIED, self::UNBANNED_ONCE, self::UNBANNED_TWICE, self::UNBANNED_THIRD,
                         self::UNBANNED_FOURTH, self::UNBANNED_AD]);
                 break;
             case PilotLevel::QQ:
-                    return [self::BBS_AD_MUTED, self::QUIT_NO_GROUP, self::AD_NO_GROUP];
+                    return [self::EMAIL_VERIFIED, self::BBS_AD_MUTED, self::QUIT_NO_GROUP, self::AD_NO_GROUP];
                 break;
             case PilotLevel::PLATFORM_ADMIN:
                 return [];

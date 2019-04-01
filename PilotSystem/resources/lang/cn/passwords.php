@@ -13,10 +13,10 @@ return [
     |
     */
 
-    'password' => 'Passwords must be at least eight characters and match the confirmation.',
-    'reset' => 'Your password has been reset!',
-    'sent' => 'We have e-mailed your password reset link!',
-    'token' => 'This password reset token is invalid.',
-    'user' => "We can't find a user with that e-mail address.",
+    'password' => '密码至少8位且必须二次确认.',
+    'reset' => '密码重置成功!',
+    'sent' => '一封关于密码重置的邮件已发送至你的注册邮箱!',
+    'token' => '密码重置认证失败.',
+    'user' => "找不到该注册邮箱.",
 
 ];

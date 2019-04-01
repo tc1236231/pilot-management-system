@@ -36,6 +36,32 @@ Route::group([
     Route::post('/dashboard/redeemFlightHours', 'DashboardController@redeemFlightHours')->name('dashboard.redeemFlightHours');
     Route::post('/dashboard/redeem', 'DashboardController@useRedeemCode')->name('dashboard.useRedeemCode');
     Route::get('/dashboard/transfer', 'DashboardController@transfer')->name('dashboard.transfer');
+
+    Route::group([
+        'prefix' => '/dashboard/link'
+    ], function () {
+        Route::get('/flightrule', function () {
+            return view('dashboard.link.flightrule');
+        })->name('dashboard.link.flightrule');
+        Route::get('/joinus', function () {
+            return view('dashboard.link.joinus');
+        })->name('dashboard.link.joinus');
+    });
+
+    Route::group([
+        'prefix' => '/dashboard/rank'
+    ], function () {
+        Route::get('/pilot', function () {
+            return view('dashboard.rank.wip');
+        })->name('dashboard.rank.pilot');
+        Route::get('/atc', function () {
+            return view('dashboard.rank.wip');
+        })->name('dashboard.rank.atc');
+        Route::get('/platform', function () {
+            return view('dashboard.rank.wip');
+        })->name('dashboard.rank.platform');
+    });
+
     Route::group([
         'middleware' => ['pilotlevel:4'], 'prefix' => '/dashboard'
     ], function () {

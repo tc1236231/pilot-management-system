@@ -5,10 +5,10 @@
 @section('main')
 <div class="container">
     <div class="row">
-        <div class="col-md-8 col-md-offset-2 p-3 w-100 mx-auto">
+        <div class="col-md-8 col-md-offset-2 mx-auto my-3 text-white">
             <div class="panel panel-default">
                 <div class="panel-heading font-weight-bold">{{ __('auth.forgotpassword') }}</div>
-                <div class="panel-body">
+                <div class="panel-body p-3">
                     @if (session('status'))
                         <div class="alert alert-success">
                             {{ session('status') }}

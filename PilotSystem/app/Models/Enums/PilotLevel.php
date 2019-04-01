@@ -61,19 +61,13 @@ class PilotLevel extends Enum
                 break;
             case self::ATC_ALL:
                 $array = [];
-                if($targetLevel != 0)
-                    array_merge($array, ['0' => self::label(0)]);
-                else
-                    array_merge($array, ['1' => self::label(1)]);
+                array_merge($array, ['0' => self::label(0), '1' => self::label(1)]);
                 array_merge($array, ['2' => self::label(2),'3' => self::label(3),
                     '4' => self::label(4),'5' => self::label(5),'6' => self::label(6),
                     '7' => self::label(7)]);
                 break;
             case self::QQ:
-                if($targetLevel != 0)
-                    return ['0' => self::label(0)];
-                else
-                    return ['1' => self::label(1)];
+                return ['0' => self::label(0), '1' => self::label(1)];
                 break;
             case self::PLATFORM_ADMIN:
                 return [];

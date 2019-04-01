@@ -21,7 +21,7 @@ class CustomResetPassword extends ResetPassword
 
         return (new MailMessage)
             ->from(env('MAIL_USERNAME'))
-            ->subject('飞行员系统密码重置')
+            ->subject('飞行员系统-密码重置')
             ->line('你收到了这封邮件表示,你正在尝试重置你的呼号密码')
             ->action('重置密码', url(config('app.url').route('password.reset', ['token' => $this->token], false)))
             ->line(Lang::getFromJson('此密码重置链接将在 :count 分钟后过期', ['count' => config('auth.passwords.users.expire')]))

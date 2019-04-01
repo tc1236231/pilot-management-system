@@ -27,6 +27,9 @@
                     </tr>
                     <tr>
                         <td>连飞资格：{{ \App\Models\Enums\PilotFlightPermission::label($user->via) }}
+                            @if($user->via == 0)
+                                <a href='http://bbs.chinaflier.com/plugin.php?id=exam' target='_black' class='btn-sm btn-primary' role='button'>进入考试系统</a>
+                            @endif
                         </td>
                     <tr>
                         <td>即时通讯：{{ $user->icq }} &nbsp;&nbsp;&nbsp; 呼号注册邮箱：{{ $user->email }}</td>

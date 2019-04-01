@@ -11,13 +11,15 @@
                     <h4 class="font-weight-light">全面启用 HTTPS、SSL 通信协议,更好的为飞行员服务</h4>
                     {{ Form::open(['url' => url('/login'), 'method' => 'post']) }}
                         <div class="form-group">
-                            <label>Username</label>
+                            <label>{{ __('auth.callsign') }} XXXX</label>
                             {{
                                 Form::text('callsign', old('callsign'), [
                                     'id' => 'callsign',
-                                    'placeholder' => __('auth.username'),
+                                    'type' => 'number',
+                                    'placeholder' => __('auth.callsign'),
                                     'class' => 'form-control',
                                     'required' => true,
+                                    'maxlength' => 4,
                                 ])
                             }}
                         </div>
@@ -28,7 +30,7 @@
                         @endif
 
                         <div class="form-group">
-                            <label>Password</label>
+                            <label>{{ __('auth.password') }}</label>
                             {{
                                Form::password('password', [
                                    'name' => 'password',
@@ -47,10 +49,9 @@
                         <div class="mt-4">
                             <button class="btn btn-block btn-warning btn-lg font-weight-medium">@lang('auth.login')</button>
                         </div>
-                        <div class="mt-2 text-center">
-                            <a href="{{ url('/register') }}" class="btn btn-outline-primary auth-link text-white mb-2">@lang('auth.createaccount')</a>
-                            <br />
-                            <a href="{{ url('/password/reset') }}" class="btn btn-outline-secondary auth-link text-white">@lang('auth.forgotpassword')?</a>
+                        <div class="mt-3 text-center">
+                            <a href="{{ url('/register') }}" class="btn btn-outline-primary auth-link text-white mx-1">@lang('auth.createaccount')</a>
+                            <a href="{{ url('/password/reset') }}" class="btn btn-outline-secondary auth-link text-white mx-1">@lang('auth.forgotpassword')</a>
                         </div>
                     {{ Form::close() }}
                 </div>
