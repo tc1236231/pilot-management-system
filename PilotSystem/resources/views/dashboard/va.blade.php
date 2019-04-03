@@ -6,6 +6,9 @@
     航空人生
 @endsection
 @section('content')
+    <div class="row p-3">
+        <a class="btn btn-inverse-info" href="//va.chinaflier.com">进入航空人生首页</a>
+    </div>
     @if($va == "notbinded")
         <div class="row">
             <div class="col-lg-12">
