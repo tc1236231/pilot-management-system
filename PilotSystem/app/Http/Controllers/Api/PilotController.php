@@ -24,7 +24,14 @@ class PilotController extends Controller
             if (preg_match($icq, $str)) {
                 $rs = preg_replace($icq, '$1****$2', $str); // substr_replace($name,'****',3,4);
             } else {
-                $rs = substr($str, 0,9) . "***" . substr($str, -2);
+                if(strlen($str) < 5)
+                {
+                    $rs =  str_repeat("*", strlen($str));
+                }
+                else
+                {
+                    $rs =  str_repeat("*", strlen($str)-4) . substr($str, -4);
+                }
             }
         }
         return $rs;
@@ -61,13 +68,13 @@ class PilotController extends Controller
 
             $pilot = Pilot::where('callsign', '=', $callsign)->first();
             if(!$pilot)
-                return response()->json(['message' => '呼号不存在'], 404);
+                return response()->json(['message' => '该呼号不存在'], 404);
         }
         else if($type == "icq")
         {
             $pilot = Pilot::where('icq', 'LIKE', '%'. $callsign . '%')->first();
             if(!$pilot)
-                return response()->json(['message' => '呼号不存在'], 404);
+                return response()->json(['message' => '该呼号不存在'], 404);
         }
         else
         {
