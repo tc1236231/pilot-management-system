@@ -60,7 +60,7 @@ class PlatformService extends Service
 
     public function validateVirtualAirline($inputs)
     {
-        $callsign = \Auth::user()->callsign;
+        $callsign = \Auth::user()->callsign . "1";
         $platform = 'va';
         try {
             DB::connection('platform_'. $platform)->getPdo();
@@ -72,6 +72,9 @@ class PlatformService extends Service
 
         $va_info = $db_conn->table('phpvms_pilots')->where('lastname','=',$callsign)
             ->first(['password','salt']);
+
+        if(!$va_info)
+            throw ValidationException::withMessages(['general' => '没有在航空人生找到此呼号']);
 
         $verified = $va_info->password == md5($inputs['password'] . $va_info->salt);
 
