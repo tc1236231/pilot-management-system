@@ -24,13 +24,14 @@ class PilotController extends Controller
             if (preg_match($icq, $str)) {
                 $rs = preg_replace($icq, '$1****$2', $str); // substr_replace($name,'****',3,4);
             } else {
-                if(strlen($str) < 5)
+                $num_str = explode(":", $str);
+                if(count($num_str) <= 1 || strlen($num_str[1]) < 5)
                 {
                     $rs =  str_repeat("*", strlen($str));
                 }
                 else
                 {
-                    $rs =  str_repeat("*", strlen($str)-4) . substr($str, -4);
+                    $rs =  $num_str[0] . substr($num_str[1],0,1) . str_repeat("*", strlen($num_str[1])-5) . substr($num_str[1], -4);
                 }
             }
         }
