@@ -60,7 +60,7 @@ class PlatformService extends Service
 
     public function validateVirtualAirline($inputs)
     {
-        $callsign = \Auth::user()->callsign . "1";
+        $callsign = \Auth::user()->callsign;
         $platform = 'va';
         try {
             DB::connection('platform_'. $platform)->getPdo();
