@@ -13,7 +13,7 @@ class CreateRedeemCodesRequest extends FormRequest
      */
     public function authorize()
     {
-        return $this->user()->hasRole('admin');
+        return $this->user()->hasRole('admin') || $this->user()->level >= \PilotLevel::CFR_ADMIN;
     }
 
     /**
