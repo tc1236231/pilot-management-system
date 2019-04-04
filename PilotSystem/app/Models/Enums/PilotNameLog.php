@@ -48,11 +48,10 @@ class PilotNameLog extends Enum
                 break;
             case PilotLevel::ATC_ALL:
                 $array = [];
-                if($targetLevel != 0)
-                    array_merge($array, [self::BANNED, self::EMAIL_VERIFIED]);
-                else
-                    array_merge($array, [self::EMAIL_VERIFIED, self::UNBANNED_ONCE, self::UNBANNED_TWICE, self::UNBANNED_THIRD,
-                        self::UNBANNED_FOURTH, self::UNBANNED_AD]);
+                $array = array_merge($array, [self::BANNED]);
+                $array = array_merge($array, [self::EMAIL_VERIFIED, self::UNBANNED_ONCE, self::UNBANNED_TWICE, self::UNBANNED_THIRD,
+                    self::UNBANNED_FOURTH, self::UNBANNED_AD]);
+                return $array;
                 break;
             case PilotLevel::QQ:
                     return [self::EMAIL_VERIFIED, self::BBS_AD_MUTED, self::QUIT_NO_GROUP, self::AD_NO_GROUP];

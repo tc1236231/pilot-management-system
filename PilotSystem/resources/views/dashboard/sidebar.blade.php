@@ -16,7 +16,7 @@
                 </ul>
             </div>
         </li>
-        @if(Auth::user()->level >= 4 && Auth::user()->level <= 9)
+        @if(Auth::user()->level >= 4 && Auth::user()->level <= 8)
             <li class="nav-item nav-category">
                 <a class="nav-link" data-toggle="collapse" href="#atc" aria-expanded="false" aria-controls="ui-basic">
                     <span class="menu-title">管制员功能</span>
@@ -29,7 +29,7 @@
                 </div>
             </li>
         @endif
-        @role('admin')
+        @if(Auth::user()->level >= 9)
             <li class="nav-item nav-category">
                 <a class="nav-link" data-toggle="collapse" href="#admin" aria-expanded="false" aria-controls="ui-basic">
                     <span class="menu-title">管理员功能</span>
@@ -38,12 +38,16 @@
                 <div class="collapse" id="admin">
                     <ul class="nav flex-column sub-menu">
                         <li class="nav-item"> <a class="nav-link" href='{{ route('frontend.dashboard.admin.index') }}'>呼号管理</a></li>
-                        <li class="nav-item"> <a class="nav-link" href='{{ route('frontend.dashboard.admin.redeem') }}'>兑换生成</a></li>
-                        <li class="nav-item"> <a class="nav-link" href="{{ route('frontend.dashboard.admin.log') }}">日志浏览</a></li>
+                        @if(Auth::user()->level >= 11)
+                            <li class="nav-item"> <a class="nav-link" href='{{ route('frontend.dashboard.admin.redeem') }}'>兑换生成</a></li>
+                        @endif
+                        @if(Auth::user()->level >= 12)
+                            <li class="nav-item"> <a class="nav-link" href="{{ route('frontend.dashboard.admin.log') }}">日志浏览</a></li>
+                        @endif
                     </ul>
                 </div>
             </li>
-        @endrole
+        @endif
         <li class="nav-item nav-category">
             <a class="nav-link" data-toggle="collapse" href="#help" aria-expanded="false" aria-controls="ui-basic">
                 <span class="menu-title">飞行员入口</span>

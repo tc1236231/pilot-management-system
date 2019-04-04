@@ -71,12 +71,18 @@ Route::group([
     });
 
     Route::group([
-        'middleware' => ['role:admin'], 'prefix' => '/dashboard'
+        'middleware' => ['pilotlevel:11'], 'prefix' => '/dashboard'
     ], function () {
-        Route::get('/admin/log', 'AdminDashboardController@log')->name('dashboard.admin.log');
         Route::get('/admin/redeem', 'AdminDashboardController@redeem')->name('dashboard.admin.redeem');
         Route::post('/admin/redeem', 'AdminDashboardController@createRedeem')->name('dashboard.admin.createRedeem');
     });
+
+    Route::group([
+        'middleware' => ['pilotlevel:12'], 'prefix' => '/dashboard'
+    ], function () {
+        Route::get('/admin/log', 'AdminDashboardController@log')->name('dashboard.admin.log');
+    });
+
 });
 
 Auth::routes(['verify' => true]);
