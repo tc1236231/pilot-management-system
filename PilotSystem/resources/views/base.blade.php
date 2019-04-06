@@ -11,9 +11,9 @@
         <title>@yield('title') - {{ config('app.name') }}</title>
 
         <!-- plugins:css -->
-        <link rel="stylesheet" href="//cdn.materialdesignicons.com/3.5.95/css/materialdesignicons.min.css">
-        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css">
-        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.3.0/css/flag-icon.min.css">
+        <link rel="stylesheet" href="{{ asset('assets/css/materialdesignicons.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/css/simple-line-icons.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/css/flag-icon.min.css') }}">
         <!-- endinject -->
 
         <!-- inject:css -->
@@ -37,9 +37,9 @@
             </footer>
         @endsection
         @yield('footer')
-        <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="{{ asset('assets/js/jquery-3.3.1.min.js') }}"></script>
+        <script src="{{ asset('assets/js/popper.min.js') }}"></script>
+        <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
         <!-- inject:js -->
         <script src="{{asset("assets/js/off-canvas.js")}}"></script>
         <script src="{{asset("assets/js/misc.js")}}"></script>

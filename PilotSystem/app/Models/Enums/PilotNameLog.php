@@ -54,7 +54,7 @@ class PilotNameLog extends Enum
                 return $array;
                 break;
             case PilotLevel::QQ:
-                    return [self::EMAIL_VERIFIED, self::BBS_AD_MUTED, self::QUIT_NO_GROUP, self::AD_NO_GROUP];
+                return [self::EMAIL_VERIFIED, self::BBS_AD_MUTED, self::QUIT_NO_GROUP, self::AD_NO_GROUP];
                 break;
             case PilotLevel::PLATFORM_ADMIN:
                 return [self::EMAIL_VERIFIED, self::BBS_AD_MUTED, self::QUIT_NO_GROUP, self::AD_NO_GROUP];

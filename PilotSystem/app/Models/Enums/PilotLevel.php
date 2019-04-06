@@ -71,7 +71,7 @@ class PilotLevel extends Enum
                 return [strval($targetLevel) => self::label($targetLevel)];
                 break;
             case self::PLATFORM_ADMIN:
-                return  [strval($targetLevel) => self::label($targetLevel),'0' => self::label(0),'1' => self::label(1)];
+                return [strval($targetLevel) => self::label($targetLevel),'0' => self::label(0),'1' => self::label(1)];
                 break;
             case self::CFR_ADMIN:
                 return [strval($targetLevel) => self::label($targetLevel),'0' => self::label(0), '1' => self::label(1),
