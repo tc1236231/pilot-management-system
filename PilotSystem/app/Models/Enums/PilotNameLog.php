@@ -57,7 +57,7 @@ class PilotNameLog extends Enum
                     return [self::EMAIL_VERIFIED, self::BBS_AD_MUTED, self::QUIT_NO_GROUP, self::AD_NO_GROUP];
                 break;
             case PilotLevel::PLATFORM_ADMIN:
-                return [];
+                return [self::EMAIL_VERIFIED, self::BBS_AD_MUTED, self::QUIT_NO_GROUP, self::AD_NO_GROUP];
                 break;
             case PilotLevel::CFR_ADMIN:
                 return [self::BANNED, self::EMAIL_VERIFIED, self::MANUAL_VERIFIED, self::BBS_AD_MUTED,
