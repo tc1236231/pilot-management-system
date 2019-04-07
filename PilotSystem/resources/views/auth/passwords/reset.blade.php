@@ -86,3 +86,15 @@
     </div>
 </div>
 @endsection
+@section('script')
+    <script>
+        $("form").submit(function (e) {
+            if ($(this).attr("attempted") === 'true' ) {
+                e.preventDefault();
+            }
+            else {
+                $(this).attr("attempted", 'true');
+            }
+        });
+    </script>
+@endsection

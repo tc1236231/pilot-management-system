@@ -64,7 +64,7 @@ class RegisterController extends Controller
                     $query->where('shouquan', '=', 1);
                 }),
                 ],
-            'callsign' => ['required', 'string', 'min:4', 'max:4', 'unique:pilots', 'unique:saved_huhao,huhao'],
+            'callsign' => ['required', 'numeric', 'digits:4', 'unique:pilots', 'unique:saved_huhao,huhao'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:pilots', 'confirmed'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
             'icq' => ['required', 'string', 'max:20', 'unique:saved_icq,icq'],

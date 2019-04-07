@@ -11,7 +11,7 @@
                     <h4 class="font-weight-light">全面启用 HTTPS、SSL 通信协议,更好的为飞行员服务</h4>
                     {{ Form::open(['url' => url('/login'), 'method' => 'post']) }}
                         <div class="form-group">
-                            <label>{{ __('auth.callsign') }} XXXX</label>
+                            <label>{{ __('auth.callsign') }} 0000</label>
                             {{
                                 Form::text('callsign', old('callsign'), [
                                     'id' => 'callsign',
@@ -20,6 +20,8 @@
                                     'class' => 'form-control',
                                     'required' => true,
                                     'maxlength' => 4,
+                                    'inputmode' => 'numeric',
+                                    'pattern' => '[0-9]*',
                                 ])
                             }}
                         </div>

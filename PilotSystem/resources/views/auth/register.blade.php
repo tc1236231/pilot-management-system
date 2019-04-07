@@ -40,13 +40,16 @@
                                     </select>
                                 </div>
                                 <div class="form-group">
-                                    {{ Form::label('callsign', '呼号') }}
+                                    {{ Form::label('callsign', '呼号 (4位纯数字 0000)') }}
                                     {{
                                        Form::text('callsign', null, [
                                            'name' => 'callsign',
                                            'class' => 'form-control',
                                            'placeholder' => '',
-                                           'required' => true
+                                           'required' => true,
+                                           'maxlength' => 4,
+                                           'inputmode' => 'numeric',
+                                           'pattern' => '[0-9]*',
                                        ])
                                     }}
                                 </div>
@@ -141,13 +144,21 @@
 
 @section('script')
 <script>
-$('#toc_accepted').click(function () {
-  if ($(this).is(':checked')) {
-    $('#register_button').removeAttr('disabled');
-  } else {
-    $('#register_button').attr('disabled', 'true');
-  }
-});
+    $('#toc_accepted').click(function () {
+      if ($(this).is(':checked')) {
+        $('#register_button').removeAttr('disabled');
+      } else {
+        $('#register_button').attr('disabled', 'true');
+      }
+    });
+    $("form").submit(function (e) {
+        if ($(this).attr("attempted") === 'true' ) {
+            e.preventDefault();
+        }
+        else {
+            $(this).attr("attempted", 'true');
+        }
+    });
 </script>
 @endsection
 @section('footer')
