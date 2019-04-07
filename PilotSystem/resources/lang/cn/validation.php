@@ -144,6 +144,10 @@ return [
     |
     */
 
-    'attributes' => [],
+    'attributes' => [
+        'callsign' => '呼号',
+        'email' => '邮箱',
+        'password' => '密码',
+    ],
 
 ];
