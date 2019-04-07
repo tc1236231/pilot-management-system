@@ -1,6 +1,6 @@
 @extends('dashboard.layout')
 @section('head')
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="{{ asset('assets/css/jquery-ui.css') }}">
 @endsection
 @section('title')
     兑换生成
@@ -102,7 +102,7 @@
     </div>
 @endsection
 @section('script')
-    <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="{{ asset('assets/js/jquery-ui.js') }}"></script>
     <script src='{{ asset('assets/js/datepicker-zh-TW.js') }}'></script>
     <script>
         $("form").submit(function (e) {
