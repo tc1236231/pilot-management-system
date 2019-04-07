@@ -107,4 +107,18 @@ class PilotController extends Controller
 
         return response()->json(['message' => $message]);
     }
+
+    public function getRecommendCallsign()
+    {
+        $digits = 4;
+        for ($x = 0; $x <= 20; $x++) {
+            $r_cs = str_pad(rand(0, pow(10, $digits)-1), $digits, '0', STR_PAD_LEFT);
+            $duplicate = Pilot::where('callsign', '=', $r_cs)->exists() ||
+                \DB::table('saved_huhao')->where('huhao', '=', $r_cs)->exists();
+            if(!$duplicate)
+                return response()->json(['callsign' => $r_cs]);
+        }
+        return response()->json(['message' => '未找到可用呼号,请重试', 422]);
+    }
+
 }

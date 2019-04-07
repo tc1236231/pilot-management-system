@@ -41,17 +41,25 @@
                                 </div>
                                 <div class="form-group">
                                     {{ Form::label('callsign', '呼号 (4位纯数字 0000)') }}
-                                    {{
-                                       Form::text('callsign', null, [
-                                           'name' => 'callsign',
-                                           'class' => 'form-control',
-                                           'placeholder' => '',
-                                           'required' => true,
-                                           'maxlength' => 4,
-                                           'inputmode' => 'numeric',
-                                           'pattern' => '[0-9]*',
-                                       ])
-                                    }}
+                                    <div class="row">
+                                        {{
+                                           Form::text('callsign', null, [
+                                               'name' => 'callsign',
+                                               'class' => 'form-control ml-2 col-7',
+                                               'placeholder' => '',
+                                               'required' => true,
+                                               'maxlength' => 4,
+                                               'inputmode' => 'numeric',
+                                               'pattern' => '[0-9]*',
+                                           ])
+                                        }}
+                                        {{
+                                            Form::button('<small>推荐呼号</small>', [
+                                                'id' => 'btnRCS',
+                                                'class' => 'btn-info btn-sm col-4 text-center ml-1',
+                                            ])
+                                        }}
+                                    </div>
                                 </div>
                                 <div class="form-group">
                                     {{ Form::label('email', '邮箱') }}
@@ -144,6 +152,29 @@
 
 @section('script')
 <script>
+    $('#btnRCS').click(function(e){
+        e.preventDefault();
+        let button = $(this);
+        button.prop('disabled', true);
+        $.ajaxSetup({
+            headers: {
+                'Accept': 'application/json',
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
+        $.ajax({
+            url: "{{ route('api.public.pilot.recommend.callsign') }}",
+            method: 'GET',
+            data: {},
+            success: function(result){
+                $("input[name='callsign']").val(result.callsign);
+                button.prop('disabled', false);
+            },
+            error: function (jqXHR, status, err) {
+                alert('获取失败,请重试');
+                button.prop('disabled', false);
+            }});
+    });
     $('#toc_accepted').click(function () {
       if ($(this).is(':checked')) {
         $('#register_button').removeAttr('disabled');
