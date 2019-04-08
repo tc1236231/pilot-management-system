@@ -86,7 +86,8 @@ class AdminDashboardController extends Controller
             $targetPilot->co = $attrs['co'];
         $targetPilot->namelog = $attrs['namelog'];
         $targetPilot->level = $attrs['level'];
-        $targetPilot->txt =  $attrs['txt'] . " | "  . $targetPilot->txt;
+        if(!empty($attrs['txt']))
+            $targetPilot->txt =  $attrs['txt'] . " | "  . $targetPilot->txt;
         $targetPilot->save();
 
         $logs = [
@@ -94,7 +95,7 @@ class AdminDashboardController extends Controller
             'searchid' => $targetPilot->callsign,
             'level' => $targetPilot->level,
             'namelog' => $targetPilot->namelog,
-            'txt' => $attrs['txt'],
+            'txt' => empty($attrs['txt']) ? '' : $attrs['txt'],
             'admin_callsign' => $request->user()->callsign
         ];
         PilotSearchLog::create($logs);
