@@ -72,7 +72,7 @@
                     <td width="auto" height="25" align="left">
                         {{ $pilot->namelog }}
                         <select name="namelog" id="namelog">
-                            @foreach(\App\Models\Enums\PilotNameLog::getOptions($pilot->level) as $label)
+                            @foreach(\App\Models\Enums\PilotNameLog::getOptions($pilot) as $label)
                                 @if($pilot->namelog == $label)
                                     <option value="{{ $label }}" selected>
                                         {{ $label }}

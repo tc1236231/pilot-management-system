@@ -26,9 +26,11 @@ class PilotNameLog extends Enum
 
     ];
 
-    public static function getOptions($targetLevel) : array
+    public static function getOptions($targetPilot) : array
     {
         $level = \Auth::user()->level;
+        $targetLevel = $targetPilot->level;
+        $targetLog = $targetPilot->namelog;
         switch($level)
         {
             case PilotLevel::BANNED:
@@ -47,25 +49,25 @@ class PilotNameLog extends Enum
                     return [];
                 break;
             case PilotLevel::ATC_ALL:
-                $array = [];
+                $array = [$targetLog];
                 $array = array_merge($array, [self::BANNED]);
                 $array = array_merge($array, [self::EMAIL_VERIFIED, self::UNBANNED_ONCE, self::UNBANNED_TWICE, self::UNBANNED_THIRD,
                     self::UNBANNED_FOURTH, self::UNBANNED_AD]);
                 return $array;
                 break;
             case PilotLevel::QQ:
-                return [self::EMAIL_VERIFIED, self::BBS_AD_MUTED, self::QUIT_NO_GROUP, self::AD_NO_GROUP];
+                return [$targetLog, self::EMAIL_VERIFIED, self::BBS_AD_MUTED, self::QUIT_NO_GROUP, self::AD_NO_GROUP];
                 break;
             case PilotLevel::PLATFORM_ADMIN:
-                return [self::EMAIL_VERIFIED, self::BBS_AD_MUTED, self::QUIT_NO_GROUP, self::AD_NO_GROUP];
+                return [$targetLog, self::EMAIL_VERIFIED, self::BBS_AD_MUTED, self::QUIT_NO_GROUP, self::AD_NO_GROUP];
                 break;
             case PilotLevel::CFR_ADMIN:
-                return [self::BANNED, self::EMAIL_VERIFIED, self::MANUAL_VERIFIED, self::BBS_AD_MUTED,
+                return [$targetLog, self::BANNED, self::EMAIL_VERIFIED, self::MANUAL_VERIFIED, self::BBS_AD_MUTED,
                     self::QUIT_NO_GROUP, self::AD_NO_GROUP, self::UNBANNED_ONCE, self::UNBANNED_TWICE, self::UNBANNED_THIRD,
                     self::UNBANNED_FOURTH, self::UNBANNED_AD];
                 break;
             case PilotLevel::SUPER_ADMIN:
-                return [self::BANNED, self::EMAIL_VERIFIED, self::MANUAL_VERIFIED, self::BBS_AD_MUTED,
+                return [$targetLog, self::BANNED, self::EMAIL_VERIFIED, self::MANUAL_VERIFIED, self::BBS_AD_MUTED,
                     self::QUIT_NO_GROUP, self::AD_NO_GROUP, self::UNBANNED_ONCE, self::UNBANNED_TWICE, self::UNBANNED_THIRD,
                     self::UNBANNED_FOURTH, self::UNBANNED_AD, self::NO_INFO];
                 break;
