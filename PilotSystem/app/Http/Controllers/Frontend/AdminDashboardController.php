@@ -73,7 +73,7 @@ class AdminDashboardController extends Controller
         {
             throw ValidationException::withMessages(array('general' => '无权限修改该呼号类型至'. \PilotLevel::label($attrs['level'])));
         }
-        if(!in_array(($attrs['namelog']), PilotNameLog::getOptions($targetPilot->level)))
+        if(!in_array(($attrs['namelog']), PilotNameLog::getOptions($targetPilot)))
         {
             throw ValidationException::withMessages(array('general' => '无权限修改该呼号状态至'. $attrs['namelog']));
         }

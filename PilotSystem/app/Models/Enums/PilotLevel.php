@@ -57,14 +57,14 @@ class PilotLevel extends Enum
                 if($targetLevel != 0)
                     return [strval($targetLevel) => self::label($targetLevel),'0' => self::label(0)];
                 else
-                    return [];
+                    return [strval($targetLevel) => self::label($targetLevel)];
                 break;
             case self::ATC_ALL:
-                $array = [];
-                $array = array_merge($array, [strval($targetLevel) => self::label($targetLevel),'0' => self::label(0), '1' => self::label(1)]);
-                $array = array_merge($array, [strval($targetLevel) => self::label($targetLevel),'2' => self::label(2),'3' => self::label(3),
+                $array = array();
+                $array = $array + [strval($targetLevel) => self::label($targetLevel),'0' => self::label(0), '1' => self::label(1)];
+                $array = $array + ['2' => self::label(2),'3' => self::label(3),
                     '4' => self::label(4),'5' => self::label(5),'6' => self::label(6),
-                    '7' => self::label(7)]);
+                    '7' => self::label(7)];
                 return $array;
                 break;
             case self::QQ:

@@ -44,32 +44,31 @@ class PilotNameLog extends Enum
             case PilotLevel::ATC_APP:
             case PilotLevel::ATC_CTR:
                 if($targetLevel != 0)
-                    return [self::BANNED];
+                    return [$targetLog, self::BANNED];
                 else
-                    return [];
+                    return [$targetLog];
                 break;
             case PilotLevel::ATC_ALL:
-                $array = [$targetLog];
-                $array = array_merge($array, [self::BANNED]);
-                $array = array_merge($array, [self::EMAIL_VERIFIED, self::UNBANNED_ONCE, self::UNBANNED_TWICE, self::UNBANNED_THIRD,
-                    self::UNBANNED_FOURTH, self::UNBANNED_AD]);
+                $array = [$targetLog, self::BANNED];
+                $array = array_unique(array_merge($array, [self::EMAIL_VERIFIED, self::UNBANNED_ONCE, self::UNBANNED_TWICE, self::UNBANNED_THIRD,
+                    self::UNBANNED_FOURTH, self::UNBANNED_AD]));
                 return $array;
                 break;
             case PilotLevel::QQ:
-                return [$targetLog, self::EMAIL_VERIFIED, self::BBS_AD_MUTED, self::QUIT_NO_GROUP, self::AD_NO_GROUP];
+                return array_unique([$targetLog, self::EMAIL_VERIFIED, self::BBS_AD_MUTED, self::QUIT_NO_GROUP, self::AD_NO_GROUP]);
                 break;
             case PilotLevel::PLATFORM_ADMIN:
-                return [$targetLog, self::EMAIL_VERIFIED, self::BBS_AD_MUTED, self::QUIT_NO_GROUP, self::AD_NO_GROUP];
+                return array_unique([$targetLog, self::EMAIL_VERIFIED, self::BBS_AD_MUTED, self::QUIT_NO_GROUP, self::AD_NO_GROUP]);
                 break;
             case PilotLevel::CFR_ADMIN:
-                return [$targetLog, self::BANNED, self::EMAIL_VERIFIED, self::MANUAL_VERIFIED, self::BBS_AD_MUTED,
+                return array_unique([$targetLog, self::BANNED, self::EMAIL_VERIFIED, self::MANUAL_VERIFIED, self::BBS_AD_MUTED,
                     self::QUIT_NO_GROUP, self::AD_NO_GROUP, self::UNBANNED_ONCE, self::UNBANNED_TWICE, self::UNBANNED_THIRD,
-                    self::UNBANNED_FOURTH, self::UNBANNED_AD];
+                    self::UNBANNED_FOURTH, self::UNBANNED_AD]);
                 break;
             case PilotLevel::SUPER_ADMIN:
-                return [$targetLog, self::BANNED, self::EMAIL_VERIFIED, self::MANUAL_VERIFIED, self::BBS_AD_MUTED,
+                return array_unique([$targetLog, self::BANNED, self::EMAIL_VERIFIED, self::MANUAL_VERIFIED, self::BBS_AD_MUTED,
                     self::QUIT_NO_GROUP, self::AD_NO_GROUP, self::UNBANNED_ONCE, self::UNBANNED_TWICE, self::UNBANNED_THIRD,
-                    self::UNBANNED_FOURTH, self::UNBANNED_AD, self::NO_INFO];
+                    self::UNBANNED_FOURTH, self::UNBANNED_AD, self::NO_INFO]);
                 break;
         }
     }
