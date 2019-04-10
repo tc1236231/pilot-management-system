@@ -22,7 +22,7 @@
                     <tr>
                         <td align="center">{{ $log->id }}</td>
                         <td align="center">{{ $log->searchid }}</td>
-                        <td align="center">{{ $log->level }}</td>
+                        <td align="center">{{ $log->level }} - {{ \App\Models\Enums\PilotLevel::label($log->level) }}</td>
                         <td align="center">{{ $log->namelog }}</td>
                         <td align="center">{{ $log->txt }}</td>
                         <td align="center">{{ $log->time }}</td>

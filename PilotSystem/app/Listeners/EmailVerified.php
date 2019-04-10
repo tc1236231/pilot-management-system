@@ -4,6 +4,7 @@ namespace App\Listeners;
 
 use App\Models\Enums\PilotNameLog;
 use App\Models\Pilot;
+use App\Models\PilotSearchLog;
 use App\Models\Role;
 use Illuminate\Auth\Events\Verified;
 use Illuminate\Queue\InteractsWithQueue;
@@ -36,5 +37,16 @@ class EmailVerified
         $role = Role::where('name', 'user')->first();
         $pilot->attachRole($role);
         $pilot->save();
+
+        $targetPilot = $event->user;
+        $logs = [
+            'co' => $targetPilot->co,
+            'searchid' => $targetPilot->callsign,
+            'level' => $targetPilot->level,
+            'namelog' => $targetPilot->namelog,
+            'txt' => '认证邮箱',
+            'admin_callsign' => '-1'
+        ];
+        PilotSearchLog::create($logs);
     }
 }
