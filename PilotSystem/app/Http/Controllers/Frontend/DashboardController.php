@@ -102,17 +102,6 @@ class DashboardController extends Controller
         $attrs = $request->all();
         $user->update($attrs);
 
-        /*
-        $log = array(
-            'callsign' => \Auth::user()->callsign,
-            'shijian' => '奖励兑换',
-            'huobi' => 0,
-            'mubiao' => $inputs['platform'],
-            'logdate' => Carbon::now()
-        );
-        PilotLog::create($log);
-        */
-
         $request->session()->flash('status', '修改成功!');
         $request->session()->flash('alert-class', 'alert-success');
         return redirect()->back();

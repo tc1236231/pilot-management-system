@@ -89,6 +89,8 @@ class PilotController extends Controller
           ".$this->hideStar($pilot->icq)."   激活邮箱：".$this->hideStar($pilot->email)."<br />
           累计连飞：".round((($pilot->onlinetime)/3600),2)."小时 &nbsp; 累计管制：".round((($pilot->atctime)/3600),2)."小时<br />
           <br />
+          <fonts class='text-primary'>====以下供管理员使用====</fonts>
+          <br />
           呼号状态：[ ".$pilot->namelog." ] ";
 
         $icq = $pilot->icq;

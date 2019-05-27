@@ -19,6 +19,8 @@ Route::group([
 ], function () {
     Route::get('/pilot/recommend/callsign', 'PilotController@getRecommendCallsign')->name('pilot.recommend.callsign');
     Route::get('/pilot/status', 'PilotController@queryPublicPilotStatus')->name('pilot.status');
+    Route::get('/va/pilot/{pilotid}/pireps', 'VirtualAirlineController@getPireps')->name('va.pilot.pireps');
+    Route::get('/atc/atis', 'ATCController@getATIS')->name('atc.atis.get');
 });
 
 Route::group([
@@ -26,4 +28,12 @@ Route::group([
     'namespace' => 'Api', 'prefix' => '', 'as' => 'api.',
 ], function () {
     Route::get('/pilot/verify', 'PilotController@verifyCallsignPassword')->name('pilot.verify');
+});
+
+Route::group([
+    'middleware' => ['auth'],
+    'namespace' => 'Api', 'prefix' => '', 'as' => 'api.',
+], function () {
+    Route::post('/atc/atis', 'ATCController@createATIS')->middleware('pilotlevel:4')->name('atc.atis.create');
+    Route::post('/atc/restrict/status', 'ATCController@updateRestrictStatus')->middleware('pilotlevel:4')->name('atc.restrict.status.change');
 });

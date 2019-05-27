@@ -32,7 +32,7 @@
         @section('footer')
             <footer class="text-center text-white position-absolute mx-auto" style="bottom:0; width:100%">
                 <div class="container">
-                    Copyright &copy; 2019 ChinaFlier <a target="_blank" href="https://pilot.chinaflier.com/">Pilot System</a> All Rights Reserved
+                    Copyright &copy; 2019 ChinaFlier <a target="_blank" href="{{ url('/') }}">Pilot System</a> All Rights Reserved
                 </div>
             </footer>
         @endsection

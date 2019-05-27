@@ -68,7 +68,6 @@ class PlatformService extends Service
             throw ValidationException::withMessages(['general' => '无数据库连接至'. $platform]);
         }
         $db_conn = DB::connection('platform_'. $platform);
-        $verified = false;
 
         $va_info = $db_conn->table('phpvms_pilots')->where('lastname','=',$callsign)
             ->first(['password','salt']);

@@ -147,6 +147,11 @@ class Pilot extends Authenticatable implements MustVerifyEmail
         return $this->hasMany('App\Models\PilotRedeemCode','callsign','callsign');
     }
 
+    public function hasPlatforms()
+    {
+        return $this->platforms->count() > 0;
+    }
+
     public function sendEmailVerificationNotification()
     {
         $this->notify(new CustomVerifyEmail());
