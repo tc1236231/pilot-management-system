@@ -21,6 +21,7 @@ Route::group([
     Route::get('/pilot/status', 'PilotController@queryPublicPilotStatus')->name('pilot.status');
     Route::get('/va/pilot/{pilotid}/pireps', 'VirtualAirlineController@getPireps')->name('va.pilot.pireps');
     Route::get('/atc/atis', 'ATCController@getATIS')->name('atc.atis.get');
+    Route::get('/pilot/export', 'PilotController@exportPilot')->name('pilot.export');
 });
 
 Route::group([

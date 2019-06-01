@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Models\Enums\PilotLevel;
+use App\Models\Enums\PilotNameLog;
 use App\Models\Pilot;
 use http\Env\Response;
 use Illuminate\Http\Request;
@@ -54,6 +55,26 @@ class PilotController extends Controller
 
         if ($pilot->level == PilotLevel::BANNED)
             return response()->json(['status' => 'error', 'message' => '呼号停飞']);
+
+        return response()->json(['status' => 'success', 'message' => '', 'pilot' => $pilot]);
+    }
+
+    public function exportPilot()
+    {
+        $callsign = Input::get('callsign','');
+        $password = Input::get('password','');
+        if(strlen($callsign) != 4 || !is_numeric($callsign))
+            return response()->json(['status' => 'error', 'message' => '呼号格式错误']);
+
+        $pilot = Pilot::where('callsign', '=', $callsign)->first();
+        if(!$pilot)
+            return response()->json(['status' => 'error', 'message' => '呼号不存在']);
+
+        if (!Hash::check($password, $pilot->password))
+            return response()->json(['status' => 'error', 'message' => '呼号密码错误']);
+
+        if ($pilot->namelog == PilotNameLog::NOT_ACTIVATED)
+            return response()->json(['status' => 'error', 'message' => '呼号未激活']);
 
         return response()->json(['status' => 'success', 'message' => '', 'pilot' => $pilot]);
     }

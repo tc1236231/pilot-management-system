@@ -10,6 +10,7 @@ use App\Interfaces\Enum;
 class PilotNameLog extends Enum
 {
     public const BANNED = '活动违规禁飞';
+    public const NOT_ACTIVATED = '呼号未激活';
     public const EMAIL_VERIFIED = '邮箱激活呼号'; //normal
     public const MANUAL_VERIFIED = '人工激活呼号';
     public const BBS_AD_MUTED = '论坛广告禁言';
