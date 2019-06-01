@@ -76,7 +76,7 @@ class PilotController extends Controller
         if ($pilot->namelog == PilotNameLog::NOT_ACTIVATED)
             return response()->json(['status' => 'error', 'message' => '呼号未激活']);
 
-        return response()->json(['status' => 'success', 'message' => '', 'pilot' => $pilot->makeVisible('phone')->toArray();]);
+        return response()->json(['status' => 'success', 'message' => '', 'pilot' => $pilot->makeVisible('phone')->toArray()]);
     }
 
     public function queryPublicPilotStatus()
