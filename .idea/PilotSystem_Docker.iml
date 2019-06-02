@@ -41,6 +41,7 @@
       <excludeFolder url="file://$MODULE_DIR$/PilotSystem/vendor/nikic/php-parser" />
       <excludeFolder url="file://$MODULE_DIR$/PilotSystem/vendor/nunomaduro/collision" />
       <excludeFolder url="file://$MODULE_DIR$/PilotSystem/vendor/opis/closure" />
+      <excludeFolder url="file://$MODULE_DIR$/PilotSystem/vendor/overtrue/easy-sms" />
       <excludeFolder url="file://$MODULE_DIR$/PilotSystem/vendor/overtrue/laravel-wechat" />
       <excludeFolder url="file://$MODULE_DIR$/PilotSystem/vendor/overtrue/socialite" />
       <excludeFolder url="file://$MODULE_DIR$/PilotSystem/vendor/overtrue/wechat" />

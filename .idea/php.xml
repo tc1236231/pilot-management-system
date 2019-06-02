@@ -107,6 +107,7 @@
       <path value="$PROJECT_DIR$/PilotSystem/vendor/laravelcollective/html" />
       <path value="$PROJECT_DIR$/PilotSystem/vendor/easywechat-composer/easywechat-composer" />
       <path value="$PROJECT_DIR$/PilotSystem/vendor/composer" />
+      <path value="$PROJECT_DIR$/PilotSystem/vendor/overtrue/easy-sms" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.1" />

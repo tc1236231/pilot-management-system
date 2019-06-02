@@ -10,6 +10,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Input;
+use Illuminate\Support\Facades\Validator;
 
 class PilotController extends Controller
 {
@@ -142,6 +143,22 @@ class PilotController extends Controller
                 return response()->json(['callsign' => $r_cs]);
         }
         return response()->json(['message' => '未找到可用呼号,请重试', 422]);
+    }
+
+    public function sendMobileVerifyCode(Request $request)
+    {
+        $validator = \Validator::make($request->all(), [
+            'phone'=>[
+                'required',
+                'mobile',
+            ]
+        ], [
+            'phone.required'=>'电话必填',
+            'phone.mobile'=>'电话格式不对',
+        ]);
+        $data = $validator->validate();
+        $phone = $data['phone'];
+        return response()->json($phone, 200);
     }
 
 }
