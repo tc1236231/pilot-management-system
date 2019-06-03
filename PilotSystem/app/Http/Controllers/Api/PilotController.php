@@ -203,4 +203,10 @@ class PilotController extends Controller
         return response()->json(['status'=> 'success', 'phone' => $phone], 200);
     }
 
+    public function register(Request $request)
+    {
+        \Log::debug(print_r($request->all()));
+        return response()->json(['status' => 'test', 'message' => 'test'], 200);
+    }
+
 }

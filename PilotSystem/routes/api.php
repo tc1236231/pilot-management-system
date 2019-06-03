@@ -31,6 +31,7 @@ Route::group([
     'middleware' => ['auth:api'],
     'namespace' => 'Api', 'prefix' => '', 'as' => 'api.',
 ], function () {
+    Route::post('/pilot/register', 'PilotController@register')->name('pilot.register');
     Route::get('/pilot/verify', 'PilotController@verifyCallsignPassword')->name('pilot.verify');
 });
 
