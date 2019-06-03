@@ -59,12 +59,12 @@ return [
             ]) : [],
         ],
 
-        'platform_cfr' => [
+        'platform_bbs' => [
             'driver'    => 'mysql',
-            'host'      => env('DB_HOST_CFR', '127.0.0.1'),
-            'database'  => env('DB_DATABASE_CFR', 'forge'),
-            'username'  => env('DB_USERNAME_CFR', 'forge'),
-            'password'  => env('DB_PASSWORD_CFR', ''),
+            'host'      => env('DB_HOST_BBS', '127.0.0.1'),
+            'database'  => env('DB_DATABASE_BBS', 'forge'),
+            'username'  => env('DB_USERNAME_BBS', 'forge'),
+            'password'  => env('DB_PASSWORD_BBS', ''),
             'charset'   => 'utf8',
             'collation' => 'utf8_general_ci',
             'prefix'    => '',

@@ -2,12 +2,15 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Facades\EasySms;
 use App\Models\Enums\PilotLevel;
 use App\Models\Enums\PilotNameLog;
 use App\Models\Pilot;
+use Carbon\Carbon;
 use http\Env\Response;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Validator;
@@ -145,20 +148,39 @@ class PilotController extends Controller
         return response()->json(['message' => '未找到可用呼号,请重试', 422]);
     }
 
+    /**
+     * @param Request $request
+     * @return \Illuminate\Http\JsonResponse
+     * @throws \Illuminate\Validation\ValidationException
+     * @throws \Overtrue\EasySms\Exceptions\InvalidArgumentException
+     * @throws \Overtrue\EasySms\Exceptions\NoGatewayAvailableException
+     */
     public function sendMobileVerifyCode(Request $request)
     {
         $validator = \Validator::make($request->all(), [
             'phone'=>[
                 'required',
                 'mobile',
+                'unique:platform_bbs.bbs_common_member_profile,mobile'
             ]
         ], [
-            'phone.required'=>'电话必填',
-            'phone.mobile'=>'电话格式不对',
+            'phone.required'=>'手机号必填',
+            'phone.mobile'=>'手机号格式不对',
+            'phone.unique'=>'该手机号已被注册',
         ]);
         $data = $validator->validate();
         $phone = $data['phone'];
-        return response()->json($phone, 200);
+        $code = randStr(6, 'NUMBER');
+        DB::table('sms_code')->insert(
+            ['phone' => $phone, 'code' => $code, 'sendTime' => Carbon::now()]
+        );
+        EasySms::send($phone, [
+            'template' => '162713',
+            'data' => [
+                'code' => $code
+            ],
+        ]);
+        return response()->json(['status'=> 'success', 'phone' => $phone], 200);
     }
 
 }
