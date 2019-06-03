@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Validator;
+use Overtrue\EasySms\Exceptions\NoGatewayAvailableException;
 
 class PilotController extends Controller
 {
@@ -153,7 +154,6 @@ class PilotController extends Controller
      * @return \Illuminate\Http\JsonResponse
      * @throws \Illuminate\Validation\ValidationException
      * @throws \Overtrue\EasySms\Exceptions\InvalidArgumentException
-     * @throws \Overtrue\EasySms\Exceptions\NoGatewayAvailableException
      */
     public function sendMobileVerifyCode(Request $request)
     {
@@ -174,12 +174,19 @@ class PilotController extends Controller
         DB::table('sms_code')->insert(
             ['phone' => $phone, 'code' => $code, 'sendTime' => Carbon::now()]
         );
-        EasySms::send($phone, [
-            'template' => '162713',
-            'data' => [
-                'code' => $code
-            ],
-        ]);
+        try
+        {
+            EasySms::send($phone, [
+                'template' => '162713',
+                'data' => [
+                    'code' => $code
+                ],
+            ]);
+        }
+        catch (NoGatewayAvailableException $e)
+        {
+            return response()->json(['status' => 'error', 'details' => $e->getExceptions()], 500);
+        }
         return response()->json(['status'=> 'success', 'phone' => $phone], 200);
     }
 
