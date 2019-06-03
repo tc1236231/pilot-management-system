@@ -10,10 +10,12 @@ use Carbon\Carbon;
 use http\Env\Response;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Routing\Middleware\ThrottleRequests;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Validation\ValidationException;
 use Overtrue\EasySms\Exceptions\NoGatewayAvailableException;
 
 class PilotController extends Controller
@@ -170,24 +172,34 @@ class PilotController extends Controller
         ]);
         $data = $validator->validate();
         $phone = $data['phone'];
+
+        $duplicate = DB::table('sms_code')->where('phone', '=', $phone)
+            ->whereTime('sendTime', '>=', Carbon::now()->subMinutes(5))->exists();
+        if($duplicate)
+        {
+            throw ValidationException::withMessages(array('general' => '5分钟发送间隔限制'));
+        }
+
         $code = randStr(6, 'NUMBER');
-        DB::table('sms_code')->insert(
-            ['phone' => $phone, 'code' => $code, 'sendTime' => Carbon::now()]
-        );
         try
         {
             EasySms::send($phone, [
                 'template' => '162713',
                 'data' => [
-                    'app' => env('APP_NAME','APP'),
+                    'app' => '呼号',
                     'code' => $code,
                 ],
             ]);
         }
         catch (NoGatewayAvailableException $e)
         {
-            return response()->json(['status' => 'error', 'details' => $e->getExceptions()], 500);
+            return response()->json(['status' => 'error', 'message' => $e->getExceptions()], 500);
         }
+
+        DB::table('sms_code')->insert(
+            ['phone' => $phone, 'code' => $code, 'sendTime' => Carbon::now()]
+        );
+
         return response()->json(['status'=> 'success', 'phone' => $phone], 200);
     }
 

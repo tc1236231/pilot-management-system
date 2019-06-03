@@ -23,7 +23,7 @@ Route::group([
     Route::get('/atc/atis', 'ATCController@getATIS')->name('atc.atis.get');
     Route::get('/pilot/export', 'PilotController@exportPilot')->name('pilot.export');
     Route::get('/pilot/mobile/verify/send', 'PilotController@sendMobileVerifyCode')
-        ->middleware('throttle:1,1')
+        ->middleware('throttle:15,1')
         ->name('pilot.mobile.verify.send');
 });
 
