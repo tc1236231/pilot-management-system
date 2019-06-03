@@ -179,7 +179,8 @@ class PilotController extends Controller
             EasySms::send($phone, [
                 'template' => '162713',
                 'data' => [
-                    'code' => $code
+                    'app' => env('APP_NAME','APP'),
+                    'code' => $code,
                 ],
             ]);
         }
