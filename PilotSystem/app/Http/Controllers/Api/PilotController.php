@@ -183,7 +183,7 @@ class PilotController extends Controller
         $phone = $data['phone'];
 
         $duplicate = DB::table('sms_code')->where('phone', '=', $phone)
-            ->whereTime('sendTime', '>=', Carbon::now()->subMinutes(5))->exists();
+            ->where('sendTime', '>=', Carbon::now()->subMinutes(5)->toDateTimeString())->exists();
         if($duplicate)
         {
             throw ValidationException::withMessages(array('general' => '5分钟发送间隔限制'));
@@ -270,7 +270,7 @@ class PilotController extends Controller
         $sms_code = $profile['mobileverifycode'];
         $sms_verified = DB::table('sms_code')->where('phone','=',$sms_phone)
             ->where('code','=',$sms_code)
-            ->whereTime('sendTime', '>=', Carbon::now()->subMinutes(30))
+            ->where('sendTime', '>=', Carbon::now()->subMinutes(30)->toDateTimeString())
             ->exists();
         if(!$sms_verified)
         {
