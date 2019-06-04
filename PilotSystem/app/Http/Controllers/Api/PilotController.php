@@ -295,7 +295,7 @@ class PilotController extends Controller
             if ($pilot->namelog == PilotNameLog::NOT_ACTIVATED)
                 return response()->json(['status' => 'error', 'message' => '导入呼号未激活'],422);
 
-            $data = array(
+            $export_data = array(
                 'field1' => $pilot->via == PilotFlightPermission::ALLOWED ? '已获得' : '未获得',
                 'field2' => $pilot->onlinetime,
                 'field4' => $pilot->atctime,
@@ -311,9 +311,9 @@ class PilotController extends Controller
         }
 
         $hashed_pwd = Hash::make($data['password']);
-        if(isset($data))
+        if(isset($export_data))
         {
-            return response()->json(['status' => 'success', 'message' => '', 'password' => $hashed_pwd, 'data' => $data], 200);
+            return response()->json(['status' => 'success', 'message' => '', 'password' => $hashed_pwd, 'data' => $export_data], 200);
         }
         else
         {
