@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Facades\EasySms;
+use App\Models\Enums\PilotFlightPermission;
 use App\Models\Enums\PilotLevel;
 use App\Models\Enums\PilotNameLog;
 use App\Models\Pilot;
@@ -293,10 +294,15 @@ class PilotController extends Controller
 
             if ($pilot->namelog == PilotNameLog::NOT_ACTIVATED)
                 return response()->json(['status' => 'error', 'message' => '导入呼号未激活'],422);
+
+            $data = array(
+                'field1' => $pilot->via == PilotFlightPermission::ALLOWED ? '已获得' : '未获得',
+                'field2' => $pilot->onlinetime,
+                'field4' => $pilot->atctime,
+            );
         }
         else
         {
-            //VA CHECK
             $info = $this->vaService->getPilotInfo($data['username']);
             if($info)
             {
@@ -305,8 +311,14 @@ class PilotController extends Controller
         }
 
         $hashed_pwd = Hash::make($data['password']);
-
-        return response()->json(['status' => 'success', 'message' => '', 'password' => $hashed_pwd], 200);
+        if(isset($data))
+        {
+            return response()->json(['status' => 'success', 'message' => '', 'password' => $hashed_pwd, 'data' => $data], 200);
+        }
+        else
+        {
+            return response()->json(['status' => 'success', 'message' => '', 'password' => $hashed_pwd], 200);
+        }
     }
 
 }
