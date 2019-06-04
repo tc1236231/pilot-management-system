@@ -280,7 +280,7 @@ class PilotController extends Controller
         if($importOldCallsign)
         {
             $callsign = $data['username'];
-            $password = $data['cpwd'];
+            $password = $profile['cpwd'];
             if(strlen($callsign) != 4 || !is_numeric($callsign))
                 return response()->json(['status' => 'error', 'message' => '导入呼号格式错误'],422);
 
