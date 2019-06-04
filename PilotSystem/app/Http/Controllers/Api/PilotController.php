@@ -6,6 +6,7 @@ use App\Facades\EasySms;
 use App\Models\Enums\PilotLevel;
 use App\Models\Enums\PilotNameLog;
 use App\Models\Pilot;
+use App\Services\VirtualAirlineService;
 use Carbon\Carbon;
 use http\Env\Response;
 use Illuminate\Http\Request;
@@ -15,11 +16,19 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Validation\Rule;
 use Illuminate\Validation\ValidationException;
 use Overtrue\EasySms\Exceptions\NoGatewayAvailableException;
 
 class PilotController extends Controller
 {
+    private $vaService;
+
+    public function __construct(VirtualAirlineService $vaService)
+    {
+        $this->vaService = $vaService;
+    }
+
     private function hideStar($str) { //QQ、邮箱 中间字符串以*隐藏
         if (strpos($str, '@')) {
             $pilotsemail = explode("@", $str);
@@ -205,8 +214,99 @@ class PilotController extends Controller
 
     public function register(Request $request)
     {
-        \Log::debug(print_r($request->all()));
-        return response()->json(['status' => 'test', 'message' => 'test'], 200);
+        $rules = [
+            'username'=>[
+                'required',
+                'string',
+                'max:5',
+            ],
+            'password'=>[
+                'required',
+                'string',
+            ],
+            'profile.cpwd'=>[
+                'sometimes',
+                'required',
+                'string'
+            ],
+            'profile.mobile'=>[
+                'required',
+                'mobile'
+            ],
+            'profile.mobileverifycode'=>[
+                'required',
+                'numeric'
+            ]
+        ];
+        $importOldCallsign = false;
+        if($request->has('profile'))
+        {
+            $temp = $request->get('profile');
+            if(!array_key_exists('cpwd',$temp))
+            {
+                array_push($rules['username'], 'unique:pilots.callsign');
+            }
+            else
+            {
+                $importOldCallsign = true;
+            }
+        }
+        $validator = \Validator::make($request->all(), $rules, [
+            'username.required'=>'用户名必填',
+            'username.unique'=>'该呼号在旧呼号系统被注册,如需使用请导入该呼号',
+        ]);
+
+        try
+        {
+            $data = $validator->validate();
+        }
+        catch (\Exception $e)
+        {
+            return response()->json(['status' => 'error', 'message' => $e->getMessage()], 422);
+        }
+
+        $profile = $data['profile'];
+        $sms_phone = $profile['mobile'];
+        $sms_code = $profile['mobileverifycode'];
+        $sms_verified = DB::table('sms_code')->where('phone','=',$sms_phone)
+            ->where('code','=',$sms_code)
+            ->whereTime('sendTime', '>=', Carbon::now()->subMinutes(30))
+            ->exists();
+        if(!$sms_verified)
+        {
+            return response()->json(['status' => 'error', 'message' => '手机验证码不正确'], 422);
+        }
+
+        if($importOldCallsign)
+        {
+            $callsign = $data['username'];
+            $password = $data['cpwd'];
+            if(strlen($callsign) != 4 || !is_numeric($callsign))
+                return response()->json(['status' => 'error', 'message' => '导入呼号格式错误'],422);
+
+            $pilot = Pilot::where('callsign', '=', $callsign)->first();
+            if(!$pilot)
+                return response()->json(['status' => 'error', 'message' => '导入呼号不存在'],422);
+
+            if (!Hash::check($password, $pilot->password))
+                return response()->json(['status' => 'error', 'message' => '导入呼号密码错误'],422);
+
+            if ($pilot->namelog == PilotNameLog::NOT_ACTIVATED)
+                return response()->json(['status' => 'error', 'message' => '导入呼号未激活'],422);
+        }
+        else
+        {
+            //VA CHECK
+            $info = $this->vaService->getPilotInfo($data['username']);
+            if($info)
+            {
+                return response()->json(['status' => 'error', 'message' => '该呼号注册过旧虚航,如需使用请导入该呼号'],422);
+            }
+        }
+
+        $hashed_pwd = Hash::make($data['password']);
+
+        return response()->json(['status' => 'success', 'message' => '', 'password' => $hashed_pwd], 200);
     }
 
 }
