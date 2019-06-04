@@ -33,6 +33,7 @@ Route::group([
 ], function () {
     Route::post('/pilot/register', 'PilotController@register')->name('pilot.register');
     Route::get('/pilot/verify', 'PilotController@verifyCallsignPassword')->name('pilot.verify');
+    Route::post('/pilot/change/password', 'PilotController@changePassword')->name('pilot.change.password');
 });
 
 Route::group([

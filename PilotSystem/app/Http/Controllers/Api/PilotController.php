@@ -321,4 +321,30 @@ class PilotController extends Controller
         }
     }
 
+    public function changePassword(Request $request)
+    {
+        $rules = [
+            'username'=>[
+                'required',
+                'string',
+            ],
+            'password'=>[
+                'required',
+                'string',
+            ]
+        ];
+        $validator = \Validator::make($request->all(), $rules);
+        try
+        {
+            $data = $validator->validate();
+        }
+        catch (\Exception $e)
+        {
+            return response()->json(['status' => 'error', 'message' => $e->getMessage()], 422);
+        }
+
+        $newpwd = Hash::make($data['password']);
+        return response()->json(['status' => 'success', 'password' => $newpwd], 200);
+    }
+
 }
