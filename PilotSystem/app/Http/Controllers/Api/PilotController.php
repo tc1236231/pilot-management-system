@@ -9,15 +9,11 @@ use App\Models\Enums\PilotNameLog;
 use App\Models\Pilot;
 use App\Services\VirtualAirlineService;
 use Carbon\Carbon;
-use http\Env\Response;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use Illuminate\Routing\Middleware\ThrottleRequests;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Input;
-use Illuminate\Support\Facades\Validator;
-use Illuminate\Validation\Rule;
 use Illuminate\Validation\ValidationException;
 use Overtrue\EasySms\Exceptions\NoGatewayAvailableException;
 
@@ -345,6 +341,89 @@ class PilotController extends Controller
 
         $newpwd = Hash::make($data['password']);
         return response()->json(['status' => 'success', 'password' => $newpwd], 200);
+    }
+
+    public function redeemExam(Request $request)
+    {
+        $rules = [
+            'uid'=>[
+                'required',
+                'numeric'
+            ],
+            'lid'=>[
+                'required',
+                'numeric'
+            ]
+        ];
+        $validator = \Validator::make($request->all(), $rules);
+        try
+        {
+            $data = $validator->validate();
+        }
+        catch (\Exception $e)
+        {
+            return response()->json(['status' => 'error', 'message' => $e->getMessage()], 422);
+        }
+        $db_conn = DB::connection('platform_bbs');
+        $result = $db_conn->table('bbs_tiny_exam3_log')->where('lid', '=' , $data['lid'])
+            ->where('uid','=',$data['uid'])
+            ->where('status','=',0)
+            ->first(['pid','score']);
+
+        if(!$result)
+        {
+            return response()->json(['status' => 'error', 'message' => '数据库错误'], 422);
+        }
+
+        switch ($result->pid)
+        {
+            case 1: //年审体检认证
+                $field5q = $db_conn->table('bbs_common_member_profile')
+                    ->where('uid','=', $data['uid'])
+                    ->first('field5');
+                if(!$field5q)
+                    return response()->json(['status' => 'error', 'message' => '资料未建立'], 422);
+                if(intval($field5q->field5) == date('m'))
+                {
+                    return response()->json(['status' => 'error', 'message' => '本月已年审，无需再次审核'], 422);
+                }
+                $db_conn->table('bbs_common_member_profile')
+                    ->where('uid','=', $data['uid'])
+                    ->update(['field5' => date('m')]);
+                break;
+            case 2: //连飞资格
+                $field1q = $db_conn->table('bbs_common_member_profile')
+                    ->where('uid','=', $data['uid'])
+                    ->first('field1');
+                if(!$field1q)
+                    return response()->json(['status' => 'error', 'message' => '资料未建立'], 422);
+                if($field1q->field1 == "已获得")
+                {
+                    return response()->json(['status' => 'error', 'message' => '已获得该资格，无需再次领取'], 422);
+                }
+                $db_conn->table('bbs_common_member_profile')
+                    ->where('uid','=', $data['uid'])
+                    ->update(['field1' => '已获得']);
+                break;
+            case 3: //管制资格
+                $field3q = $db_conn->table('bbs_common_member_profile')
+                    ->where('uid','=', $data['uid'])
+                    ->first('field3');
+                if(!$field3q)
+                    return response()->json(['status' => 'error', 'message' => '资料未建立'], 422);
+                if($field3q->field3 == "已获得")
+                {
+                    return response()->json(['status' => 'error', 'message' => '已获得该资格，无需再次领取'], 422);
+                }
+                $db_conn->table('bbs_common_member_profile')
+                    ->where('uid','=', $data['uid'])
+                    ->update(['field3' => '已获得']);
+                break;
+            default:
+                return response()->json(['status' => 'error', 'message' => '未知考试类型'], 200);
+        }
+
+        return response()->json(['status' => 'success', 'message' => ''], 200);
     }
 
 }
