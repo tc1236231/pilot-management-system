@@ -368,7 +368,7 @@ class PilotController extends Controller
         $result = $db_conn->table('bbs_tiny_exam3_log')->where('lid', '=' , $data['lid'])
             ->where('uid','=',$data['uid'])
             ->where('status','=',0)
-            ->first(['pid','score']);
+            ->first(['pid','score','total']);
 
         if(!$result)
         {
@@ -387,6 +387,10 @@ class PilotController extends Controller
                 {
                     return response()->json(['status' => 'error', 'message' => '本月已年审，无需再次审核'], 422);
                 }
+                if($result->score < 100)
+                {
+                    return response()->json(['status' => 'error', 'message' => '分数不够'], 422);
+                }
                 $db_conn->table('bbs_common_member_profile')
                     ->where('uid','=', $data['uid'])
                     ->update(['field5' => date('m')]);
@@ -401,6 +405,10 @@ class PilotController extends Controller
                 {
                     return response()->json(['status' => 'error', 'message' => '已获得该资格，无需再次领取'], 422);
                 }
+                if($result->score < 100)
+                {
+                    return response()->json(['status' => 'error', 'message' => '分数不够'], 422);
+                }
                 $db_conn->table('bbs_common_member_profile')
                     ->where('uid','=', $data['uid'])
                     ->update(['field1' => '已获得']);
@@ -414,6 +422,10 @@ class PilotController extends Controller
                 if($field3q->field3 == "已获得")
                 {
                     return response()->json(['status' => 'error', 'message' => '已获得该资格，无需再次领取'], 422);
+                }
+                if($result->score < 100)
+                {
+                    return response()->json(['status' => 'error', 'message' => '分数不够'], 422);
                 }
                 $db_conn->table('bbs_common_member_profile')
                     ->where('uid','=', $data['uid'])
