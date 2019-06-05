@@ -292,7 +292,7 @@ class PilotController extends Controller
                 return response()->json(['status' => 'error', 'message' => '导入呼号未激活'],422);
 
             $export_data = array(
-                'field1' => $pilot->via == PilotFlightPermission::ALLOWED ? '已获得' : '未获得',
+                'field1' => $pilot->via == PilotFlightPermission::ALLOWED ? '1' : '0',
                 'field2' => $pilot->onlinetime,
                 'field4' => $pilot->atctime,
             );
@@ -401,7 +401,7 @@ class PilotController extends Controller
                     ->first('field1');
                 if(!$field1q)
                     return response()->json(['status' => 'error', 'message' => '资料未建立'], 422);
-                if($field1q->field1 == "已获得")
+                if($field1q->field1 == "1")
                 {
                     return response()->json(['status' => 'error', 'message' => '已获得该资格，无需再次领取'], 422);
                 }
@@ -411,7 +411,7 @@ class PilotController extends Controller
                 }
                 $db_conn->table('bbs_common_member_profile')
                     ->where('uid','=', $data['uid'])
-                    ->update(['field1' => '已获得']);
+                    ->update(['field1' => '1']);
                 break;
             case 3: //管制资格
                 $field3q = $db_conn->table('bbs_common_member_profile')
@@ -419,7 +419,7 @@ class PilotController extends Controller
                     ->first('field3');
                 if(!$field3q)
                     return response()->json(['status' => 'error', 'message' => '资料未建立'], 422);
-                if($field3q->field3 == "已获得")
+                if($field3q->field3 == "1")
                 {
                     return response()->json(['status' => 'error', 'message' => '已获得该资格，无需再次领取'], 422);
                 }
@@ -429,7 +429,7 @@ class PilotController extends Controller
                 }
                 $db_conn->table('bbs_common_member_profile')
                     ->where('uid','=', $data['uid'])
-                    ->update(['field3' => '已获得']);
+                    ->update(['field3' => '1']);
                 break;
             default:
                 return response()->json(['status' => 'error', 'message' => '未知考试类型'], 200);
