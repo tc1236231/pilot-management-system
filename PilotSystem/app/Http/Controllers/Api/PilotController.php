@@ -438,4 +438,23 @@ class PilotController extends Controller
         return response()->json(['status' => 'success', 'message' => ''], 200);
     }
 
+    public function verifyNewPilot($callsign, $password)
+    {
+        $db_conn = DB::connection('platform_bbs');
+        $user = $db_conn->table('bbs_common_member')->where('username', '=',$callsign)
+            ->first(['password','email']);
+        if(!$user)
+        {
+            return response()->json(['status' => 'error', 'message' => 'no user']);
+        }
+        if(Hash::check($password, $user->password))
+        {
+            return response()->json(['status' => 'success', 'user' => $user], 200);
+        }
+        else
+        {
+            return response()->json(['status' => 'error', 'message' => 'username password incorrect']);
+        }
+    }
+
 }
