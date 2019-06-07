@@ -17,6 +17,7 @@ Route::group([
     'middleware' => ['throttle:60,1'],
     'namespace' => 'Api', 'prefix' => 'public', 'as' => 'api.public.',
 ], function () {
+    Route::get('/client/config','PilotController@getConfig')->name('client.config');
     Route::get('/pilot/recommend/callsign', 'PilotController@getRecommendCallsign')->name('pilot.recommend.callsign');
     Route::get('/pilot/status', 'PilotController@queryPublicPilotStatus')->name('pilot.status');
     Route::get('/va/pilot/{pilotid}/pireps', 'VirtualAirlineController@getPireps')->name('va.pilot.pireps');
