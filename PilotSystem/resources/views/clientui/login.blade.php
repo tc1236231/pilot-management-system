@@ -81,7 +81,9 @@
                         try{
                             var remember = document.getElementById("remMe").checked;
                             MainWindowJSObject.setLoginParam(huhao_user,huhao_pwd,remember);
-                        } catch {}
+                        } catch (error) {
+
+                        }
                         location.reload();
                     }else{
                         swal('登录失败',data.message,"error");
