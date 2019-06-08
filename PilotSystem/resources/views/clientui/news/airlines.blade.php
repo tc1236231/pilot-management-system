@@ -7,8 +7,8 @@
   <textarea id="input">这是幕后黑手</textarea>
   @inject('vasvc','App\Services\VirtualAirlineService')
   @foreach($vasvc->getAirlines() as $airline)
-    <button style="margin-bottom:4px; margin-top:4px;" onclick="copyText('https://va.chinaflier.com/index.php/Airlines/airline/{{$airline->code}}')">
-      {{$airline->code}}<br /> <img width='48' height='48' src="https://va.chinaflier.com/images/Airlineslogo/{{$airline->code}}/{{$airline->code}}OK.jpg"/><br />{{$airline->gspv}}
+    <button style="margin-bottom:4px; margin-top:4px;" onclick="copyText('http://va.hkonc.cn/index.php/Airlines/airline/{{$airline->code}}')">
+      {{$airline->code}}<br /> <img width='48' height='48' src="http://va.hkonc.cn/images/Airlineslogo/{{$airline->code}}/{{$airline->code}}OK.jpg"/><br />{{$airline->gspv}}
     </button>
   @endforeach
 

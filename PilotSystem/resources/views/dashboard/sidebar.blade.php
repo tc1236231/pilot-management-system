@@ -56,7 +56,7 @@
             <div class="collapse" id="help">
                 <ul class="nav flex-column sub-menu">
                     <li class="nav-item"> <a class="nav-link" href="{{ route('frontend.dashboard.link.flightrule') }}">连飞规定</a></li>
-                    <li class="nav-item"> <a class="nav-link" target="_blank" href="http://bbs.chinaflier.com/thread-31231-1-1.html">软件下载</a></li>
+                    <li class="nav-item"> <a class="nav-link" target="_blank" href="http://bbs.hkonc.cn/thread-31231-1-1.html">软件下载</a></li>
                     <li class="nav-item"> <a class="nav-link" href="{{ route('frontend.dashboard.link.joinus') }}">加入我们</a></li>
                 </ul>
             </div>

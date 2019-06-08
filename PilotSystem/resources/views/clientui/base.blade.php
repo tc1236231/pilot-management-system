@@ -58,8 +58,8 @@
         @yield('main')
 
         <!-- 版权 -->
-        <div id="footer">
-                Copyright © 2004 - 2019  <a href="https://va.chinaFlier.com/" title="ChinaFlier" target="_blank">COC 航空人生</a> 飞行品质监控系统</div>
+        <div id="footer" style="margin:auto;text-align:center;">
+                Copyright © 2004 - 2019 COC 航空人生 飞行品质监控系统</div>
         </div>
 
         <script type="text/javascript" src="{{ asset('assets/js/client/client_function.js') }}"></script>

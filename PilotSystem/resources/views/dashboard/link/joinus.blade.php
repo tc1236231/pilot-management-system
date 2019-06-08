@@ -39,7 +39,7 @@
                     <img width='140' height='140' src="{{ asset('assets/images/joinus/TeamViewer.png') }}"/><br />远程协助
                 </button>
 
-                <button style="margin-bottom:8px; margin-top:8px;" onclick="copyText('8928@chinaflier.com')">
+                <button style="margin-bottom:8px; margin-top:8px;" onclick="copyText('admin@hkrscoc.com')">
                     <img width='140' height='140' src="{{ asset('assets/images/joinus/Email.png') }}"/><br />电子邮件
                 </button>
 

@@ -30,7 +30,7 @@
 &nbsp; &nbsp;3、直播时，必须带有平台logo或平台名称；<br />
 &nbsp; &nbsp;一经发现违反须知内容直播，将取消入驻！<br />
 &nbsp; &nbsp;平台名称：< 中国飞行者联盟 航空人生 ><br />
-  &nbsp; &nbsp;平台LOGO:  <button onclick="copyText('https://va.chinaflier.com/images/new/logo-overwatch-full.png')">下载LOGO</button>
+  &nbsp; &nbsp;平台LOGO:  <button onclick="copyText('http://va.hkonc.cn/images/new/logo-overwatch-full.png')">下载LOGO</button>
   <button onclick="copyText('http://zhannei.baidu.com/cse/search?q=Flash+for+Chrome&click=1&entry=1&s=9035802123405734980&nsid=1')">Flash插件</button>
   <br /><br />联系 6862 申请入驻
 

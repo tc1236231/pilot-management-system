@@ -5,7 +5,6 @@
  * Date: 2018/6/20
  * Time: 1:12
  */
-header("ACCESS-CONTROL-ALLOW-ORIGIN:https://va.chinaflier.com");
 require_once("SimRoutePlanner.php");
 
 $action = @$_POST["action"];

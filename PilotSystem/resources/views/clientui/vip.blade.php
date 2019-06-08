@@ -25,7 +25,7 @@
                 </span>
             </a>
 
-            <a href="https://pilot.chinaflier.com/" target="_blank" class="amount" style="width:82px; height:43px; padding-top:14px; border-left-width:2px;">
+            <a target="_blank" class="amount" style="width:82px; height:43px; padding-top:14px; border-left-width:2px;">
                 @if (Auth::user()->level == 0)
                     <span style='color:red;'>VIP 已过期</span>
                 @elseif (Auth::user()->level == 1)
@@ -36,7 +36,7 @@
                 <span class="balanceAmount" style="color:#FFCC00" >{{ Auth::user()->callsign }}</span>
             </a>
 
-            <a href="https://pilot.chinaflier.com/" target="_blank" class="amount" style="width:82px; height:43px; padding-top:14px; border-left-width:2px;">
+            <a target="_blank" class="amount" style="width:82px; height:43px; padding-top:14px; border-left-width:2px;">
                 <span style='color:#FFCC00;'>连飞资格</span>
 
                 <span class="balanceAmount">

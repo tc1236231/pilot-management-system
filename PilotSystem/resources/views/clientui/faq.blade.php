@@ -25,9 +25,9 @@
                     <button onclick="copyText('https://cloud.video.taobao.com//play/u/2334173164/p/1/e/6/t/1/50062070243.mp4')">航空人生教程</button>
                     <br /><br />
                     <div class="line"></div> <br />
-                    <button onclick="copyText('http://bbs.chinaflier.com/forum.php?mod=viewthread&tid=31231')">客户端 问题解答</button>&nbsp; &nbsp;
-                    <button onclick="copyText('http://bbs.chinaflier.com/forum.php?mod=viewthread&tid=27480')">机模 AI 帮助</button>&nbsp; &nbsp;
-                    <button onclick="copyText('http://va.chinaflier.com/index.php/faq')">虚航问题解答</button>
+                    <button onclick="copyText('http://bbs.hkonc.cn/forum.php?mod=viewthread&tid=31231')">客户端 问题解答</button>&nbsp; &nbsp;
+                    <button onclick="copyText('http://bbs.hkonc.cn/forum.php?mod=viewthread&tid=27480')">机模 AI 帮助</button>&nbsp; &nbsp;
+                    <button onclick="copyText('http://va.hkonc.cn/index.php/faq')">虚航问题解答</button>
                     <br /><br />
                     <button onclick="copyText('https://pan.baidu.com/s/15OwumJsuNTkVwPdXRFZX6A 提取码:8hc6')">主安装程序 | 安装说明 | 客舱语音包 | XP-FF359识别修复补丁</button>
                     <br /><br />
@@ -37,7 +37,7 @@
                     <br /><br />
                     <button onclick="copyText('https://pan.baidu.com/s/1qXXIDo4 提取码:xts1')">Team Viewer CFR官方专用远程帮助工具</button>
                     <br /><br />
-                    <button onclick="copyText('http://bbs.chinaflier.com/forum.php?mod=forumdisplay&fid=339')">其他各种插件安装视频教程</button>
+                    <button onclick="copyText('http://bbs.hkonc.cn/forum.php?mod=forumdisplay&fid=339')">其他各种插件安装视频教程</button>
                 </div>
                 <br />
                 <div class="line"></div> <br />

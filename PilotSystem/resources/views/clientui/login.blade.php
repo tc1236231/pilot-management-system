@@ -11,7 +11,7 @@
                 <div class="userNav">
                     <ul>
                         <li><a href="{{ url('/') }}" target="_blank"><img src="{{ asset('assets/images/client/icons/topnav/profile.png') }}" /><span>注册 | 查询呼号状态</span></a></li>
-                        <li><a href="https://va.chinaflier.com/" target="_blank"><img src="{{ asset('assets/images/client/icons/topnav/messages.png') }}" /><span>加入航司</span></a></li>
+                        <li><a href="https://va.hkonc.cn/" target="_blank"><img src="{{ asset('assets/images/client/icons/topnav/messages.png') }}" /><span>加入航司</span></a></li>
                         <li><a id="exit" onclick="onExitBtnClicked()"><img src="{{ asset('assets/images/client/cfr/deleteFile.png') }}" /><span>退出</span></a></li>
                     </ul>
                 </div>
