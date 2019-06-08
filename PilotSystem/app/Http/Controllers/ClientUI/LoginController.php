@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\ClientUI;
 
 use App\Models\Enums\PilotLevel;
+use App\Services\PlatformService;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Response;
@@ -10,9 +11,18 @@ use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
+    private $platformService;
+
+    public function __construct(PlatformService $platformService)
+    {
+        $this->platformService = $platformService;
+    }
     public function index()
     {
-        return view('clientui.login');
+        return view('clientui.login',
+            [
+                'platforms' => $this->platformService->getAuthorizedPlatforms(),
+            ]);
     }
 
     protected function username() {

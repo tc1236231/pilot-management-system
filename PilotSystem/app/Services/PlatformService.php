@@ -3,6 +3,7 @@
 namespace App\Services;
 
 use App\Interfaces\Service;
+use App\Models\Platform;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Validation\ValidationException;
 use Log;
@@ -12,6 +13,11 @@ use Log;
  */
 class PlatformService extends Service
 {
+    public function getAuthorizedPlatforms()
+    {
+        return Platform::where('shouquan','=','1')->get();
+    }
+
     public function validateUsernamePassword($inputs)
     {
         $platform = strtolower($inputs['platform']);

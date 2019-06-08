@@ -47,7 +47,7 @@ class Platform extends Model
         'y-1',
         'shouquan',
         'shouquansql',
-        'zhuanhuan',
+        'va_enabled',
         'http',
     ];
 
