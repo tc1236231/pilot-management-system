@@ -13,6 +13,13 @@ class ConfigController extends Controller
     {
         $configs = DB::table('client_config')->where('enabled','=',1)
             ->get(['name', 'value']);
-        return response()->json($configs, 200);
+
+        $output_arr = array();
+        foreach($configs as $config)
+        {
+            $output_arr[$config->name] = $config->value;
+        }
+
+        return response()->json($output_arr, 200);
     }
 }
