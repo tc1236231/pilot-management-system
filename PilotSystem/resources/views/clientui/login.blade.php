@@ -27,11 +27,11 @@
                 <form action="index.php" id="validate" class="form" style="height: 165px;">
                     <fieldset>
                         <div class="formRow">
-                            <label for="platform">所属平台:</label>
+                            <label for="platform">接入平台:</label>
                             <div class="loginInput">
                             <select id="platform" name="platform" >
                                 @foreach($platforms as $platform)
-                                <option value="{{$platform->code}}">{{$platform->name}}</option>
+                                <option value="{{$platform->id}}">{{$platform->name}}</option>
                                 @endforeach
                             </select>
                             </div>

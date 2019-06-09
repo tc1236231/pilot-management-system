@@ -15,24 +15,12 @@
             <a class="amount" style="color:#00CCFF; width:125px; height:45px; padding-top:14px; padding-bottom:7px;">
                 <span>到期时间</span>
                 <span>
-                    @if (Auth::user()->level == 0)
-                        <span class='balanceAmount'>禁止使用</span>
-                    @elseif (Auth::user()->level == 1)
-                        <span class='balanceAmount'>内测试用</span>
-                    @elseif (Auth::user()->level >= 2)
-                        <span class='balanceAmount'>永久使用</span>
-                    @endif
+                    <span class='balanceAmount'>暂无</span>
                 </span>
             </a>
 
             <a target="_blank" class="amount" style="width:82px; height:43px; padding-top:14px; border-left-width:2px;">
-                @if (Auth::user()->level == 0)
-                    <span style='color:red;'>VIP 已过期</span>
-                @elseif (Auth::user()->level == 1)
-                    <span style='color:Lime;'>内测试用</span>
-                @elseif (Auth::user()->level >= 2)
-                    <span style='color:Lime;'>ATC 专享</span>
-                @endif
+                <span style='color:Lime;'>欢迎</span>
                 <span class="balanceAmount" style="color:#FFCC00" >{{ Auth::user()->callsign }}</span>
             </a>
 
@@ -40,9 +28,9 @@
                 <span style='color:#FFCC00;'>连飞资格</span>
 
                 <span class="balanceAmount">
-                @if(Auth::user()->via == 0)
+                @if(!Auth::user()->FlightPermission)
                     <span class='balanceAmount' style='color:red;'>未获得</span>
-                @elseif(Auth::user()->via == 1)
+                @else
                     <span class='balanceAmount' style='color:Lime;'>已获得</span>
                 @endif
                 </span>
@@ -50,9 +38,6 @@
         </div>
         <div class="line"></div><!-- 分割 -->
         <!-- 获取VIP飞行系统信息结束 -->
-        @if(!Auth::user()->hasPlatforms())
-            <b><center><font color="#FF3333">禁止访问！ 您还未绑定论坛<br />请登陆《飞行员系统》进入菜单 → 飞行员首页 → 论坛绑定 即可</font></center></b>
-        @else
         <ul class="tabs" >
             <li><a href="#tab1">航路查询 | Route </a></li>
             <li><a href="#tab2">功能中心 | Functional</a></li>
@@ -210,7 +195,6 @@
             </div>
             <!-- 匹配进度结束 -->
         </div>
-        @endif
         <!-- 分页开始结束 -->
         <div class="clear"></div><!-- 分割 -->
     </div>

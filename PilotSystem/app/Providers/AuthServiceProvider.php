@@ -2,6 +2,9 @@
 
 namespace App\Providers;
 
+use App\Extensions\NewUserProvider;
+use App\Models\NewUser;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
 
@@ -25,6 +28,8 @@ class AuthServiceProvider extends ServiceProvider
     {
         $this->registerPolicies();
 
-        //
+        Auth::provider('bbs', function ($app, array $config) {
+           return new NewUserProvider();
+        });
     }
 }

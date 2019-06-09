@@ -48,11 +48,13 @@
 <body>
 <div class="flex-center position-ref full-height">
     <div class="code">
-        404            </div>
+        404
+    </div>
 
     <div class="message" style="padding: 10px;">
-        未找到            </div>
-    <a href="javascript :history.back(-1)">返回上一页</a>
+        未找到
+    </div>
+    <a href="#" onClick="javascript :history.back(-1);">返回上一页</a>
 </div>
 </body>
 </html>

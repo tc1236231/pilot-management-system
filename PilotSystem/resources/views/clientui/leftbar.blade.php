@@ -19,12 +19,12 @@
     <!-- 菜单导航 -->
     <ul id="menu" class="nav" ondragstart="return false;">
         <li class="dash"><a href="{{ route('clientui.index') }}" class=""><span>新闻公告 | News</span></a></li>
-        @if(Auth::user()->level > 0)
+        @if(!Auth::user()->banned)
             <li class="typo"><a href="{{ route('clientui.vip') }}"><span>会员专区 | VIP</span></a></li>
         @endif
         <li class="files"><a href="{{ route('clientui.flightcenter') }}"><span>连飞中心 | Flight</span></a></li>
         <li class="typo"><a href="{{ route('clientui.vaflight') }}"><span>航司运营 | Airlines VA</span></a></li>
-        @if(Auth::user()->level > 1)
+        @if(Auth::user()->isatc)
             <li class="charts"><a href="{{ route('clientui.atc') }}"><span>空管中心 | ATC</span></a></li>
         @endif
         <li class="ui"><a href="{{ route('clientui.voice') }}"><span>语音设置 | Voice</span></a></li>

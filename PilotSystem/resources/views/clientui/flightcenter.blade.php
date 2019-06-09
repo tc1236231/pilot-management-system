@@ -6,12 +6,8 @@
     <!-- 框架内容 -->
     <div class="widget chartWrapper" ondragstart="return false;">
         @inject('fsvc', 'App\Services\FlightService')
-        @if(empty(Auth::user()->realname) || empty(Auth::user()->phone))
-            <img alt='prohibit' src='{{asset('assets/images/client/cfr/prohibit.jpg')}}'/>
-            <b><p color="#FF3333">禁止访问！ 未补充填写个人信息<br />请登陆《飞行员系统》进入菜单 → 飞行员首页 → 个人信息</p></b>
-        @elseif($fsvc->getRestrictFlight() && Auth::user()->via==0){
-            <img alt="viall" src='{{asset('assets/images/client/cfr/viaall.png')}}'/>
-            <b><p color="#FF3333">禁止访问！您还未获得活动连飞资格，活动结束前，无法进入该频道！</p></b>
+        @if($fsvc->getRestrictFlight() && Auth::user()->via==0){
+            <b><h1 color="#FF3333">禁止访问！您还未获得活动连飞资格，活动结束前，无法进入该频道！</h1></b>
         @else
         <ul class="tabs">
             <li><a href="#tab1">飞行员 | Pilot</a></li>
@@ -41,12 +37,10 @@
                     </a>
                     <a href="{{ url('/') }}" target="_blank" class="amount" style="width:55px; height:43px; padding-top:14px; border-left-width:2px;">
                         <span>
-                            @if(Auth::user()->level == 0)
+                            @if(Auth::user()->banned)
                                 <span style='color:red;'>已停飞</span>
-                            @elseif(Auth::user()->level == 1)
-                                <span style='color:Lime;'>Pilot</span>
-                            @elseif(Auth::user()->level > 1)
-                                <span style='color:Aqua;'>ATC</span>
+                            @else()
+                                <span style='color:Aqua;'>呼号</span>
                             @endif
                         </span>
                         <span class="balanceAmount" style="color:#80BFFF" >{{ Auth::user()->callsign }}</span>
@@ -56,7 +50,7 @@
                 <!-- 获取飞连线信息 -->
                 <div class="statsRow">
                     <div class="wrapper statsItems">
-                        <div class="sItem ticketsStats"><h2><a class="value">{{ Auth::user()->co }}<span>平台</span></a></h2></div>
+                        <div class="sItem ticketsStats"><h2><a class="value">{{ Auth::user()->platform }}<span>平台</span></a></h2></div>
                         <div class="sItem ticketsStats"><h2><a id="CompanyCode" class="value" style="padding-left: 16px; padding-right: 16px;">XXX<span>公司</span></a></h2></div>
                         <div class="sItem ticketsStats"><h2><a id="AircraftTypeCode" class="value" style="padding-left: 16px; padding-right: 16px;">XXXX<span>机型</span></a></h2></div>
                         <div class="sItem ticketsStats"><h2><a id="TransponderCode" class="value" style="padding-left: 16px; padding-right: 16px;">0000<span>应答机</span></a></h2></div>

@@ -20,11 +20,12 @@ Route::group([
 Route::group([
    'namespace' => 'ClientUI', 'prefix' => 'clientui', 'as' => 'clientui.'
 ], function () {
-    Route::get('/login', 'LoginController@index')->middleware(['guest'])->name('login.show');
-    Route::post('/login', 'LoginController@login')->middleware(['guest','throttle:60,1'])->name('login.action');
+    Route::get('/login', 'LoginController@index')->middleware(['guest:web,bbs'])->name('login.show');
+    Route::post('/login', 'LoginController@login')->middleware(['guest:web,bbs','throttle:60,1'])->name('login.action');
     Route::group([
-       'middleware' => ['auth', 'verified', 'role:admin|user']
+       'middleware' => ['auth:web,bbs']
     ], function() {
+        Route::get('/logout','LoginController@logout')->name('logout');
         Route::get('/index','HomeController@index')->name('index');
         Route::get('/news/{type}','HomeController@news')->name('news');
         Route::get('/flightcenter','HomeController@flightcenter')->name('flightcenter');

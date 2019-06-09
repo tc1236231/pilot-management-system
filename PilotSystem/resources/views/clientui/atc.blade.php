@@ -5,10 +5,6 @@
 @section('submain')
     <!-- 框架内容 -->
     <div class="widget chartWrapper" ondragstart="return false;">
-        @if(empty(Auth::user()->realname) || empty(Auth::user()->phone))
-            <img alt='prohibit' src='{{asset('assets/images/client/cfr/prohibit.jpg')}}'/>
-            <b><p color="#FF3333">禁止访问！ 未补充填写个人信息<br />请登陆《飞行员系统》进入菜单 → 飞行员首页 → 个人信息</p></b>
-        @elseif(Auth::user()->level>1)
         <ul class="tabs">
             <li><a href="#tab1">管制席位 | ATC Position</a></li>
             <li><a href="#tab2">终端情报 | ATIS</a></li>
@@ -99,7 +95,6 @@
         </div>
         <!-- 分页开始结束 -->
         <div class="clear"></div><!-- 分割 -->
-        @endif
     </div>
     <!-- 框架内容结束 -->
     <div class="clear"></div>

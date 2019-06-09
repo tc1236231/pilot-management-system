@@ -41,6 +41,11 @@ return [
             'provider' => 'users',
         ],
 
+        'bbs' => [
+            'driver' => 'session',
+            'provider' => 'bbsusers',
+        ],
+
         'api' => [
             'driver' => 'token',
             'provider' => 'apiusers',
@@ -76,6 +81,9 @@ return [
             'model' => App\Models\ApiUser::class,
         ],
 
+        'bbsusers' => [
+            'driver' => 'bbs',
+        ],
         // 'users' => [
         //     'driver' => 'database',
         //     'table' => 'users',

@@ -15,15 +15,17 @@ class RedirectIfAuthenticated
      * @param  string|null  $guard
      * @return mixed
      */
-    public function handle($request, Closure $next, $guard = null)
+    public function handle($request, Closure $next, ...$guards)
     {
-        if (Auth::guard($guard)->check()) {
-            if ($request->is('clientui*')) {
-                return redirect('/clientui/index');
-            }
-            else
-            {
-                return redirect('/dashboard');
+        foreach ($guards as $guard) {
+            if (Auth::guard($guard)->check()) {
+                if ($request->is('clientui*')) {
+                    return redirect('/clientui/index');
+                }
+                else
+                {
+                    return redirect('/dashboard');
+                }
             }
         }
 

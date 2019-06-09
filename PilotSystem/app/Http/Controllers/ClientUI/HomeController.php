@@ -26,6 +26,10 @@ class HomeController extends Controller
 
     public function vip()
     {
+        if(\Auth::guard('web')->check())
+        {
+            return view('clientui.oldforbidden');
+        }
         return view('clientui.vip');
     }
 
@@ -47,6 +51,10 @@ class HomeController extends Controller
 
     public function flightcenter()
     {
+        if(\Auth::guard('web')->check())
+        {
+            return view('clientui.oldforbidden');
+        }
         return view('clientui.flightcenter');
     }
 
@@ -69,6 +77,10 @@ class HomeController extends Controller
 
     public function vaflight()
     {
+        if(\Auth::guard('web')->check())
+        {
+            return view('clientui.oldforbidden');
+        }
         $pinfo = $this->vaService->getPilotInfo(\Auth::user()->callsign);
 
         return view('clientui.vaflight', compact('pinfo'));
