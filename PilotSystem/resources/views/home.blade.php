@@ -80,6 +80,8 @@
                             </div>
                         </div>
                     </div>
+                @else
+                    <h1 class="text-warning">请移步<a href="//bbs.hkonc.cn">论坛</a></h1>
                 @endif
             </div>
         </div>

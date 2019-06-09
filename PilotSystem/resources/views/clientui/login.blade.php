@@ -92,7 +92,7 @@
                     if(data.status === "success"){
                         try{
                             var remember = document.getElementById("remMe").checked;
-                            MainWindowJSObject.setLoginParam(huhao_user,huhao_pwd,remember);
+                            MainWindowJSObject.setLoginParam(huhao_user,huhao_pwd,remember,huhao_platform);
                         } catch (error) {
 
                         }

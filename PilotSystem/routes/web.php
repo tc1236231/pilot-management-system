@@ -44,7 +44,7 @@ Route::group([
  */
 Route::group([
     'namespace'  => 'Frontend', 'prefix' => 'dashboard', 'as' => 'frontend.',
-    'middleware' => ['auth', 'verified', 'role:admin|user'],
+    'middleware' => ['auth', 'verified', 'role:admin'],
 ], function () {
     Route::get('/', 'DashboardController@index')->name('dashboard.index');
     Route::get('/bind', 'DashboardController@bindPlatformShow')->name('dashboard.bind');
@@ -107,5 +107,5 @@ Route::group([
 
 });
 
-Auth::routes(['verify' => true]);
+//Auth::routes(['verify' => true]);
 Route::get('/logout', 'Auth\LoginController@logout')->name('logout');
