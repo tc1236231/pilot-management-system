@@ -438,8 +438,10 @@ class PilotController extends Controller
         return response()->json(['status' => 'success', 'message' => ''], 200);
     }
 
-    public function verifyNewPilot($callsign, $password)
+    public function verifyNewPilot(Request $request)
     {
+        $callsign = Input::get('callsign','');
+        $password = Input::get('password','');
         $db_conn = DB::connection('platform_bbs');
         $user = $db_conn->table('bbs_common_member')->where('username', '=',$callsign)
             ->first(['password','email']);
