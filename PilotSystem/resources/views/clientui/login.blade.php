@@ -21,8 +21,8 @@
 
         <!-- Main content wrapper -->
         <div class="loginWrapper">
-            <div class="widget" style="margin-top:40px;height: 238px;">
-                <div type="button" onclick="dlink()" class="loginLogo" style="margin-left:40px;top:-80;margin-top:10px; width:266px;height:90px;left:0px;"><img src="{{ asset('assets/images/client/cfr/Logo.png') }}" width="100%"></div>
+            <div class="widget" style="margin-top:0px;height: 238px;">
+                <div type="button" onclick="dlink()" class="loginLogo" style="margin-left:40px;margin-top:-40px; width:266px;height:90px;left:0px;"><img src="{{ asset('assets/images/client/cfr/Logo.png') }}" width="100%"></div>
                 <div class="title"><img src="{{ asset('assets/images/client/icons/dark/files.png') }}" class="titleIcon"><h6>登录面板 | Login</h6></div>
                 <form action="index.php" id="validate" class="form" style="height: 165px;">
                     <fieldset>

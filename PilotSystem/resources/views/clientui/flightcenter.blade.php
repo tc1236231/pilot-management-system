@@ -72,7 +72,7 @@
                                     <option value='{{$server->ip}}'> {{$server->svname}} </option>
                             @endforeach
                             </select>  &nbsp;
-                            @if(Auth::user()->level > 0)
+                            @if(!Auth::user()->banned)
                             <input id="ConnectBtn" onclick="onConnectBtnClicked(false)" class="dredB" value="连线飞行" type="reset" />
                             @endif
                             <input id="DisconnectBtn" onclick="onDisconnectBtnClicked()" class="basic" value="断线飞行" type="reset" />&nbsp;
