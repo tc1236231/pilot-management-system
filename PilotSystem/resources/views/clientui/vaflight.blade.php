@@ -6,10 +6,7 @@
     <!-- 框架内容 -->
     <div class="widget" ondragstart="return false;">
         @inject('fsvc', 'App\Services\FlightService')
-        @if(empty(Auth::user()->realname) || empty(Auth::user()->phone))
-            <img alt='prohibit' src='{{asset('assets/images/client/cfr/prohibit.jpg')}}'/>
-            <b><p color="#FF3333">禁止访问！ 未补充填写个人信息<br />请登陆《飞行员系统》进入菜单 → 飞行员首页 → 个人信息</p></b>
-        @elseif(empty($pinfo))
+        @if(empty($pinfo))
             <img alt="stop" src='{{asset('assets/images/client/cfr/STOP.png')}}'/>
             <b><center><font color="#FF3333">禁止访问! 未绑定航空人生账号<br /> 请登陆《飞行员系统》进入菜单 → 飞行员首页 → 航空人生 进行绑定</font></center></b>
         @else
