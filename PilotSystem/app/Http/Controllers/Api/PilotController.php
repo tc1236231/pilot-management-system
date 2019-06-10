@@ -198,7 +198,7 @@ class PilotController extends Controller
         }
         catch (NoGatewayAvailableException $e)
         {
-            \Log::error($e->getExceptions());
+            \Log::error($e->getLastException());
             return response()->json(['status' => 'error', 'message' => '短信接口失败,请通知管理员'], 500);
         }
 
