@@ -11,7 +11,7 @@ return [
 
         // 默认可用的发送网关
         'gateways' => [
-            'juhe',
+            'aliyun',
         ],
     ],
     // 可用的网关配置
@@ -23,9 +23,9 @@ return [
             'api_key' => '824f0ff2f71cab52936axxxxxxxxxx',
         ],
         'aliyun' => [
-            'access_key_id' => '',
-            'access_key_secret' => '',
-            'sign_name' => '',
+            'access_key_id' => env('ALIYUN_SMS_APP_ID', 'xxxxxxx'),
+            'access_key_secret' => env('ALIYUN_SMS_APP_SECRET', 'xxxxxxx'),
+            'sign_name' => env('ALIYUN_SMS_APP_SIGN_NAME', 'xxxxxxx'),
         ],
         'juhe' => [
             'app_key' => env('JUHE_SMS_APP_KEY', 'xxxxxxx'),

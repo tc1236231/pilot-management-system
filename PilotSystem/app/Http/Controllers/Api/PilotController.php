@@ -190,16 +190,16 @@ class PilotController extends Controller
         try
         {
             EasySms::send($phone, [
-                'template' => '162713',
+                'template' => 'SMS_167520147',
                 'data' => [
-                    'app' => '呼号',
                     'code' => $code,
                 ],
             ]);
         }
         catch (NoGatewayAvailableException $e)
         {
-            return response()->json(['status' => 'error', 'message' => $e->getExceptions()], 500);
+            \Log::error($e->getExceptions());
+            return response()->json(['status' => 'error', 'message' => '短信接口失败,请通知管理员'], 500);
         }
 
         DB::table('sms_code')->insert(
