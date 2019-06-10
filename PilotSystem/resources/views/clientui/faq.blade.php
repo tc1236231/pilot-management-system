@@ -42,7 +42,7 @@
                 <br />
                 <div class="line"></div> <br />
                 <div class="wrapper statsItems">
-                    @if(Auth::user()->level >= 1)
+                    @if(!Auth::user()->banned)
                         <button onclick='MainWindowJSObject.updateXPlanePlugin();'>X-PLANE 错误修正 Bug Fixes | 校验基础接口文件(校验时将自动关闭模拟器)</button>
                     @endif
                 </div>
