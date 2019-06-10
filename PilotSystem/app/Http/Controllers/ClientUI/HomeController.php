@@ -60,6 +60,10 @@ class HomeController extends Controller
 
     public function atc()
     {
+        if(!\Auth::user()->isatc)
+        {
+            return redirect('/clientui/login');
+        }
         $restrict = $this->flightService->getRestrictEntry();
 
         return view('clientui.atc',compact('restrict'));
@@ -84,5 +88,10 @@ class HomeController extends Controller
         $pinfo = $this->vaService->getPilotInfo(\Auth::user()->callsign);
 
         return view('clientui.vaflight', compact('pinfo'));
+    }
+
+    public function radar()
+    {
+        return view('clientui.radar');
     }
 }

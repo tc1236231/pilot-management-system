@@ -40,9 +40,9 @@ Route::group([
 });
 
 Route::group([
-    'middleware' => ['auth'],
+    'middleware' => ['auth:web,bbs'],
     'namespace' => 'Api', 'prefix' => '', 'as' => 'api.',
 ], function () {
-    Route::post('/atc/atis', 'ATCController@createATIS')->middleware('pilotlevel:4')->name('atc.atis.create');
-    Route::post('/atc/restrict/status', 'ATCController@updateRestrictStatus')->middleware('pilotlevel:4')->name('atc.restrict.status.change');
+    Route::post('/atc/atis', 'ATCController@createATIS')->name('atc.atis.create');
+    Route::post('/atc/restrict/status', 'ATCController@updateRestrictStatus')->name('atc.restrict.status.change');
 });
