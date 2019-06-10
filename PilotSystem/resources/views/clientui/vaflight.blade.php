@@ -17,7 +17,7 @@
             <li><a href="#tab4">日志|Log</a></li>
             <li><a href="#tab5">计划|Plan</a></li>
             <li><a href="#tab6">说明|FAQ</a></li>
-            @if($pinfo->lastname == '3804' || $pinfo->lastname == '8928' || $pinfo->huhao_user == "6862" || $pinfo->huhao_user == "3538" || $pinfo->huhao_user == "3131")
+            @if($pinfo->lastname == '3804' || $pinfo->lastname == '8928')
                 <li><a href="#tab7">内测</a></li>
             @endif
         </ul>
