@@ -35,8 +35,8 @@ Route::group([
         Route::get('/vip','HomeController@vip')->name('vip');
         Route::get('/faq','HomeController@faq')->name('faq');
         Route::get('/dispatching','HomeController@dispatching')->name('dispatching');
-        Route::get('/radar','HomeController@radar')->name('radar');
     });
+    Route::get('/radar','HomeController@radar')->name('radar');
 });
 
 /*

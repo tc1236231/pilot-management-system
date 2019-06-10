@@ -6,8 +6,8 @@
     <!-- 框架内容 -->
     <div class="widget chartWrapper" ondragstart="return false;">
         @inject('fsvc', 'App\Services\FlightService')
-        @if($fsvc->getRestrictFlight() && Auth::user()->via==0){
-            <b><h1 color="#FF3333">禁止访问！您还未获得活动连飞资格，活动结束前，无法进入该频道！</h1></b>
+        @if($fsvc->getRestrictFlight() && Auth::user()->via==0)
+            <b><h1 color="#FF3333" style="padding:100px;line-height:40px">禁止访问！您还未获得活动连飞资格，活动结束前，无法进入该频道！请前往飞行员系统进行考试</h1></b>
         @else
         <ul class="tabs">
             <li><a href="#tab1">飞行员 | Pilot</a></li>
