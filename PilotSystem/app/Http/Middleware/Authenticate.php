@@ -19,7 +19,7 @@ class Authenticate extends Middleware
                 return route('clientui.login.show');
             }
             else{
-                return route('login');
+                return url('/');
             }
         }
     }

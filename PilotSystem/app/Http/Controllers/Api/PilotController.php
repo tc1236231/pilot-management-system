@@ -215,7 +215,8 @@ class PilotController extends Controller
             'username'=>[
                 'required',
                 'string',
-                'max:5',
+                'min:4',
+                'max:4',
             ],
             'password'=>[
                 'required',
@@ -232,7 +233,7 @@ class PilotController extends Controller
             ],
             'profile.mobileverifycode'=>[
                 'required',
-                'numeric'
+                'string'
             ]
         ];
         $importOldCallsign = false;
@@ -241,7 +242,8 @@ class PilotController extends Controller
             $temp = $request->get('profile');
             if(!array_key_exists('cpwd',$temp))
             {
-                array_push($rules['username'], 'unique:pilots.callsign');
+                array_push($rules['username'], 'unique:pilots,callsign');
+                array_push($rules['username'], 'unique:saved_huhao,huhao');
             }
             else
             {
@@ -250,7 +252,8 @@ class PilotController extends Controller
         }
         $validator = \Validator::make($request->all(), $rules, [
             'username.required'=>'用户名必填',
-            'username.unique'=>'该呼号在旧呼号系统被注册,如需使用请导入该呼号',
+            'username.unique'=>'该呼号被保留或在旧呼号系统被注册,如需使用请导入该呼号',
+            'profile.mobile.mobile'=>'手机号格式有误',
         ]);
 
         try
@@ -259,7 +262,7 @@ class PilotController extends Controller
         }
         catch (\Exception $e)
         {
-            return response()->json(['status' => 'error', 'message' => $e->getMessage()], 422);
+            return response()->json(['status' => 'error', 'message' => $validator->errors()->first()], 422);
         }
 
         $profile = $data['profile'];

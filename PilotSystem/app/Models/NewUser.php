@@ -68,7 +68,7 @@ class NewUser extends Model implements
 
     public function getIsATCAttribute()
     {
-        return $this->detail->field3 >= 1;
+        return $this->detail->field3 > 1;
     }
 
     public function getOnlineTimeAttribute()
