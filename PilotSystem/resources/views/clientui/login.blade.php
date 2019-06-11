@@ -56,9 +56,9 @@
                             <div class="clear"></div>
                         </div>
                         <p style="padding-top: 0px;">
-                            &nbsp; * X-PLANE平台 请校验文件 - 2019年1月20日<br />
-                            &nbsp; * 退群需谨慎 - QQ和呼号一旦退群，将被禁止再次加群。<br />
-
+                            客户端版本: {{ $user_agent }}<br />
+                            用户IP: {{ $user_ip }}<br />
+                        </p>
                     </fieldset>
                 </form>
             </div>

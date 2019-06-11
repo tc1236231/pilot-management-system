@@ -19,11 +19,15 @@ class LoginController extends Controller
     {
         $this->platformService = $platformService;
     }
-    public function index()
+    public function index(Request $request)
     {
+        $user_agent = $request->header('User-Agent');
+        $user_ip = $request->ip();
         return view('clientui.login',
             [
                 'platforms' => $this->platformService->getAuthorizedPlatforms(),
+                'user_agent' => $user_agent,
+                'user_ip' => $user_ip,
             ]);
     }
 
