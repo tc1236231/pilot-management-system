@@ -368,10 +368,13 @@ class PilotController extends Controller
             return response()->json(['status' => 'error', 'message' => $e->getMessage()], 422);
         }
         $db_conn = DB::connection('platform_bbs');
-        $result = $db_conn->table('bbs_tiny_exam3_log')->where('lid', '=' , $data['lid'])
-            ->where('uid','=',$data['uid'])
-            ->where('status','=',0)
-            ->first(['pid','score','total']);
+        $result = $db_conn->table('bbs_tiny_exam3_log')
+            ->leftJoin('bbs_tiny_exam3_paper', 'bbs_tiny_exam3_log.pid', '=', 'bbs_tiny_exam3_paper.pid')
+            ->select(['bbs_tiny_exam3_log.pid','bbs_tiny_exam3_log.score','bbs_tiny_exam3_log.total','bbs_tiny_exam3_paper.pass'])
+            ->where('bbs_tiny_exam3_log.lid', '=' , $data['lid'])
+            ->where('bbs_tiny_exam3_log.uid','=',$data['uid'])
+            ->where('bbs_tiny_exam3_log.status','=',0)
+            ->first();
 
         if(!$result)
         {
@@ -390,7 +393,7 @@ class PilotController extends Controller
                 {
                     return response()->json(['status' => 'error', 'message' => '本月已年审，无需再次审核'], 422);
                 }
-                if($result->score < 100)
+                if($result->score < $result->pass)
                 {
                     return response()->json(['status' => 'error', 'message' => '分数不够'], 422);
                 }
@@ -408,7 +411,7 @@ class PilotController extends Controller
                 {
                     return response()->json(['status' => 'error', 'message' => '已获得该资格，无需再次领取'], 422);
                 }
-                if($result->score < 100)
+                if($result->score < $result->pass)
                 {
                     return response()->json(['status' => 'error', 'message' => '分数不够'], 422);
                 }
@@ -426,7 +429,7 @@ class PilotController extends Controller
                 {
                     return response()->json(['status' => 'error', 'message' => '已获得该资格，无需再次领取'], 422);
                 }
-                if($result->score < 100)
+                if($result->score < $result->pass)
                 {
                     return response()->json(['status' => 'error', 'message' => '分数不够'], 422);
                 }
