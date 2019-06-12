@@ -56,8 +56,8 @@
                             <div class="clear"></div>
                         </div>
                         <p style="padding-top: 0px;">
-                            客户端版本: {{ $user_agent }}<br />
-                            用户IP: {{ $user_ip }}<br />
+                            客户端版本: {{ $user_agent }} | 
+                            用户登陆IP: {{ $user_ip }}<br />
                         </p>
                     </fieldset>
                 </form>
