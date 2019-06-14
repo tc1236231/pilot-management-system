@@ -84,7 +84,7 @@
         <!-- 分页3 -->
         <div id="tab3" class="tab_content">
             <div class="wrapper statsItems"><!-- 居中 -->
-                @if(Auth::user()->level==12 || Auth::user()->callsign == "6862")
+                @if(Auth::user()->callsign == "8928" || Auth::user()->callsign == "3804")
                     <button onclick=MainWindowJSObject.showPointSystemEditForm();''>FOQA 编辑中心</button>
                 @endif
             </div>
