@@ -66,13 +66,13 @@
         };
 
         function loadAfterTime() {
-            postscribe('#zongju', "<script src='http://bbs.hkonc.cn/api.php?mod=js&bid=8' async><\/script>");
-            postscribe('#jingpai', "<script src='http://bbs.hkonc.cn/api.php?mod=js&bid=13' async><\/script>");
-            postscribe('#lianfei', "<script src='http://bbs.hkonc.cn/api.php?mod=js&bid=7' async><\/script>");
-            postscribe('#feiyuan', "<script src='http://bbs.hkonc.cn/api.php?mod=js&bid=310' async><\/script>");
-            postscribe('#hangsi', "<script src='http://bbs.hkonc.cn/api.php?mod=js&bid=306' async><\/script>");
-            postscribe('#zhaopin', "<script src='http://bbs.hkonc.cn/api.php?mod=js&bid=307' async><\/script>");
-            postscribe('#weigui', "<script src='http://bbs.hkonc.cn/api.php?mod=js&bid=12' async><\/script>");
+            postscribe('#zongju', "<script src='https://bbs.hkrscoc.com/api.php?mod=js&bid=8' async><\/script>");
+            postscribe('#jingpai', "<script src='https://bbs.hkrscoc.com/api.php?mod=js&bid=13' async><\/script>");
+            postscribe('#lianfei', "<script src='https://bbs.hkrscoc.com/api.php?mod=js&bid=7' async><\/script>");
+            postscribe('#feiyuan', "<script src='https://bbs.hkrscoc.com/api.php?mod=js&bid=310' async><\/script>");
+            postscribe('#hangsi', "<script src='https://bbs.hkrscoc.com/api.php?mod=js&bid=306' async><\/script>");
+            postscribe('#zhaopin', "<script src='https://bbs.hkrscoc.com/api.php?mod=js&bid=307' async><\/script>");
+            postscribe('#weigui', "<script src='https://bbs.hkrscoc.com/api.php?mod=js&bid=12' async><\/script>");
         }
     </script>
 @endsection
