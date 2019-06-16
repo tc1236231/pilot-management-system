@@ -411,7 +411,7 @@
                 success:function(result){
                     $('#mytable').find('tbody').empty();
                     for(var k in result) {
-                        $('#mytable').find('tbody').append( "<tr><td><center><a href='http://va.hkonc.cn/index.php/pireps/view/"+ result[k].pirepid +"' target='_blank'>" + result[k].code + result[k].flightnum +"</td><td><center>" + result[k].depicao + "</td><td><center>" + result[k].arricao + "</td><td><center>" + result[k].submitdate + "</td><td><center>" + ((result[k].accepted == "1") ? "<font color='Blue'>通过</font>" : "<font color='red'>拒绝</font>") + "</td></tr>" );
+                        $('#mytable').find('tbody').append( "<tr><td><center><a href='https://va.hkrscoc.com/index.php/pireps/view/"+ result[k].pirepid +"' target='_blank'>" + result[k].code + result[k].flightnum +"</td><td><center>" + result[k].depicao + "</td><td><center>" + result[k].arricao + "</td><td><center>" + result[k].submitdate + "</td><td><center>" + ((result[k].accepted == "1") ? "<font color='Blue'>通过</font>" : "<font color='red'>拒绝</font>") + "</td></tr>" );
                     }
                 }
             });
