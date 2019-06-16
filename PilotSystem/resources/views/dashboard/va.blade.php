@@ -7,7 +7,7 @@
 @endsection
 @section('content')
     <div class="row p-3">
-        <a class="btn btn-inverse-info" target="_blank" href="//va.hkonc.cn">进入航空人生首页</a>
+        <a class="btn btn-inverse-info" target="_blank" href="//va.hkrscoc.com">进入航空人生首页</a>
     </div>
     @if($va == "notbinded")
         <div class="row">

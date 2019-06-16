@@ -81,7 +81,7 @@
                         </div>
                     </div>
                 @else
-                    <h1 class="text-warning">请移步<a href="//bbs.hkonc.cn">新飞行员系统</a></h1>
+                    <h1 class="text-warning">请移步<a href="//bbs.hkrscoc.com">新飞行员系统</a></h1>
                 @endif
             </div>
         </div>
