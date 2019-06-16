@@ -5,10 +5,9 @@
 @section('submain')
     <!-- 框架内容 -->
     <div class="widget" ondragstart="return false;">
-        @inject('fsvc', 'App\Services\FlightService')
-        @if(empty($pinfo))
+        @if(!$pinfo || empty($pinfo))
             <img alt="stop" src='{{asset('assets/images/client/cfr/STOP.png')}}'/>
-            <b><center><font color="#FF3333">禁止访问! 未绑定航空人生账号<br /> 请登陆《飞行员系统》进入菜单 → 飞行员首页 → 航空人生 进行绑定</font></center></b>
+            <b><p color="#FF3333">禁止访问! 未注册航空人生账号 请前往va.hkrscoc.com注册</p></b>
         @else
         <ul class="tabs" >
             <li><a href="#tab1">机组|Crew</a></li>
@@ -401,6 +400,7 @@
 @section('script')
     @parent
 
+    @if(!empty($pinfo))
     <script>
         $("#queryPirepsBtn").click(function(){
             $.ajax({
@@ -417,4 +417,5 @@
             });
         });
     </script>
+    @endif
 @endsection
