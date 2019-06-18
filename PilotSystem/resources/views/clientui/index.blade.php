@@ -15,16 +15,17 @@
             <!-- 分页1 -->
             <div id="tab1" class="tab_content">
                 <div style="height: 450px;"><!-- 居中 -->
-                    <div id="zongju"></div>
+                    <div id="新闻"></div>
                     <div class="line"></div><!-- 分割 -->
-                    <div id="jingpai"></div>
+                    <div id="连飞"></div>
                     <div class="line"></div><!-- 分割 -->
-                    <div id="lianfei"></div>
-                    <div id="feiyuan"></div>
-                    <div id="hangsi"></div>
-                    <div id="zhaopin"></div>
+                    <div id="航司动态"></div>
                     <div class="line"></div><!-- 分割 -->
-                    <div id="weigui"></div>
+                    <div id="飞行员"></div>
+                    <div class="line"></div><!-- 分割 -->
+                    <div id="飞行资料"></div>
+                    <div class="line"></div><!-- 分割 -->
+                    <div id="签到"></div>
                 </div>
             </div>
             <!-- 分页1结束 -->
@@ -66,13 +67,15 @@
         };
 
         function loadAfterTime() {
-            postscribe('#zongju', "<script src='https://bbs.hkrscoc.com/api.php?mod=js&bid=8' async><\/script>");
-            postscribe('#jingpai', "<script src='https://bbs.hkrscoc.com/api.php?mod=js&bid=13' async><\/script>");
-            postscribe('#lianfei', "<script src='https://bbs.hkrscoc.com/api.php?mod=js&bid=7' async><\/script>");
-            postscribe('#feiyuan', "<script src='https://bbs.hkrscoc.com/api.php?mod=js&bid=310' async><\/script>");
-            postscribe('#hangsi', "<script src='https://bbs.hkrscoc.com/api.php?mod=js&bid=306' async><\/script>");
-            postscribe('#zhaopin', "<script src='https://bbs.hkrscoc.com/api.php?mod=js&bid=307' async><\/script>");
-            postscribe('#weigui', "<script src='https://bbs.hkrscoc.com/api.php?mod=js&bid=12' async><\/script>");
+            postscribe('#新闻', "<script src='https://bbs.hkrscoc.com/api.php?mod=js&bid=8' async><\/script>");
+            postscribe('#连飞', "<script src='https://bbs.hkrscoc.com/api.php?mod=js&bid=15' async><\/script>");
+            postscribe('#航司动态', "<script src='https://bbs.hkrscoc.com/api.php?mod=js&bid=13' async><\/script>");
+            postscribe('#飞行员', "<script src='https://bbs.hkrscoc.com/api.php?mod=js&bid=7' async><\/script>");
+            postscribe('#飞行资料', "<script src='https://bbs.hkrscoc.com/api.php?mod=js&bid=18' async><\/script>");
+
+            postscribe('#签到', "<script src='https://bbs.hkrscoc.com/api.php?mod=js&bid=12' async><\/script>");
+          
+          
         }
     </script>
 @endsection

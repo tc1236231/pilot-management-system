@@ -56,8 +56,9 @@
                             <div class="clear"></div>
                         </div>
                         <p style="padding-top: 0px;">
-                            客户端版本: {{ $user_agent }} | 
-                            用户登陆IP: {{ $user_ip }}<br />
+                            * 连飞服务器再次更新，请广大飞友，连线飞行测试稳定性。<br />
+                            * 新 X-PLANE 连飞插件更新,使用校验按钮自动更新抢先体验。<br /><br />
+                            COC版本: {{ $user_agent }} | 本机IP: {{ $user_ip }}<br />
                         </p>
                     </fieldset>
                 </form>
