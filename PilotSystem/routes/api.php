@@ -45,4 +45,8 @@ Route::group([
 ], function () {
     Route::post('/atc/atis', 'ATCController@createATIS')->name('atc.atis.create');
     Route::post('/atc/restrict/status', 'ATCController@updateRestrictStatus')->name('atc.restrict.status.change');
+    Route::get('/atc/callsign/query', 'ATCController@queryCallsignStatus')->name('atc.callsign.query');
+    Route::get('/atc/callsign/ban', 'ATCController@banCallsign')->name('atc.callsign.ban');
+    Route::get('/atc/callsign/unban', 'ATCController@unbanCallsign')->name('atc.callsign.unban');
+    Route::get('/atc/callsign/mod', 'ATCController@modCallsign')->name('atc.callsign.mod');
 });

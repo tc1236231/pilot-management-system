@@ -29,6 +29,7 @@ use App\Interfaces\Model;
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\PilotSearchLog whereTxt($value)
  * @mixin \Eloquent
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\PilotSearchLog whereAdminCallsign($value)
+ * @property-read \App\Models\Pilot $admin
  */
 class PilotSearchLog extends Model
 {

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\ClientUI;
 
+use App\Models\ATCLog;
 use App\Services\FlightService;
 use App\Services\VirtualAirlineService;
 use Illuminate\Http\Request;
@@ -66,7 +67,12 @@ class HomeController extends Controller
         }
         $restrict = $this->flightService->getRestrictEntry();
 
-        return view('clientui.atc',compact('restrict'));
+        if(\Auth::user()->manageATC)
+        {
+            $logs = ATCLog::orderByDesc('id')->paginate(20);
+        }
+
+        return view('clientui.atc',compact(['restrict','logs']));
     }
 
     public function voice()

@@ -78,6 +78,9 @@ use Laratrust\Traits\LaratrustUserTrait;
  * @mixin \Eloquent
  * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\PilotLog[] $logs
  * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\PilotRedeemCode[] $redeemCodes
+ * @property string|null $email_verified_at
+ * @property-read \Illuminate\Notifications\DatabaseNotificationCollection|\Illuminate\Notifications\DatabaseNotification[] $notifications
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Pilot whereEmailVerifiedAt($value)
  */
 class Pilot extends Authenticatable implements MustVerifyEmail
 {
