@@ -6,7 +6,7 @@
     <!-- 框架内容 -->
     <div class="widget chartWrapper" ondragstart="return false;">
         <ul class="tabs">
-            <li><a href="#tab1">管制席位 | ATC Position</a></li>
+            <li><a href="#tab1">管制席位 | Main</a></li>
             <li><a href="#tab2">终端情报 | ATIS</a></li>
             <li><a href="#tab3">活动管理 | Activity</a></li>
             @if(Auth::user()->manageATC)
