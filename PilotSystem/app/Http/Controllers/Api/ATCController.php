@@ -89,7 +89,7 @@ class ATCController extends Controller
             array_push($actions, 'unban');
         if(!$user->banned)
             array_push($actions, 'ban');
-        if($user->detail->field3 <= 7 && $current_admin_level > 10)
+        if($user->detail->field3 <= 7 && $current_admin_level > 10 && $user->detail->field3 != 0)
             array_push($actions, 'mod');
 
         $flight_perm = PilotFlightPermission::label($user->detail->field1);
@@ -161,7 +161,7 @@ class ATCController extends Controller
             return response()->json('该呼号已经被封禁',400);
 
         $current_admin_level = \Auth::user()->detail->field3;
-        if(!\Auth::user()->manageATC || $current_admin_level <= 10)
+        if(!\Auth::user()->manageATC || $current_admin_level <= 10 || $user->detail->field3 == 0)
             return response()->json('无权限',401);
 
         $old_level_txt = ATCLevel::label($user->detail->field3);
