@@ -67,6 +67,7 @@ class HomeController extends Controller
         }
         $restrict = $this->flightService->getRestrictEntry();
 
+        $logs = array();
         if(\Auth::user()->manageATC)
         {
             $logs = ATCLog::orderByDesc('id')->paginate(20);
