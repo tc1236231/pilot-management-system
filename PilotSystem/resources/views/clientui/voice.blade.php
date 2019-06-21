@@ -14,7 +14,6 @@
                     暂无
                 </div>
             </div>
-            <br />
             <div class="formRow"><h4><a id="PTTKeyLabel" title="" class="value"></a></h4></div><br />
             <a class="button greenB" onclick="configurePTTKey()" style="margin: 5px;"><span>自定义通话键</span></a>
             <a class="button blackB" onclick="testVoice()" ><span>语音测试开关</span></a> <br />
