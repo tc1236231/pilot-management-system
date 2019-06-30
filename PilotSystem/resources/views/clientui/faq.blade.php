@@ -29,13 +29,13 @@
                     <button onclick="copyText('https://bbs.hkrscoc.com/forum.php?mod=viewthread&tid=14')">机模 AI 帮助</button>&nbsp; &nbsp;
                     <button onclick="copyText('https://va.hkrscoc.com/index.php/faq')">虚航问题解答</button>
                     <br /><br />
-                    <button onclick="copyText('https://pan.baidu.com/s/15OwumJsuNTkVwPdXRFZX6A 提取码:8hc6')">主安装程序 | 安装说明 | 客舱语音包 | XP-FF359识别修复补丁</button>
+                    <button onclick="copyText('https://www.lanzous.com/b779323')">客户端主程序下载</button>&nbsp; &nbsp;
+                    <button onclick="copyText('https://www.lanzous.com/b783403')">客舱语音文件下载</button>&nbsp; &nbsp;
+                    <button onclick="copyText('https://www.lanzous.com/b783730')">必装环境组件下载</button>
                     <br /><br />
-                    <button onclick="copyText('https://pan.baidu.com/s/1o8UdWOM 提取码:mki3')">ChinaFlier Client AI FSX P3D 版 - 仅支持 FSX P3D</button>
+                    <button onclick="copyText('https://bbs.hkrscoc.com/forum.php?mod=viewthread&tid=14')">客户端 AI 机模映射包下载、安装说明、常见问题</button>
                     <br /><br />
-                    <button onclick="copyText('https://pan.baidu.com/s/1hsaL6vU 提取码:zgmv')">ChinaFlier Client AI X-PLANE 版 - 仅支持 X-PLANE</button>
-                    <br /><br />
-                    <button onclick="copyText('https://pan.baidu.com/s/1qXXIDo4 提取码:xts1')">Team Viewer CFR官方专用远程帮助工具</button>
+                    <button onclick="copyText('https://www.lanzous.com/b806805')">官方专用远程帮助工具 TeamViewer（TV12）</button>
                     <br /><br />
                     <button onclick="copyText('https://bbs.hkrscoc.com/forum.php?mod=forumdisplay&fid=2')">其他各种插件安装视频教程</button>
                 </div>
@@ -43,7 +43,7 @@
                 <div class="line"></div> <br />
                 <div class="wrapper statsItems">
                     @if(!Auth::user()->banned)
-                        <button onclick='MainWindowJSObject.updateXPlanePlugin();'>X-PLANE 错误修正 Bug Fixes | 校验基础接口文件(校验时将自动关闭模拟器)</button>
+                        <button onclick='MainWindowJSObject.updateXPlanePlugin();'>X-PLANE 错误修正 Bug Fixes | 校验基础文件(校验时将自动关闭模拟器)</button>
                     @endif
                 </div>
             </div>

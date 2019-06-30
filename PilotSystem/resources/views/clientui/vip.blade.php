@@ -162,7 +162,7 @@
                         <td align="center">{{$ac->aircraft_name}}</td>
                         <td align="center">
                             @empty($ac->aircraft_match_name)
-                                未匹配机型
+                                ←是否有明确机型
                             @endempty
                             {{  $ac->aircraft_match_name }}
                         </td>
@@ -189,9 +189,9 @@
                 </table>
                 <br />【 自动匹配说明 】<br />
                 &nbsp; &nbsp;1、自动状态 - 请核对：任务机型、FOQA文件 是否正确； <br />
-                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;正确：可自行重新登机，开始航班；<br />
-                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;有误：联系 6862 、8928 进行人工匹配；<br />
-                &nbsp; &nbsp;2、待匹状态 - 请联系：6862 、8928 进行人工匹配，重新登机，开始航班；<br />
+                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;匹配正确：可自行重新登机，开始航班；<br />
+                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;未自动匹配：请更换其他涂装或机型执飞航班；<br />
+                &nbsp; &nbsp;2、任务机型和当前识别的执飞机型，必须要有明确相同的机型数据显示；否则无法自动匹配<br />
             </div>
             <!-- 匹配进度结束 -->
         </div>

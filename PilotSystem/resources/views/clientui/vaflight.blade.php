@@ -137,7 +137,7 @@
                             <ul class="red">
                                 <b>※ 请在登机前检查机场 加油 | 航班恢复有风险 | 接地前可关闭客户端 | 接地后必须上传 ※</b>
                                 <div class="line"></div>
-                                <li style="cursor: pointer;"><a id="BtnReconectToFS" onclick="MainWindowJSObject.vaConnectToSimulator()"><img src="{{asset('assets/images/client/icons/control/32/networking.png')}}" alt=""/><span>连接FS</span></a></li>
+                                <li style="cursor: pointer;"><a id="BtnReconectToFS" onclick="MainWindowJSObject.vaConnectToSimulator()"><img src="{{asset('assets/images/client/icons/control/32/networking.png')}}" alt=""/><span>连模拟器</span></a></li>
                                 <li style="cursor: pointer;"><a id="BtnLoadBid" onclick="MainWindowJSObject.vaLoadTask()"><img src="{{asset('assets/images/client/icons/control/32/administrative-docs.png')}}" alt=""/><span>载入航班</span></a></li>
                                 <li style="cursor: pointer;"><a id="BtnClearInformation" onclick="MainWindowJSObject.vaClearTask()"><img src="{{asset('assets/images/client/icons/control/32/basket.png')}}" alt=""/><span>清空数据</span></a></li>
                                 <li style="cursor: pointer;"><a id="BtnStartFlightRecording" onclick="MainWindowJSObject.vaStartTask()"><img src="{{asset('assets/images/client/icons/control/32/world.png')}}" alt=""/><span>开始登机</span></a></li>

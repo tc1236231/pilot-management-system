@@ -26,7 +26,7 @@ class PilotLevel extends Enum
     public static $labels = [
         self::BANNED   => '封号禁止连线',
         self::NORMAL => '飞行员',  
-        self::ATC_CAD => '管制学员', 
+        self::ATC_CAD => '准管制学员', 
         self::ATC_OBS => '实习管制员',
         self::ATC_GND => '地面管制员',
         self::ATC_TWR => '塔台管制员',

@@ -54,7 +54,8 @@
                 &nbsp; &nbsp; &nbsp; &nbsp;3、 将新的 125275.wav 文件放在客户端主目录下的ATIS文件夹内,选择文件上传;<br />
                 &nbsp; &nbsp; &nbsp; &nbsp;4、 双击右侧飞行员即可踢出语音服务器； <br />
                 &nbsp; &nbsp; &nbsp; &nbsp;5、 管制指令： _ 代表 空格 <br />
-                &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;定位点（.rcenter_ZBAA）,私聊（.msg_呼号_内容）,广播（.wall_内容）; <br />
+                &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;定位点（.rcenter_ZBAA）, 私聊（.msg_呼号_内容）<br />
+                &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;广播（.wall_内容）, T 断线（.msg_呼号_ZAIJIAN）; <br />
             </div>
             <!-- 管制席位结束 -->
             <!-- 终端情报 -->

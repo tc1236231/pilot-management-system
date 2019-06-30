@@ -14,9 +14,9 @@ class PilotFlightPermission extends Enum
     public const BANNED = 2;
 
     public static $labels = [
-        self::NOT_ALLOWED   => '未获得连飞资格',
-        self::ALLOWED => '已获得连飞资格',
-        self::BANNED => '已停飞封号',
+        self::NOT_ALLOWED   => '连飞资格未获得',
+        self::ALLOWED => '连飞资格已获得',
+        self::BANNED => '被封号已停飞',
     ];
 
 }
