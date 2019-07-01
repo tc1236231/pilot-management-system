@@ -32,6 +32,7 @@ Route::group([
     'middleware' => ['auth:api'],
     'namespace' => 'Api', 'prefix' => '', 'as' => 'api.',
 ], function () {
+    Route::get('/fsd/login', 'FSDController@login')->name('fsd.login');
     Route::post('/pilot/register', 'PilotController@register')->name('pilot.register');
     Route::get('/pilot/verify', 'PilotController@verifyCallsignPassword')->name('pilot.verify');
     Route::get('/pilot/new/verify', 'PilotController@verifyNewPilot')->name('pilot.new.verify');

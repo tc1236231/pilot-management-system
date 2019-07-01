@@ -132,6 +132,11 @@ class NewUser extends Model implements
         return $this->detail->field1 == 2;
     }
 
+    public function getATCLevelAttribute()
+    {
+        return $this->detail->field3;
+    }
+
     public function getIsATCAttribute()
     {
         return $this->detail->field3 > 1;
