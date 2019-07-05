@@ -70,6 +70,17 @@ return [
             'prefix'    => '',
         ],
 
+        'platform_cbs' => [
+            'driver'    => 'mysql',
+            'host'      => env('DB_HOST_CBS', '127.0.0.1'),
+            'database'  => env('DB_DATABASE_CBS', 'forge'),
+            'username'  => env('DB_USERNAME_CBS', 'forge'),
+            'password'  => env('DB_PASSWORD_CBS', ''),
+            'charset'   => 'utf8',
+            'collation' => 'utf8_general_ci',
+            'prefix'    => '',
+        ],
+
         'platform_va' => [
             'driver'    => 'mysql',
             'host'      => env('DB_HOST_VA', '127.0.0.1'),

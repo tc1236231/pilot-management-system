@@ -6,7 +6,7 @@
     <!-- 框架内容 -->
     <div class="widget chartWrapper" ondragstart="return false;">
         @inject('fsvc', 'App\Services\FlightService')
-        @if($fsvc->getRestrictFlight() && Auth::user()->via==0)
+        @if($fsvc->getRestrictFlight() && !Auth::user()->flight_permission)
             <b><h1 color="#FF3333" style="padding:100px;line-height:40px">禁止访问！您还未获得活动连飞资格，活动结束前，无法进入该频道！请前往飞行员系统进行考试</h1></b>
         @else
         <ul class="tabs">
@@ -56,8 +56,8 @@
                         <div class="sItem ticketsStats"><h2><a id="TransponderCode" class="value" style="padding-left: 16px; padding-right: 16px;">0000<span>应答机</span></a></h2></div>
                     </div>
                     <div class="wrapper statsItems">
-                        <div class="sItem ticketsStats"><h2><a id="com1Label" class="value" style="padding-left: 16px; padding-right: 16px;">118.200<span>COM1</span></a></h2></div>
-                        <div class="sItem visitsStats"><h2> <a id="com2Label" class="value" style="padding-left: 16px; padding-right: 16px;">127.900<span>COM2</span></a></h2></div>
+                        <div class="sItem ticketsStats"><h2><a id="com1Label" class="value" style="padding-left: 16px; padding-right: 16px;">000.000<span>COM1</span></a></h2></div>
+                        <div class="sItem visitsStats"><h2> <a id="com2Label" class="value" style="padding-left: 16px; padding-right: 16px;">000.000<span>COM2</span></a></h2></div>
                         <div class="sItem ticketsStats"><h2><a id="SimulatorStatus" class="value" style="padding-left: 15px; padding-right: 15px;">断开<span>模拟器</span></a></h2></div>
                         <div class="sItem ticketsStats"><h2><a id="SessionStatus" class="value" style="padding-left: 15px; padding-right: 15px;">断开<span>服务器</span></a></h2></div>
                     </div>

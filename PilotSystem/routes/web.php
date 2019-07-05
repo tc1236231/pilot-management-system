@@ -20,10 +20,10 @@ Route::group([
 Route::group([
    'namespace' => 'ClientUI', 'prefix' => 'clientui', 'as' => 'clientui.'
 ], function () {
-    Route::get('/login', 'LoginController@index')->middleware(['guest:web,bbs'])->name('login.show');
-    Route::post('/login', 'LoginController@login')->middleware(['guest:web,bbs','throttle:60,1'])->name('login.action');
+    Route::get('/login', 'LoginController@index')->middleware(['guest:web,bbs,cbs'])->name('login.show');
+    Route::post('/login', 'LoginController@login')->middleware(['guest:web,bbs,cbs','throttle:60,1'])->name('login.action');
     Route::group([
-       'middleware' => ['auth:web,bbs']
+       'middleware' => ['auth:web,bbs,cbs']
     ], function() {
         Route::get('/logout','LoginController@logout')->name('logout');
         Route::get('/index','HomeController@index')->name('index');

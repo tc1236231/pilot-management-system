@@ -75,6 +75,7 @@
             <!-- 终端情报结束 -->
             <!-- 活动管理 -->
             <div id="tab3" class="tab_content">
+                @if($restrict)
                 <a>当前连线模式：</a>
                 <a id="currentRestrictStatus" class="value">
                     @if(!$restrict->ip)
@@ -93,6 +94,7 @@
                 <br /><br />
                 <b>注意事项</b> <br /><br />
                 &nbsp; &nbsp; &nbsp; &nbsp;* * 活动结束后，请修改恢复设置《当前活动状态》; <br />
+                @endif
             </div>
             <!-- 活动管理结束 -->
             @if(Auth::user()->manageATC)

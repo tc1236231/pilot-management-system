@@ -46,6 +46,11 @@ return [
             'provider' => 'bbsusers',
         ],
 
+        'cbs' => [
+            'driver' => 'session',
+            'provider' => 'cbsusers',
+        ],
+
         'api' => [
             'driver' => 'token',
             'provider' => 'apiusers',
@@ -83,6 +88,10 @@ return [
 
         'bbsusers' => [
             'driver' => 'bbs',
+        ],
+
+        'cbsusers' => [
+            'driver' => 'cbs',
         ],
         // 'users' => [
         //     'driver' => 'database',

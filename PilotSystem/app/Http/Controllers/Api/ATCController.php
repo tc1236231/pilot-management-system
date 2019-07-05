@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Api;
 
 use App\Models\ATCLog;
+use App\Models\CBSATCLog;
+use App\Models\CBSUser;
 use App\Models\Enums\ATCLevel;
 use App\Models\Enums\PilotFlightPermission;
 use App\Models\NewUser;
@@ -76,7 +78,11 @@ class ATCController extends Controller
         if(empty($callsign))
             return response()->json('呼号不能为空',400);
 
-        $user = NewUser::where('username','=',$callsign)->first();
+        if(\Auth::guard('cbs')->check())
+            $user = CBSUser::where('username','=',$callsign)->first();
+        else
+            $user = NewUser::where('username','=',$callsign)->first();
+
         if(!$user)
             return response()->json('查不到该呼号信息',404);
 
@@ -104,7 +110,11 @@ class ATCController extends Controller
         if(empty($callsign))
             return response()->json('呼号不能为空',400);
 
-        $user = NewUser::where('username','=',$callsign)->first();
+        if(\Auth::guard('cbs')->check())
+            $user = CBSUser::where('username','=',$callsign)->first();
+        else
+            $user = NewUser::where('username','=',$callsign)->first();
+
         if(!$user)
             return response()->json('查不到该呼号信息',404);
 
@@ -117,7 +127,10 @@ class ATCController extends Controller
         $user->detail->field1 = 2;
         $user->detail->save();
 
-        ATCLog::create(['callsign' => $callsign, 'content' => '停飞封禁', 'admin' => \Auth::user()->callsign, 'time' => Carbon::now()]);
+        if(\Auth::guard('cbs')->check())
+            CBSATCLog::create(['callsign' => $callsign, 'content' => '停飞封禁', 'admin' => \Auth::user()->callsign, 'time' => Carbon::now()]);
+        else
+            ATCLog::create(['callsign' => $callsign, 'content' => '停飞封禁', 'admin' => \Auth::user()->callsign, 'time' => Carbon::now()]);
 
         return response()->json(['status' => 'success'], 200);
     }
@@ -128,7 +141,11 @@ class ATCController extends Controller
         if(empty($callsign))
             return response()->json('呼号不能为空',400);
 
-        $user = NewUser::where('username','=',$callsign)->first();
+        if(\Auth::guard('cbs')->check())
+            $user = CBSUser::where('username','=',$callsign)->first();
+        else
+            $user = NewUser::where('username','=',$callsign)->first();
+
         if(!$user)
             return response()->json('查不到该呼号信息',404);
 
@@ -141,7 +158,10 @@ class ATCController extends Controller
         $user->detail->field1 = 0;
         $user->detail->save();
 
-        ATCLog::create(['callsign' => $callsign, 'content' => '解封', 'admin' => \Auth::user()->callsign, 'time' => Carbon::now()]);
+        if(\Auth::guard('cbs')->check())
+            CBSATCLog::create(['callsign' => $callsign, 'content' => '解封', 'admin' => \Auth::user()->callsign, 'time' => Carbon::now()]);
+        else
+            ATCLog::create(['callsign' => $callsign, 'content' => '解封', 'admin' => \Auth::user()->callsign, 'time' => Carbon::now()]);
 
         return response()->json(['status' => 'success'], 200);
     }
@@ -153,7 +173,11 @@ class ATCController extends Controller
         if(empty($callsign) || !is_numeric($level))
             return response()->json('输入有误',400);
 
-        $user = NewUser::where('username','=',$callsign)->first();
+        if(\Auth::guard('cbs')->check())
+            $user = CBSUser::where('username','=',$callsign)->first();
+        else
+            $user = NewUser::where('username','=',$callsign)->first();
+
         if(!$user)
             return response()->json('查不到该呼号信息',404);
 
@@ -171,7 +195,10 @@ class ATCController extends Controller
 
         $new_level_txt = ATCLevel::label($level);
 
-        ATCLog::create(['callsign' => $callsign, 'content' => '变更权限'.$old_level_txt.'->'.$new_level_txt,'admin' => \Auth::user()->callsign, 'time' => Carbon::now()]);
+        if(\Auth::guard('cbs')->check())
+            CBSATCLog::create(['callsign' => $callsign, 'content' => '变更权限'.$old_level_txt.'->'.$new_level_txt,'admin' => \Auth::user()->callsign, 'time' => Carbon::now()]);
+        else
+            ATCLog::create(['callsign' => $callsign, 'content' => '变更权限'.$old_level_txt.'->'.$new_level_txt,'admin' => \Auth::user()->callsign, 'time' => Carbon::now()]);
 
         return response()->json(['status' => 'success'], 200);
     }

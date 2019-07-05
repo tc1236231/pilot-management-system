@@ -82,6 +82,27 @@ class LoginController extends Controller
         }
     }
 
+    private function cbsLogin(Request $request, $credentials) {
+        $credentials = array(
+            'username' => $credentials[$this->username()],
+            'password' => $credentials['password'],
+        );
+        $authSuccess = Auth::guard('cbs')->attempt($credentials);
+
+        if($authSuccess) {
+            $request->session()->regenerate();
+            return response()->json(['status' => 'success', 'message' => '登录成功'], Response::HTTP_OK);
+        }
+        else
+        {
+            return
+                response()->json([
+                    'status' => 'failed',
+                    'message' => '呼号或密码错误'
+                ], Response::HTTP_FORBIDDEN);
+        }
+    }
+
     public function login(Request $request)
     {
         $credentials = $request->only($this->username(), 'password');
@@ -94,6 +115,9 @@ class LoginController extends Controller
                 break;
             case '2':
                 return $this->newLogin($request, $credentials);
+                break;
+            case '8':
+                return $this->cbsLogin($request, $credentials);
                 break;
             default:
                 return response()->json([

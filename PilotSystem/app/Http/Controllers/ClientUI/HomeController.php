@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\ClientUI;
 
 use App\Models\ATCLog;
+use App\Models\CBSATCLog;
 use App\Services\FlightService;
 use App\Services\VirtualAirlineService;
 use Illuminate\Http\Request;
@@ -70,7 +71,10 @@ class HomeController extends Controller
         $logs = array();
         if(\Auth::user()->manageATC)
         {
-            $logs = ATCLog::orderByDesc('id')->paginate(20);
+            if(\Auth::guard('cbs')->check())
+                $logs = CBSATCLog::orderByDesc('id')->paginate(20);
+            else
+                $logs = ATCLog::orderByDesc('id')->paginate(20);
         }
 
         return view('clientui.atc',compact(['restrict','logs']));
@@ -92,7 +96,11 @@ class HomeController extends Controller
         {
             return view('clientui.oldforbidden');
         }
-        $pinfo = $this->vaService->getPilotInfo(\Auth::user()->callsign);
+        $pinfo = array();
+        if(\Auth::guard('bbs')->check())
+        {
+            $pinfo = $this->vaService->getPilotInfo(\Auth::user()->callsign);
+        }
 
         return view('clientui.vaflight', compact('pinfo'));
     }

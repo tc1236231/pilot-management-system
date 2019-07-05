@@ -1,5 +1,9 @@
 <div id="leftSide">
-    <div class="logo" onmousemove="onCanvasMouseMove(event)" onmousedown="onCanvasMouseDown(event); return false;"><img src="{{ asset('assets/images/client/loginLogo.png') }}" alt="" style=" width: 200px;" /></div>
+    @if(Auth::guard("cbs")->check())
+        <div class="logo" onmousemove="onCanvasMouseMove(event)" onmousedown="onCanvasMouseDown(event); return false;"><img src="{{ asset('assets/images/client/cbsLogo.png') }}" alt="" style="height: 80px; width: 120px;" /></div>
+    @else
+        <div class="logo" onmousemove="onCanvasMouseMove(event)" onmousedown="onCanvasMouseDown(event); return false;"><img src="{{ asset('assets/images/client/loginLogo.png') }}" alt="" style=" width: 200px;" /></div>
+    @endif
     <div class="sidebarSep" style="margin-top: 10px; margin-bottom: 10px;"></div>
 
     <!-- 顶部按钮-->

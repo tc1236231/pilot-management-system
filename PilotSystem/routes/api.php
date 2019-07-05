@@ -41,7 +41,7 @@ Route::group([
 });
 
 Route::group([
-    'middleware' => ['auth:web,bbs'],
+    'middleware' => ['auth:web,bbs,cbs'],
     'namespace' => 'Api', 'prefix' => '', 'as' => 'api.',
 ], function () {
     Route::post('/atc/atis', 'ATCController@createATIS')->name('atc.atis.create');

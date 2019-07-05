@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Extensions\CBSUserProvider;
 use App\Extensions\NewUserProvider;
 use App\Models\NewUser;
 use Illuminate\Support\Facades\Auth;
@@ -30,6 +31,10 @@ class AuthServiceProvider extends ServiceProvider
 
         Auth::provider('bbs', function ($app, array $config) {
            return new NewUserProvider();
+        });
+
+        Auth::provider('cbs', function ($app, array $config) {
+            return new CBSUserProvider();
         });
     }
 }
