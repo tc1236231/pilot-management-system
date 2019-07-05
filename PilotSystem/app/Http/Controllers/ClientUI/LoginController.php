@@ -87,6 +87,10 @@ class LoginController extends Controller
             'username' => $credentials[$this->username()],
             'password' => $credentials['password'],
         );
+        $callsign = $credentials[$this->username()];
+        if(strlen($callsign) != 4 || !is_numeric($callsign))
+            return response()->json(['status' => 'error', 'message' => '呼号格式错误,论坛用户名必须为4位数字呼号']);
+
         $authSuccess = Auth::guard('cbs')->attempt($credentials);
 
         if($authSuccess) {
