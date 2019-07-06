@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api;
 use App\Models\CBSUser;
 use App\Models\NewUser;
 use App\Services\VirtualAirlineService;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
@@ -58,6 +59,8 @@ class FSDController extends Controller
                     return response()->json(["status" => "WRONG_PASSWORD"], 200);
                 if($user->banned)
                     return response()->json(["status" => "BANNED"], 200);
+                $user->detail->atclogintime = Carbon::now();
+                $user->detail->save();
                 return response()->json(["status" => "ATC", "level" => ($user->atclevel + 1)], 200);
                 break;
             case "COC":
@@ -71,6 +74,8 @@ class FSDController extends Controller
                 $code = $platform_code;
                 if($pinfo)
                     $code = $pinfo->code;
+                $user->detail->pologintime = Carbon::now();
+                $user->detail->save();
                 return response()->json(["status" => "PILOT", "code" => $code], 200);
                 break;
             case "CBS":
@@ -92,25 +97,37 @@ class FSDController extends Controller
                 {
                     $code = $platform_code;
                 }
+                $user->detail->pologintime = Carbon::now();
+                $user->detail->save();
                 return response()->json(["status" => "PILOT", "code" => $code], 200);
                 break;
             default:
                 $simLabel = substr($input['platform'], 0, 1);
                 if($simLabel == "-")
                 {
-                    $authed = Auth::guard("bbs")->validate($credentials);
+                    switch ($input['source'])
+                    {
+                        case "COC":
+                            $authed = Auth::guard("bbs")->validate($credentials);
+                            $user = NewUser::where("username", "=", $input['callsign'])->first();
+                            break;
+                        case "CBS":
+                            $authed = Auth::guard("cbs")->validate($credentials);
+                            $user = CBSUser::where("username", "=", $input['callsign'])->first();
+                            break;
+                        default:
+                            $authed = Auth::guard("bbs")->validate($credentials);
+                            $user = NewUser::where("username", "=", $input['callsign'])->first();
+                            break;
+                    }
                     if(!$authed)
                         return response()->json(["status" => "WRONG_PASSWORD"], 200);
-                    $user = NewUser::where("username", "=", $input['callsign'])->first();
                     if($user->banned)
                         return response()->json(["status" => "BANNED"], 200);
                     return response()->json(["status" => "SIM"], 200);
                 }
                 break;
         }
-
-
-        //set login time
     }
 
     public function logout()
