@@ -31,7 +31,7 @@
                             <div class="loginInput">
                             <select id="platform" name="platform" >
                                 @foreach($platforms as $platform)
-                                <option value="{{$platform->id}}">{{$platform->name}}</option>
+                                <option value="{{$platform->id}}" code="{{$platform->code}}">{{$platform->name}}</option>
                                 @endforeach
                             </select>
                             </div>
@@ -81,6 +81,7 @@
                 return false;
             }
             var huhao_platform=$("#platform").val();
+            var huhao_code=$( "#platform option:selected" ).attr('code');
             $.ajax({
                 url:"{{ route('clientui.login.action') }}",
                 type:"POST",
@@ -93,7 +94,8 @@
                     if(data.status === "success"){
                         try{
                             var remember = document.getElementById("remMe").checked;
-                            MainWindowJSObject.setLoginParam(huhao_user,huhao_pwd,remember,huhao_platform);
+                            console.log(huhao_user,huhao_pwd,remember,(huhao_platform+":"+huhao_code));
+                            MainWindowJSObject.setLoginParam(huhao_user,huhao_pwd,remember,(huhao_platform+":"+huhao_code));
                         } catch (error) {
 
                         }
