@@ -95,6 +95,17 @@ class FSDController extends Controller
                 return response()->json(["status" => "PILOT", "code" => $code], 200);
                 break;
             default:
+                $simLabel = substr($input['platform'], 0, 1);
+                if($simLabel == "-")
+                {
+                    $authed = Auth::guard("bbs")->validate($credentials);
+                    if(!$authed)
+                        return response()->json(["status" => "WRONG_PASSWORD"], 200);
+                    $user = NewUser::where("username", "=", $input['callsign'])->first();
+                    if($user->banned)
+                        return response()->json(["status" => "BANNED"], 200);
+                    return response()->json(["status" => "SIM"], 200);
+                }
                 break;
         }
 
