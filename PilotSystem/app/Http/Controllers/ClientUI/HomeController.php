@@ -87,7 +87,8 @@ class HomeController extends Controller
 
     public function faq()
     {
-        return view('clientui.faq');
+        $foqa = $this->vaService->getFOQAFiles();
+        return view('clientui.faq', compact('foqa'));
     }
 
     public function vaflight()

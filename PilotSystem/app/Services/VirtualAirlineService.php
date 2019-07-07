@@ -115,4 +115,18 @@ class VirtualAirlineService extends Service
 
         return $aircraftTrackers;
     }
+
+    public function getFOQAFiles()
+    {
+        try {
+            DB::connection('platform_va')->getPdo();
+        } catch (\Exception $e) {
+            return array();
+        }
+        $db_conn = DB::connection('platform_va');
+
+        $foqaFiles = $db_conn->table('aircraft_mk')->get();
+
+        return $foqaFiles;
+    }
 }

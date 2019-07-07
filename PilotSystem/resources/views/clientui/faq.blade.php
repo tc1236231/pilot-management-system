@@ -51,10 +51,52 @@
         </div>
         <!-- 分页1结束 -->
       
-        <!-- 分页2   select * from aircraft_mk   https://va.hkrscoc.com/Download/FOQA_PDF/'.$v10->FOQA_name;?>_FOQA.pdf -->
+        <!-- 分页2 -->
         <div id="tab2" class="tab_content">
- 				<h5>请到论坛导航 FOQA 中查看 或 登陆 VA网站 个人前台中查看</h5><br />
-                 &nbsp; 7月9日 将PDF文件，更新至此处； <br />
+            <table class="ocean_table" width="100%" border="1px" cellspacing="0" cellpadding="0" align="center"  >
+                <thead>
+                <tr>
+                    <th style='background:#EEE9BF;padding:auto;' class="fixtd" width="auto"><center>当前机型数据</center></th>
+                    <th style='background:#EEE9BF;padding:auto;' class="fixtd" width="auto"><center>任务机型</center></th>
+                    <th style='background:#EEE9BF;padding:auto;' class="fixtd" width="auto"><center>FOQA文件</center></th>
+                    <th style='background:#EEE9BF;padding:auto;' class="fixtd" width="auto"><center>匹配状态</center></th>
+                </tr>
+                </thead>
+                <tbody>
+                <style>
+                    tr{background:#FFFFFF;}
+                    tr:hover{background:#FFFF33;}
+                </style>
+                @foreach($foqa as $f)
+                    <tr>
+                        <td align="center">{{$f->aircraft_name}}</td>
+                        <td align="center">
+                            @empty($f->aircraft_match_name)
+                                ←是否有明确机型
+                            @endempty
+                            {{  $f->aircraft_match_name }}
+                        </td>
+                        <td align="center">
+                            @empty($f->FOQA_name)
+                                未匹配FOQA
+                            @endempty
+                            <a target="_blank" href="https://va.hkrscoc.com/Download/FOQA_PDF/{{  $f->FOQA_name }}_FOQA.pdf">查看资料</a>
+                        </td>
+                        <td align="center">
+                            @if($f->huhao == 0)
+                                <fonts color="Fuchsia">待核对</fonts>
+                            @elseif($f->huhao == 3)
+                                已核对
+                            @elseif($f->huhao == 1)
+                                <fonts color="red">自动</fonts>
+                            @else
+                                未知
+                            @endif
+                        </td>
+                    </tr>
+                @endforeach
+                </tbody>
+            </table>
         </div>
         <!-- 分页2结束 -->
       
