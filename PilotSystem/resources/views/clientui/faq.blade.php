@@ -13,8 +13,9 @@
 
         <ul class="tabs">
             <li><a href="#tab1">常见问题 | FAQ</a></li>
-            <li><a href="#tab2">飞行教程 | Flight</a></li>
-            <li><a href="#tab3">管理中心 | Admin</a></li>
+            <li><a href="#tab2">标准手册 | FOQA</a></li>
+            <li><a href="#tab3">飞行教程 | Flight</a></li>
+            <li><a href="#tab4">管理中心 | Admin</a></li>
         </ul>
         <!-- 分页开始 -->
         <div class="tab_container">
@@ -49,8 +50,16 @@
             </div>
         </div>
         <!-- 分页1结束 -->
-        <!-- 分页2 -->
+      
+        <!-- 分页2   select * from aircraft_mk   https://va.hkrscoc.com/Download/FOQA_PDF/'.$v10->FOQA_name;?>_FOQA.pdf -->
         <div id="tab2" class="tab_content">
+ 				<h5>请到论坛导航 FOQA 中查看 或 登陆 VA网站 个人前台中查看</h5><br />
+                 &nbsp; 7月9日 将PDF文件，更新至此处； <br />
+        </div>
+        <!-- 分页2结束 -->
+      
+        <!-- 分页3 -->
+        <div id="tab3" class="tab_content">
             <h5>连飞说明</h5>
             &nbsp; 1、 进入管制雷达范围内，请主动联系管制人员； <br />
             &nbsp; 2、 COM1 和 COM 2 与机载通讯面板联动操作；通过机载通讯面板进行收听、送话； <br />
@@ -79,17 +88,17 @@
 
             <br /><br />
         </div>
-        <!-- 分页2结束 -->
+        <!-- 分页3结束 -->
 
-        <!-- 分页3 -->
-        <div id="tab3" class="tab_content">
+        <!-- 分页4 -->
+        <div id="tab4" class="tab_content">
             <div class="wrapper statsItems"><!-- 居中 -->
                 @if(Auth::user()->callsign == "8928" || Auth::user()->callsign == "3804")
                     <button onclick=MainWindowJSObject.showPointSystemEditForm();''>FOQA 编辑中心</button>
                 @endif
             </div>
         </div>
-        <!-- 分页3结束 -->
+        <!-- 分页4结束 -->
     </div>
     <!-- 分页开始结束 -->
 

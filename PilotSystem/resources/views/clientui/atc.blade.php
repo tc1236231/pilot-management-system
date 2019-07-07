@@ -62,7 +62,6 @@
             <div id="tab2" class="tab_content">
                 <div class="formRow">
                     机组接收文本 ATIS 频率: <input type="text" class="required" placeholder="000.000" maxlength="7" name="customMessage" id="customMessage"/>
-
                     <br />	<br />
                     <textarea placeholder="输入要上传 ATIS 文本" id="txt" style="height:250px; width:500px; resize: none;"></textarea>
                     <br /><br />
